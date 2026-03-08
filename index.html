@@ -333,50 +333,45 @@
     .map-frame {
       position: relative;
       width: 100%;
-    }
-
-    .map-image {
-      width: 100%;
-      height: auto;
-      display: block;
+      aspect-ratio: 16 / 10;
+      border-radius: 14px;
+      overflow: hidden;
       background: #ffffff;
     }
 
-    .zone-overlay {
-      position: absolute;
-      inset: 0;
-      z-index: 3;
-      pointer-events: none;
+    .svg-container {
+      width: 100%;
+      height: 100%;
+      background: #ffffff;
     }
 
-    .zone-label {
-      position: absolute;
-      transform: translate(-50%, -50%);
-      width: 28px;
-      height: 28px;
-      border-radius: 50%;
-      opacity: 0;
-      background: rgba(34, 197, 94, 0.38);
-      box-shadow: 0 0 0 3px rgba(22, 163, 74, 0.9);
-      transition: opacity 180ms ease, transform 180ms ease;
+    .svg-container > svg {
+      width: 100%;
+      height: 100%;
+      display: block;
+      touch-action: none;
+      user-select: none;
+      -webkit-user-select: none;
+      background: #ffffff;
+      shape-rendering: geometricPrecision;
+      text-rendering: geometricPrecision;
     }
 
-    .zone-label.active {
-      opacity: 1;
-      transform: translate(-50%, -50%) scale(1.12);
-      animation: zonePulse 1s ease-in-out infinite;
+    .svg-container [id] {
+      cursor: pointer;
     }
 
-    @keyframes zonePulse {
-      0% {
-        box-shadow: 0 0 0 3px rgba(22, 163, 74, 0.95), 0 0 14px rgba(34, 197, 94, 0.55);
-      }
-      50% {
-        box-shadow: 0 0 0 10px rgba(34, 197, 94, 0.28), 0 0 30px rgba(34, 197, 94, 0.95);
-      }
-      100% {
-        box-shadow: 0 0 0 3px rgba(22, 163, 74, 0.95), 0 0 14px rgba(34, 197, 94, 0.55);
-      }
+    .svg-container .shelf-selected,
+    .svg-container .shelf-selected * {
+      fill: #22c55e !important;
+      stroke: #166534 !important;
+      transition: fill 220ms ease, stroke 220ms ease, filter 220ms ease;
+      filter: drop-shadow(0 0 8px rgba(34, 197, 94, 0.65));
+    }
+
+    .svg-container .shelf-selected text {
+      fill: #064e3b !important;
+      stroke: none !important;
     }
 
     .map-fallback {
@@ -403,11 +398,20 @@
       max-width: 280px;
     }
 
-    .map-upload {
+    .map-controls {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      z-index: 5;
+      display: flex;
+      gap: 8px;
+    }
+
+    .map-reset-btn {
       border: 1px solid #cbd5e1;
       background: #ffffff;
       border-radius: 999px;
-      padding: 8px 14px;
+      padding: 8px 12px;
       font-size: 0.86rem;
       cursor: pointer;
       box-shadow: 0 2px 8px rgba(17, 24, 39, 0.08);
@@ -635,17 +639,12 @@
 
       <section class="map-section" aria-label="Store map">
         <div class="map-frame">
-          <img
-            class="map-image"
-            src="store-map.jpg"
-            alt="Store map with aisle labels"
-            id="mapImage"
-          />
-          <div class="zone-overlay" id="zoneOverlay" aria-hidden="true"></div>
-          <div class="map-fallback" id="mapFallback">
-            <p class="map-help">Map image not found in project folder. Select it once and it will be saved for future visits.</p>
-            <label class="map-upload" for="mapFile">Choose map image</label>
-            <input type="file" id="mapFile" accept="image/*" hidden />
+          <div class="svg-container" id="svgContainer" aria-label="Interactive store map"></div>
+          <div class="map-controls">
+            <button class="map-reset-btn" id="resetMapView" type="button">Visa hela kartan</button>
+          </div>
+          <div class="map-fallback hidden" id="mapFallback">
+            <p class="map-help">Kunde inte ladda SVG-kartan. Kontrollera att filen finns i projektmappen.</p>
           </div>
         </div>
       </section>
@@ -692,13 +691,16 @@
     const panelCategory = document.getElementById("panelCategory");
     const panelEan = document.getElementById("panelEan");
     const panelStatus = document.getElementById("panelStatus");
-    const mapImage = document.getElementById("mapImage");
-    const mapFile = document.getElementById("mapFile");
+    const mapFrame = document.querySelector(".map-frame");
+    const svgContainer = document.getElementById("svgContainer");
+    const resetMapView = document.getElementById("resetMapView");
     const mapFallback = document.getElementById("mapFallback");
-    const zoneOverlay = document.getElementById("zoneOverlay");
-    const MAP_STORAGE_KEY = "grocery_store_map_data_url";
-    const savedMap = localStorage.getItem(MAP_STORAGE_KEY);
-    let savedMapTried = false;
+    // Put your exported floorplan SVG in the project root and keep this path in sync.
+    const STORE_SVG_PATH = "./%C3%84lmhult%20-%20250902.svg";
+    // Lower value = more zoom-in on first load.
+    const INITIAL_MAP_SCALE = 0.60;
+    // Negative value nudges the initial map view left.
+    const INITIAL_MAP_OFFSET_X = -0.08;
     const ALL_CATEGORY = "ALLT";
 
     let products = [];
@@ -708,7 +710,19 @@
     let renderedCount = 0;
     const RESULTS_PAGE_SIZE = 30;
     let activeZone = "";
-    const zoneElements = {};
+    let svgElement = null;
+    let svgOriginalViewBox = null;
+    let activeShelfElement = null;
+    let viewBoxAnimationId = 0;
+    let suppressNextShelfClick = false;
+    const dragState = {
+      active: false,
+      moved: false,
+      pointerId: null,
+      startClientX: 0,
+      startClientY: 0,
+      startViewBox: null
+    };
 
     const ZONE_POSITIONS = {
       Z1: [19, 3], Z2: [2, 26], Z3: [2, 75], Z4: [19, 97],
@@ -785,35 +799,342 @@
       return list[Math.floor(Math.random() * list.length)];
     }
 
-    function clearZoneHighlight() {
-      if (activeZone && zoneElements[activeZone]) {
-        zoneElements[activeZone].classList.remove("active");
+    function clearZoneHighlight(resetZoom = true) {
+      if (activeShelfElement) {
+        activeShelfElement.classList.remove("shelf-selected");
       }
+      activeShelfElement = null;
       activeZone = "";
+      if (resetZoom && svgOriginalViewBox) {
+        const initialViewBox = getInitialViewBox();
+        animateToViewBox(initialViewBox || svgOriginalViewBox, 420);
+      }
+    }
+
+    function getCurrentViewBox() {
+      if (!svgElement) return null;
+      const baseVal = svgElement.viewBox.baseVal;
+      if (baseVal && baseVal.width > 0 && baseVal.height > 0) {
+        return { x: baseVal.x, y: baseVal.y, width: baseVal.width, height: baseVal.height };
+      }
+      if (!svgOriginalViewBox) return null;
+      return { ...svgOriginalViewBox };
+    }
+
+    function setViewBox(viewBox) {
+      if (!svgElement || !viewBox) return;
+      svgElement.setAttribute("viewBox", [viewBox.x, viewBox.y, viewBox.width, viewBox.height].join(" "));
+    }
+
+    function stopViewBoxAnimation() {
+      cancelAnimationFrame(viewBoxAnimationId);
+      viewBoxAnimationId = 0;
+    }
+
+    function clampViewBox(viewBox) {
+      if (!svgOriginalViewBox || !viewBox) return viewBox;
+
+      const base = svgOriginalViewBox;
+      const aspect = base.width / base.height;
+      const minScale = 0.06;
+      let width = clamp(viewBox.width, base.width * minScale, base.width);
+      let height = clamp(viewBox.height, base.height * minScale, base.height);
+
+      if (Math.abs(width / height - aspect) > 0.0001) {
+        if (width / height > aspect) {
+          width = height * aspect;
+        } else {
+          height = width / aspect;
+        }
+      }
+
+      const minX = base.x;
+      const minY = base.y;
+      const maxX = base.x + base.width - width;
+      const maxY = base.y + base.height - height;
+
+      return {
+        x: clamp(viewBox.x, minX, maxX),
+        y: clamp(viewBox.y, minY, maxY),
+        width,
+        height
+      };
+    }
+
+    function getInitialViewBox() {
+      if (!svgOriginalViewBox) return null;
+      const base = svgOriginalViewBox;
+      const width = base.width * INITIAL_MAP_SCALE;
+      const height = base.height * INITIAL_MAP_SCALE;
+      const centerX = base.x + base.width / 2;
+      const centerY = base.y + base.height / 2;
+      return clampViewBox({
+        x: centerX - width / 2 + base.width * INITIAL_MAP_OFFSET_X,
+        y: centerY - height / 2,
+        width,
+        height
+      });
+    }
+
+    function animateToViewBox(target, duration = 540) {
+      if (!svgElement || !target) return;
+      const start = getCurrentViewBox();
+      if (!start) {
+        setViewBox(target);
+        return;
+      }
+      stopViewBoxAnimation();
+      const clampedTarget = clampViewBox(target);
+      const startTime = performance.now();
+      const easeInOut = (t) => (t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2);
+
+      const step = (now) => {
+        const progress = Math.min((now - startTime) / duration, 1);
+        const eased = easeInOut(progress);
+        setViewBox(clampViewBox({
+          x: start.x + (clampedTarget.x - start.x) * eased,
+          y: start.y + (clampedTarget.y - start.y) * eased,
+          width: start.width + (clampedTarget.width - start.width) * eased,
+          height: start.height + (clampedTarget.height - start.height) * eased
+        }));
+        if (progress < 1) {
+          viewBoxAnimationId = requestAnimationFrame(step);
+        } else {
+          setViewBox(clampedTarget);
+        }
+      };
+
+      viewBoxAnimationId = requestAnimationFrame(step);
+    }
+
+    function clamp(value, min, max) {
+      return Math.min(max, Math.max(min, value));
+    }
+
+    function getFocusedViewBox(target) {
+      if (!svgOriginalViewBox || !target) return null;
+      const box = target.getBBox();
+      if (!box || box.width <= 0 || box.height <= 0) return null;
+
+      const base = svgOriginalViewBox;
+      const aspect = base.width / base.height;
+      const paddingRatio = 0.35;
+
+      let focusWidth = box.width * (1 + paddingRatio);
+      let focusHeight = box.height * (1 + paddingRatio);
+      if (focusWidth / focusHeight > aspect) {
+        focusHeight = focusWidth / aspect;
+      } else {
+        focusWidth = focusHeight * aspect;
+      }
+
+      focusWidth = Math.min(focusWidth, base.width);
+      focusHeight = Math.min(focusHeight, base.height);
+
+      const centerX = box.x + box.width / 2;
+      const centerY = box.y + box.height / 2;
+
+      const minX = base.x;
+      const minY = base.y;
+      const maxX = base.x + base.width - focusWidth;
+      const maxY = base.y + base.height - focusHeight;
+
+      return {
+        x: clamp(centerX - focusWidth / 2, minX, maxX),
+        y: clamp(centerY - focusHeight / 2, minY, maxY),
+        width: focusWidth,
+        height: focusHeight
+      };
+    }
+
+    function focusShelf(target) {
+      if (!target) return;
+      clearZoneHighlight(false);
+      activeShelfElement = target;
+      activeZone = String(target.id || "");
+      activeShelfElement.classList.add("shelf-selected");
+      const focused = getFocusedViewBox(target);
+      if (focused) {
+        animateToViewBox(focused, 560);
+      }
+    }
+
+    function handleMapWheel(event) {
+      if (!svgElement || !svgOriginalViewBox) return;
+      event.preventDefault();
+      const current = getCurrentViewBox();
+      if (!current) return;
+
+      stopViewBoxAnimation();
+      const rect = svgElement.getBoundingClientRect();
+      if (!rect.width || !rect.height) return;
+
+      const pointerX = clamp(event.clientX - rect.left, 0, rect.width);
+      const pointerY = clamp(event.clientY - rect.top, 0, rect.height);
+      const worldX = current.x + (pointerX / rect.width) * current.width;
+      const worldY = current.y + (pointerY / rect.height) * current.height;
+
+      const zoomFactor = event.deltaY < 0 ? 0.9 : 1.1;
+      const nextWidth = current.width * zoomFactor;
+      const nextHeight = current.height * zoomFactor;
+      const nextViewBox = clampViewBox({
+        x: worldX - (pointerX / rect.width) * nextWidth,
+        y: worldY - (pointerY / rect.height) * nextHeight,
+        width: nextWidth,
+        height: nextHeight
+      });
+
+      setViewBox(nextViewBox);
+    }
+
+    function handleMapPointerDown(event) {
+      if (!svgElement || !svgOriginalViewBox) return;
+      if (event.pointerType !== "touch" && event.button !== 0) return;
+      const startViewBox = getCurrentViewBox();
+      if (!startViewBox) return;
+
+      event.preventDefault();
+      stopViewBoxAnimation();
+      dragState.active = true;
+      dragState.moved = false;
+      dragState.pointerId = event.pointerId;
+      dragState.startClientX = event.clientX;
+      dragState.startClientY = event.clientY;
+      dragState.startViewBox = { ...startViewBox };
+      svgElement.setPointerCapture(event.pointerId);
+    }
+
+    function handleMapPointerMove(event) {
+      if (!dragState.active || dragState.pointerId !== event.pointerId || !svgElement) return;
+      event.preventDefault();
+      const rect = svgElement.getBoundingClientRect();
+      if (!rect.width || !rect.height) return;
+
+      const deltaX = event.clientX - dragState.startClientX;
+      const deltaY = event.clientY - dragState.startClientY;
+      if (Math.abs(deltaX) > 4 || Math.abs(deltaY) > 4) {
+        dragState.moved = true;
+      }
+
+      const viewUnitsPerPixelX = dragState.startViewBox.width / rect.width;
+      const viewUnitsPerPixelY = dragState.startViewBox.height / rect.height;
+      const panned = clampViewBox({
+        x: dragState.startViewBox.x - deltaX * viewUnitsPerPixelX,
+        y: dragState.startViewBox.y - deltaY * viewUnitsPerPixelY,
+        width: dragState.startViewBox.width,
+        height: dragState.startViewBox.height
+      });
+      setViewBox(panned);
+    }
+
+    function handleMapPointerEnd(event) {
+      if (!dragState.active || dragState.pointerId !== event.pointerId || !svgElement) return;
+      try {
+        svgElement.releasePointerCapture(event.pointerId);
+      } catch (captureError) {
+      }
+
+      const wasDragged = dragState.moved;
+      dragState.active = false;
+      dragState.moved = false;
+      dragState.pointerId = null;
+      dragState.startViewBox = null;
+
+      if (wasDragged) {
+        suppressNextShelfClick = true;
+        setTimeout(() => {
+          suppressNextShelfClick = false;
+        }, 0);
+      }
+    }
+
+    function escapeCssId(id) {
+      if (window.CSS && typeof window.CSS.escape === "function") {
+        return window.CSS.escape(id);
+      }
+      return String(id).replace(/([ !"#$%&'()*+,./:;<=>?@[\\\]^`{|}~])/g, "\\$1");
     }
 
     function highlightZone(zone) {
-      clearZoneHighlight();
-      if (!zone || !zoneElements[zone]) return;
-      activeZone = zone;
-      zoneElements[zone].classList.add("active");
+      if (!zone || !svgElement) {
+        clearZoneHighlight(false);
+        return;
+      }
+      const target = svgElement.querySelector("#" + escapeCssId(zone));
+      if (!target) return;
+      focusShelf(target);
     }
 
-    function renderZoneOverlay() {
-      zoneOverlay.innerHTML = Object.entries(ZONE_POSITIONS)
-        .map(([zone, point]) => "<span class=\"zone-label\" data-zone=\"" + zone + "\" title=\"" + zone + "\" style=\"left:" + point[0] + "%;top:" + point[1] + "%;\"></span>")
-        .join("");
+    function isIgnoredSvgNode(node) {
+      const tag = String(node.tagName || "").toLowerCase();
+      return ["svg", "defs", "clipPath", "mask", "pattern", "linearGradient", "radialGradient", "style", "metadata", "desc", "title"].includes(tag);
+    }
 
-      Object.keys(zoneElements).forEach((key) => delete zoneElements[key]);
-      zoneOverlay.querySelectorAll(".zone-label").forEach((element) => {
-        zoneElements[element.dataset.zone] = element;
-      });
+    function findShelfNode(startNode) {
+      let node = startNode;
+      while (node && node !== svgElement) {
+        if (node.id && !isIgnoredSvgNode(node)) return node;
+        node = node.parentElement;
+      }
+      return null;
+    }
+
+    async function initStoreSvg() {
+      try {
+        const response = await fetch(STORE_SVG_PATH, { cache: "no-cache" });
+        if (!response.ok) throw new Error("Failed to load SVG");
+        const svgText = await response.text();
+        svgContainer.innerHTML = svgText;
+        svgElement = svgContainer.querySelector("svg");
+        if (!svgElement) throw new Error("No <svg> root in file");
+
+        svgElement.removeAttribute("width");
+        svgElement.removeAttribute("height");
+        svgElement.setAttribute("preserveAspectRatio", "xMidYMid meet");
+
+        const vb = svgElement.viewBox.baseVal;
+        if (vb && vb.width > 0 && vb.height > 0) {
+          svgOriginalViewBox = { x: vb.x, y: vb.y, width: vb.width, height: vb.height };
+        } else {
+          const width = Number(svgElement.getAttribute("width")) || 1000;
+          const height = Number(svgElement.getAttribute("height")) || 700;
+          svgOriginalViewBox = { x: 0, y: 0, width, height };
+          setViewBox(svgOriginalViewBox);
+        }
+
+        if (mapFrame && svgOriginalViewBox.width > 0 && svgOriginalViewBox.height > 0) {
+          mapFrame.style.aspectRatio = svgOriginalViewBox.width + " / " + svgOriginalViewBox.height;
+        }
+        const initialViewBox = getInitialViewBox();
+        if (initialViewBox) {
+          setViewBox(initialViewBox);
+        }
+
+        svgElement.addEventListener("click", (event) => {
+          if (suppressNextShelfClick) return;
+          // Any clicked node (or parent group) with an id is treated as a focusable shelf/area.
+          const target = findShelfNode(event.target);
+          if (!target) return;
+          focusShelf(target);
+        });
+        svgElement.addEventListener("wheel", handleMapWheel, { passive: false });
+        svgElement.addEventListener("pointerdown", handleMapPointerDown);
+        svgElement.addEventListener("pointermove", handleMapPointerMove);
+        svgElement.addEventListener("pointerup", handleMapPointerEnd);
+        svgElement.addEventListener("pointercancel", handleMapPointerEnd);
+
+        mapFallback.classList.add("hidden");
+      } catch (error) {
+        svgContainer.innerHTML = "";
+        mapFallback.classList.remove("hidden");
+      }
     }
 
     function getZoneCandidates(product) {
       const name = normalizeValue(product.name);
       const category = normalizeValue(product.category);
 
+      // Map products/categories to SVG element IDs in the floorplan.
       if (name.includes("KAFFE")) return ["D25"];
       if (category.includes("KROPPSVARD")) return ["D17"];
       if (category.includes("GROV KEM")) return ["D18"];
@@ -1018,39 +1339,11 @@
       clearZoneHighlight();
     });
 
-    mapImage.addEventListener("load", () => {
-      mapFallback.classList.add("hidden");
+    resetMapView.addEventListener("click", () => {
+      clearZoneHighlight(true);
     });
 
-    mapImage.addEventListener("error", () => {
-      if (!savedMapTried && savedMap) {
-        savedMapTried = true;
-        mapImage.src = savedMap;
-        return;
-      }
-      mapFallback.classList.remove("hidden");
-    });
-
-    mapFile.addEventListener("change", (event) => {
-      const [file] = event.target.files;
-      if (!file) return;
-      const reader = new FileReader();
-      reader.onload = () => {
-        const dataUrl = String(reader.result || "");
-        if (!dataUrl) return;
-        localStorage.setItem(MAP_STORAGE_KEY, dataUrl);
-        mapImage.src = dataUrl;
-      };
-      reader.readAsDataURL(file);
-    });
-
-    if (!mapImage.complete || mapImage.naturalWidth === 0) {
-      mapFallback.classList.remove("hidden");
-    } else {
-      mapFallback.classList.add("hidden");
-    }
-
-    renderZoneOverlay();
+    initStoreSvg();
     loadProducts();
   </script>
 </body>
