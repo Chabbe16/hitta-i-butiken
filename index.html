@@ -712,6 +712,8 @@
     let activeZone = "";
     let svgElement = null;
     let svgOriginalViewBox = null;
+    // The "full map" viewBox shown on first load. This is the maximum zoom-out the user is allowed to reach.
+    let svgMinZoomViewBox = null;
     let activeShelfElement = null;
     let viewBoxAnimationId = 0;
     let suppressNextShelfClick = false;
@@ -831,14 +833,18 @@
       viewBoxAnimationId = 0;
     }
 
-    function clampViewBox(viewBox) {
+    function clampViewBox(viewBox, options = {}) {
       if (!svgOriginalViewBox || !viewBox) return viewBox;
 
+      const ignoreMinZoom = Boolean(options.ignoreMinZoom);
       const base = svgOriginalViewBox;
       const aspect = base.width / base.height;
+      const maxZoomOut = !ignoreMinZoom && svgMinZoomViewBox ? svgMinZoomViewBox : base;
       const minScale = 0.06;
-      let width = clamp(viewBox.width, base.width * minScale, base.width);
-      let height = clamp(viewBox.height, base.height * minScale, base.height);
+      const maxWidth = Math.min(base.width, maxZoomOut.width);
+      const maxHeight = Math.min(base.height, maxZoomOut.height);
+      let width = clamp(viewBox.width, base.width * minScale, maxWidth);
+      let height = clamp(viewBox.height, base.height * minScale, maxHeight);
 
       if (Math.abs(width / height - aspect) > 0.0001) {
         if (width / height > aspect) {
@@ -861,7 +867,7 @@
       };
     }
 
-    function getInitialViewBox() {
+    function computeInitialViewBox() {
       if (!svgOriginalViewBox) return null;
       const base = svgOriginalViewBox;
       const width = base.width * INITIAL_MAP_SCALE;
@@ -873,7 +879,17 @@
         y: centerY - height / 2,
         width,
         height
-      });
+      }, { ignoreMinZoom: true });
+    }
+
+    function getInitialViewBox() {
+      if (!svgOriginalViewBox) return null;
+      if (svgMinZoomViewBox) return { ...svgMinZoomViewBox };
+      const initial = computeInitialViewBox();
+      if (initial) {
+        svgMinZoomViewBox = { ...initial };
+      }
+      return initial;
     }
 
     function animateToViewBox(target, duration = 540) {
@@ -965,6 +981,16 @@
       const current = getCurrentViewBox();
       if (!current) return;
 
+      const zoomingOut = event.deltaY > 0;
+      if (zoomingOut) {
+        const maxZoomOut = svgMinZoomViewBox || svgOriginalViewBox;
+        const widthEpsilon = Math.max(maxZoomOut.width * 1e-4, 0.0001);
+        const heightEpsilon = Math.max(maxZoomOut.height * 1e-4, 0.0001);
+        if (current.width >= maxZoomOut.width - widthEpsilon && current.height >= maxZoomOut.height - heightEpsilon) {
+          return;
+        }
+      }
+
       stopViewBoxAnimation();
       const rect = svgElement.getBoundingClientRect();
       if (!rect.width || !rect.height) return;
@@ -983,6 +1009,15 @@
         width: nextWidth,
         height: nextHeight
       });
+
+      // If zoom-out was clamped, don't allow the pointer-anchoring math to "pan" the map.
+      if (
+        zoomingOut &&
+        Math.abs(nextViewBox.width - current.width) <= Math.max(current.width * 1e-6, 0.0001) &&
+        Math.abs(nextViewBox.height - current.height) <= Math.max(current.height * 1e-6, 0.0001)
+      ) {
+        return;
+      }
 
       setViewBox(nextViewBox);
     }
