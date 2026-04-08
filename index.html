@@ -683,7 +683,7 @@
     }
 
     /* ---------- Mobile-first responsive fixes ---------- */
-    @media (max-width: 767.98px) {
+    @media (max-width: 767.98px), (hover: none) and (pointer: coarse) {
       /* Larger tap targets on phones (44px+ is a common mobile guideline). */
       .icon-button,
       .close {
@@ -1071,8 +1071,12 @@
 
     // Mobile responsiveness: reserve space for bottom drawers so they don't cover the map.
     function isMobileViewport() {
+      // Prefer a “coarse pointer” heuristic (phones/tablets) and fallback to width if needed.
+      // This prevents mobile behavior from failing on devices with large CSS pixel widths.
+      if (window.matchMedia) {
+        return window.matchMedia("(max-width: 767.98px), (hover: none) and (pointer: coarse)").matches;
+      }
       // Fallback to innerWidth for older/embedded browsers that may not expose matchMedia.
-      if (window.matchMedia) return window.matchMedia("(max-width: 767.98px)").matches;
       return (window.innerWidth || 0) > 0 ? window.innerWidth < 768 : false;
     }
 
@@ -1084,6 +1088,14 @@
         (selectedPanel && selectedPanel.classList.contains("open"));
 
       appEl.classList.toggle("mobile-overlay-open", Boolean(anyOpen) && isMobileViewport());
+    }
+
+    // Mobile UX: when a drawer opens, ensure the map area is visible above it (so drawers don't feel like they “cover” the map).
+    function ensureMapVisibleForMobile() {
+      if (!isMobileViewport()) return;
+      const mapSection = document.querySelector(".map-section");
+      if (!mapSection || typeof mapSection.scrollIntoView !== "function") return;
+      mapSection.scrollIntoView({ block: "start", behavior: "smooth" });
     }
 
     window.addEventListener("resize", updateMobileOverlayState, { passive: true });
@@ -1237,13 +1249,14 @@
 
     function setSelectedPanelOpen(open) {
       if (!selectedPanel) return;
-      // Mobile: keep only one bottom drawer open at a time.
-      if (open && isMobileViewport()) {
+      // Keep only one drawer open at a time to avoid “colliding” panels.
+      if (open) {
         setSearchPanelOpen(false);
         setProductPanelOpen(false);
       }
       selectedPanel.classList.toggle("open", Boolean(open));
       updateMobileOverlayState();
+      if (open) ensureMapVisibleForMobile();
     }
 
     function renderSelectedProducts() {
@@ -1703,7 +1716,28 @@
         try {
           const box = node.getBBox();
           if (!box || box.width <= 0 || box.height <= 0) return null;
-          return box;
+
+          // Mobile optimization: some SVG exports use transforms on groups. `getBBox()` is often local-space,
+          // which can cause the focus camera to end up offset from the highlighted Hyll-ID.
+          // Convert bbox corners through `getCTM()` so we focus the true on-screen location.
+          if (typeof node.getCTM === "function") {
+            const m = node.getCTM();
+            if (m) {
+              const tx = (x, y) => ({ x: m.a * x + m.c * y + m.e, y: m.b * x + m.d * y + m.f });
+              const p1 = tx(box.x, box.y);
+              const p2 = tx(box.x + box.width, box.y);
+              const p3 = tx(box.x, box.y + box.height);
+              const p4 = tx(box.x + box.width, box.y + box.height);
+
+              const minX = Math.min(p1.x, p2.x, p3.x, p4.x);
+              const minY = Math.min(p1.y, p2.y, p3.y, p4.y);
+              const maxX = Math.max(p1.x, p2.x, p3.x, p4.x);
+              const maxY = Math.max(p1.y, p2.y, p3.y, p4.y);
+              return { x: minX, y: minY, width: Math.max(maxX - minX, 1), height: Math.max(maxY - minY, 1) };
+            }
+          }
+
+          return { x: box.x, y: box.y, width: box.width, height: box.height };
         } catch (error) {
           return null;
         }
@@ -2364,25 +2398,27 @@
     }
 
     function setSearchPanelOpen(open) {
-      // Mobile: keep only one bottom drawer open at a time.
-      if (open && isMobileViewport()) {
+      // Keep only one drawer open at a time to avoid “colliding” panels.
+      if (open) {
         setSelectedPanelOpen(false);
         setProductPanelOpen(false);
       }
       searchSidePanel.classList.toggle("open", open);
       appEl.classList.toggle("has-side-panel", open);
       updateMobileOverlayState();
+      if (open) ensureMapVisibleForMobile();
     }
 
     function setProductPanelOpen(open) {
       if (!panel) return;
-      // Mobile: keep only one bottom drawer open at a time.
-      if (open && isMobileViewport()) {
+      // Keep only one drawer open at a time to avoid “colliding” panels.
+      if (open) {
         setSearchPanelOpen(false);
         setSelectedPanelOpen(false);
       }
       panel.classList.toggle("open", Boolean(open));
       updateMobileOverlayState();
+      if (open) ensureMapVisibleForMobile();
     }
 
     function renderSearchResultBatch(reset) {
