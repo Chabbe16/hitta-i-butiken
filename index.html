@@ -1830,10 +1830,20 @@
       activeShelfElement = target;
       activeZone = String(target.id || "");
       activeShelfElement.classList.add("shelf-selected");
+      activeShelfElement.classList.add("shelf-focus");
+
       const focused = getFocusedViewBox(target);
       if (focused) {
+        ensureMapVisibleForMobile();
         animateToViewBox(focused, 560);
       }
+
+      const shelfElement = activeShelfElement;
+      window.setTimeout(() => {
+        if (shelfElement) {
+          shelfElement.classList.remove("shelf-focus");
+        }
+      }, SHELF_FOCUS_DURATION);
     }
 
     function handleMapWheel(event) {
