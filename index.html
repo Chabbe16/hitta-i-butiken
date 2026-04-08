@@ -552,6 +552,19 @@
       box-shadow: 0 2px 8px rgba(17, 24, 39, 0.08);
     }
 
+    /* Mobile/desktop: keep map control buttons visually consistent. */
+    .map-zoom-btn {
+      width: 38px;
+      height: 38px;
+      border-radius: 12px;
+      padding: 0;
+      display: grid;
+      place-items: center;
+      font-size: 1.2rem;
+      font-weight: 800;
+      line-height: 1;
+    }
+
     .marker {
       position: absolute;
       transform: translate(-50%, -100%);
@@ -747,6 +760,18 @@
         font-size: 0.95rem;
         padding: 10px 14px;
       }
+
+      .map-zoom-btn {
+        width: 44px;
+        height: 44px;
+        font-size: 1.35rem;
+      }
+
+      /* Make the map larger on phones (avoid “microscopic” map caused by desktop aspect-ratio). */
+      .map-frame {
+        aspect-ratio: auto;
+        height: min(62dvh, 560px);
+      }
     }
 
     @media (max-width: 480px) {
@@ -881,6 +906,9 @@
         <div class="map-frame">
           <div class="svg-container" id="svgContainer" aria-label="Interactive store map"></div>
           <div class="map-controls">
+            <!-- Mobile optimization: add explicit zoom buttons (since mouse wheel zoom isn't available on phones). -->
+            <button class="map-reset-btn map-zoom-btn" id="zoomOutMap" type="button" aria-label="Zooma ut">−</button>
+            <button class="map-reset-btn map-zoom-btn" id="zoomInMap" type="button" aria-label="Zooma in">+</button>
             <button class="map-reset-btn" id="resetMapView" type="button">Visa hela kartan</button>
           </div>
           <div class="map-fallback hidden" id="mapFallback">
@@ -966,6 +994,8 @@
     const mapFrame = document.querySelector(".map-frame");
     const svgContainer = document.getElementById("svgContainer");
     const resetMapView = document.getElementById("resetMapView");
+    const zoomInMap = document.getElementById("zoomInMap");
+    const zoomOutMap = document.getElementById("zoomOutMap");
     const mapFallback = document.getElementById("mapFallback");
     const toggleSelectedPanel = document.getElementById("toggleSelectedPanel");
     const selectedPanel = document.getElementById("selectedPanel");
@@ -1041,7 +1071,9 @@
 
     // Mobile responsiveness: reserve space for bottom drawers so they don't cover the map.
     function isMobileViewport() {
-      return window.matchMedia && window.matchMedia("(max-width: 767.98px)").matches;
+      // Fallback to innerWidth for older/embedded browsers that may not expose matchMedia.
+      if (window.matchMedia) return window.matchMedia("(max-width: 767.98px)").matches;
+      return (window.innerWidth || 0) > 0 ? window.innerWidth < 768 : false;
     }
 
     function updateMobileOverlayState() {
@@ -1604,8 +1636,10 @@
     function computeInitialViewBox() {
       if (!svgOriginalViewBox) return null;
       const base = svgOriginalViewBox;
-      const width = base.width * INITIAL_MAP_SCALE;
-      const height = base.height * INITIAL_MAP_SCALE;
+      // Mobile optimization: start more zoomed-in on phones so the map is readable immediately.
+      const initialScale = isMobileViewport() ? 0.86 : INITIAL_MAP_SCALE;
+      const width = base.width * initialScale;
+      const height = base.height * initialScale;
       const centerX = base.x + base.width / 2;
       const centerY = base.y + base.height / 2;
       return clampViewBox({
@@ -1813,6 +1847,43 @@
       }
 
       setViewBox(nextViewBox);
+    }
+
+    // Mobile optimization: button-driven zoom (and a reusable helper for gestures).
+    function zoomMapAtClientPoint(zoomFactor, clientX, clientY) {
+      if (!svgElement || !svgOriginalViewBox) return;
+      const current = getCurrentViewBox();
+      if (!current) return;
+
+      stopViewBoxAnimation();
+      const rect = svgElement.getBoundingClientRect();
+      if (!rect.width || !rect.height) return;
+
+      const pointerX = clamp(clientX - rect.left, 0, rect.width);
+      const pointerY = clamp(clientY - rect.top, 0, rect.height);
+      const worldX = current.x + (pointerX / rect.width) * current.width;
+      const worldY = current.y + (pointerY / rect.height) * current.height;
+
+      const nextWidth = current.width * zoomFactor;
+      const nextHeight = current.height * zoomFactor;
+      const nextViewBox = clampViewBox({
+        x: worldX - (pointerX / rect.width) * nextWidth,
+        y: worldY - (pointerY / rect.height) * nextHeight,
+        width: nextWidth,
+        height: nextHeight
+      });
+
+      setViewBox(nextViewBox);
+    }
+
+    function zoomMapByButton(direction) {
+      if (!svgElement) return;
+      const rect = svgElement.getBoundingClientRect();
+      const centerX = rect.left + rect.width / 2;
+      const centerY = rect.top + rect.height / 2;
+      // direction: "in" or "out"
+      const factor = direction === "in" ? 0.82 : 1.18;
+      zoomMapAtClientPoint(factor, centerX, centerY);
     }
 
     function handleMapPointerDown(event) {
@@ -2614,6 +2685,14 @@
     resetMapView.addEventListener("click", () => {
       clearZoneHighlight(true);
     });
+
+    // Mobile optimization: explicit zoom buttons (works even if pinch-to-zoom is unreliable in a given WebView).
+    if (zoomInMap) {
+      zoomInMap.addEventListener("click", () => zoomMapByButton("in"));
+    }
+    if (zoomOutMap) {
+      zoomOutMap.addEventListener("click", () => zoomMapByButton("out"));
+    }
 
     selectedProducts = loadSelectedProducts();
     renderSelectedProducts();
