@@ -1717,27 +1717,71 @@
           const box = node.getBBox();
           if (!box || box.width <= 0 || box.height <= 0) return null;
 
-          // Mobile optimization: some SVG exports use transforms on groups. `getBBox()` is often local-space,
-          // which can cause the focus camera to end up offset from the highlighted Hyll-ID.
-          // Convert bbox corners through `getCTM()` so we focus the true on-screen location.
+          const rawBox = { x: box.x, y: box.y, width: box.width, height: box.height };
+
+          // Some SVG exports place shelves inside transformed groups. In those cases `getBBox()` can be returned
+          // in local (pre-transform) coordinates and needs to be converted with `getCTM()`.
+          //
+          // However, in most browsers `getBBox()` is already in the element's current user space (i.e. transforms
+          // already applied). Converting again will "double transform" and can fling the camera outside the map.
+          // To avoid that, compute both and choose the one that best fits the original map viewBox.
+          let transformedBox = null;
           if (typeof node.getCTM === "function") {
             const m = node.getCTM();
             if (m) {
               const tx = (x, y) => ({ x: m.a * x + m.c * y + m.e, y: m.b * x + m.d * y + m.f });
-              const p1 = tx(box.x, box.y);
-              const p2 = tx(box.x + box.width, box.y);
-              const p3 = tx(box.x, box.y + box.height);
-              const p4 = tx(box.x + box.width, box.y + box.height);
+              const p1 = tx(rawBox.x, rawBox.y);
+              const p2 = tx(rawBox.x + rawBox.width, rawBox.y);
+              const p3 = tx(rawBox.x, rawBox.y + rawBox.height);
+              const p4 = tx(rawBox.x + rawBox.width, rawBox.y + rawBox.height);
 
               const minX = Math.min(p1.x, p2.x, p3.x, p4.x);
               const minY = Math.min(p1.y, p2.y, p3.y, p4.y);
               const maxX = Math.max(p1.x, p2.x, p3.x, p4.x);
               const maxY = Math.max(p1.y, p2.y, p3.y, p4.y);
-              return { x: minX, y: minY, width: Math.max(maxX - minX, 1), height: Math.max(maxY - minY, 1) };
+              transformedBox = {
+                x: minX,
+                y: minY,
+                width: Math.max(maxX - minX, 1),
+                height: Math.max(maxY - minY, 1)
+              };
             }
           }
 
-          return { x: box.x, y: box.y, width: box.width, height: box.height };
+          if (!svgOriginalViewBox || !transformedBox) return rawBox;
+
+          const base = svgOriginalViewBox;
+          const tolX = Math.max(base.width * 0.05, 1);
+          const tolY = Math.max(base.height * 0.05, 1);
+          const centerInside = (candidate) => {
+            const cx = candidate.x + candidate.width / 2;
+            const cy = candidate.y + candidate.height / 2;
+            return (
+              cx >= base.x - tolX &&
+              cx <= base.x + base.width + tolX &&
+              cy >= base.y - tolY &&
+              cy <= base.y + base.height + tolY
+            );
+          };
+          const intersectionArea = (candidate) => {
+            const ix1 = Math.max(candidate.x, base.x);
+            const iy1 = Math.max(candidate.y, base.y);
+            const ix2 = Math.min(candidate.x + candidate.width, base.x + base.width);
+            const iy2 = Math.min(candidate.y + candidate.height, base.y + base.height);
+            const w = ix2 - ix1;
+            const h = iy2 - iy1;
+            return w > 0 && h > 0 ? w * h : 0;
+          };
+
+          const rawInside = centerInside(rawBox);
+          const transformedInside = centerInside(transformedBox);
+          if (rawInside && !transformedInside) return rawBox;
+          if (!rawInside && transformedInside) return transformedBox;
+
+          const rawOverlap = intersectionArea(rawBox);
+          const transformedOverlap = intersectionArea(transformedBox);
+          if (transformedOverlap > rawOverlap) return transformedBox;
+          return rawBox;
         } catch (error) {
           return null;
         }
