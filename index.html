@@ -20,6 +20,9 @@
       --radius-lg: 18px;
       --radius-pill: 999px;
       --transition: 220ms ease;
+      /* Mobile: reserve space for bottom drawers + iOS safe-area. */
+      --safe-bottom: env(safe-area-inset-bottom, 0px);
+      --mobile-drawer-height: min(46dvh, 420px);
     }
 
     * {
@@ -43,7 +46,7 @@
       overflow-y: auto;
       -webkit-overflow-scrolling: touch;
       scroll-behavior: smooth;
-      padding-bottom: 120px;
+      padding-bottom: calc(120px + var(--safe-bottom));
       width: 100%;
     }
 
@@ -589,6 +592,11 @@
       transform: translateY(100%);
       transition: transform 280ms ease;
       padding: 14px 16px 24px;
+      /* Mobile usability: prevent the panel from covering the whole screen and allow scrolling inside. */
+      max-height: calc(100dvh - 120px);
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
+      padding-bottom: calc(24px + var(--safe-bottom));
     }
 
     .product-panel.open {
@@ -659,6 +667,105 @@
       height: 32px;
       font-size: 1rem;
       cursor: pointer;
+    }
+
+    /* ---------- Mobile-first responsive fixes ---------- */
+    @media (max-width: 767.98px) {
+      /* Larger tap targets on phones (44px+ is a common mobile guideline). */
+      .icon-button,
+      .close {
+        width: 44px;
+        height: 44px;
+        border-radius: 14px;
+        font-size: 1.05rem;
+      }
+
+      .search {
+        min-height: 44px;
+      }
+
+      .search input {
+        font-size: 1rem;
+      }
+
+      .category,
+      .map-reset-btn,
+      .load-more,
+      .mini-btn {
+        min-height: 44px;
+      }
+
+      /* On phones: side panels become bottom drawers to avoid blocking the map. */
+      .search-side-panel,
+      .selected-side-panel {
+        top: auto;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: var(--mobile-drawer-height);
+        border-left: none;
+        border-right: none;
+        border-top: 1px solid var(--border);
+        border-radius: 20px 20px 0 0;
+        box-shadow: var(--shadow-panel);
+        transform: translateY(103%);
+      }
+
+      .search-side-panel.open,
+      .selected-side-panel.open {
+        transform: translateY(0);
+      }
+
+      /* Product panel: match the same drawer sizing on mobile. */
+      .product-panel {
+        height: var(--mobile-drawer-height);
+        max-height: calc(100dvh - 120px);
+      }
+
+      /*
+        When any drawer is open, reserve space so the fixed drawer doesn't sit on top of the map.
+        JS toggles `.mobile-overlay-open` on `.app` when a panel is open on mobile.
+      */
+      .app.mobile-overlay-open {
+        padding-bottom: calc(var(--mobile-drawer-height) + var(--safe-bottom));
+      }
+
+      .app.mobile-overlay-open .map-section {
+        height: calc(100dvh - 270px - var(--mobile-drawer-height));
+        min-height: 220px;
+        max-height: calc(100dvh - 270px - var(--mobile-drawer-height));
+      }
+
+      /* Keep map controls reachable and slightly larger on mobile. */
+      .map-controls {
+        top: 8px;
+        right: 8px;
+      }
+
+      .map-reset-btn {
+        font-size: 0.95rem;
+        padding: 10px 14px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      :root {
+        --header-height: 90px;
+        --search-height: 50px;
+      }
+
+      .logo-text {
+        font-size: 1.25rem;
+      }
+
+      .logo-subtitle {
+        font-size: 0.78rem;
+      }
+
+      .content {
+        padding: 12px 10px 0;
+      }
     }
 
     @media (min-width: 768px) {
@@ -916,6 +1023,39 @@
       startViewBox: null
     };
 
+    // --- Mobile/touch improvements ---
+    // Pinch-to-zoom needs multi-touch pointer tracking (previously only single-pointer drag + mouse wheel zoom).
+    const touchGestureState = {
+      pointers: new Map(), // pointerId -> { x, y }
+      pinch: {
+        active: false,
+        moved: false,
+        startDistance: 0,
+        startViewBox: null,
+        startCenterClientX: 0,
+        startCenterClientY: 0,
+        startCenterWorldX: 0,
+        startCenterWorldY: 0
+      }
+    };
+
+    // Mobile responsiveness: reserve space for bottom drawers so they don't cover the map.
+    function isMobileViewport() {
+      return window.matchMedia && window.matchMedia("(max-width: 767.98px)").matches;
+    }
+
+    function updateMobileOverlayState() {
+      if (!appEl) return;
+      const anyOpen =
+        (panel && panel.classList.contains("open")) ||
+        (searchSidePanel && searchSidePanel.classList.contains("open")) ||
+        (selectedPanel && selectedPanel.classList.contains("open"));
+
+      appEl.classList.toggle("mobile-overlay-open", Boolean(anyOpen) && isMobileViewport());
+    }
+
+    window.addEventListener("resize", updateMobileOverlayState, { passive: true });
+
     const ZONE_POSITIONS = {
       Z1: [19, 3], Z2: [2, 26], Z3: [2, 75], Z4: [19, 97],
       Y1: [51, 4],
@@ -1065,7 +1205,13 @@
 
     function setSelectedPanelOpen(open) {
       if (!selectedPanel) return;
+      // Mobile: keep only one bottom drawer open at a time.
+      if (open && isMobileViewport()) {
+        setSearchPanelOpen(false);
+        setProductPanelOpen(false);
+      }
       selectedPanel.classList.toggle("open", Boolean(open));
+      updateMobileOverlayState();
     }
 
     function renderSelectedProducts() {
@@ -1677,16 +1823,110 @@
 
       event.preventDefault();
       stopViewBoxAnimation();
+
+      // Touch: support pinch-to-zoom (two pointers) + pan (one pointer).
+      if (event.pointerType === "touch") {
+        touchGestureState.pointers.set(event.pointerId, { x: event.clientX, y: event.clientY });
+        try {
+          svgElement.setPointerCapture(event.pointerId);
+        } catch (captureError) {
+        }
+
+        if (touchGestureState.pointers.size >= 2) {
+          const rect = svgElement.getBoundingClientRect();
+          if (!rect.width || !rect.height) return;
+
+          const points = Array.from(touchGestureState.pointers.values()).slice(0, 2);
+          const p1 = points[0];
+          const p2 = points[1];
+          const dx = p2.x - p1.x;
+          const dy = p2.y - p1.y;
+          const distance = Math.max(Math.hypot(dx, dy), 1);
+          const centerX = (p1.x + p2.x) / 2;
+          const centerY = (p1.y + p2.y) / 2;
+
+          const relCenterX = clamp(centerX - rect.left, 0, rect.width);
+          const relCenterY = clamp(centerY - rect.top, 0, rect.height);
+
+          touchGestureState.pinch.active = true;
+          touchGestureState.pinch.moved = false;
+          touchGestureState.pinch.startDistance = distance;
+          touchGestureState.pinch.startViewBox = { ...startViewBox };
+          touchGestureState.pinch.startCenterClientX = centerX;
+          touchGestureState.pinch.startCenterClientY = centerY;
+          touchGestureState.pinch.startCenterWorldX = startViewBox.x + (relCenterX / rect.width) * startViewBox.width;
+          touchGestureState.pinch.startCenterWorldY = startViewBox.y + (relCenterY / rect.height) * startViewBox.height;
+
+          // Cancel any in-progress single-touch drag when a second finger is added.
+          dragState.active = false;
+          dragState.moved = false;
+          dragState.pointerId = null;
+          dragState.startViewBox = null;
+          return;
+        }
+      }
+
+      // Mouse or single-touch pan.
       dragState.active = true;
       dragState.moved = false;
       dragState.pointerId = event.pointerId;
       dragState.startClientX = event.clientX;
       dragState.startClientY = event.clientY;
       dragState.startViewBox = { ...startViewBox };
-      svgElement.setPointerCapture(event.pointerId);
+      try {
+        svgElement.setPointerCapture(event.pointerId);
+      } catch (captureError) {
+      }
     }
 
     function handleMapPointerMove(event) {
+      if (!svgElement) return;
+
+      if (event.pointerType === "touch" && touchGestureState.pointers.has(event.pointerId)) {
+        touchGestureState.pointers.set(event.pointerId, { x: event.clientX, y: event.clientY });
+
+        if (touchGestureState.pinch.active && touchGestureState.pointers.size >= 2) {
+          event.preventDefault();
+          const rect = svgElement.getBoundingClientRect();
+          if (!rect.width || !rect.height) return;
+
+          const points = Array.from(touchGestureState.pointers.values()).slice(0, 2);
+          const p1 = points[0];
+          const p2 = points[1];
+          const dx = p2.x - p1.x;
+          const dy = p2.y - p1.y;
+          const distance = Math.max(Math.hypot(dx, dy), 1);
+          const scale = distance / Math.max(touchGestureState.pinch.startDistance, 1);
+          const start = touchGestureState.pinch.startViewBox;
+          if (!start || !Number.isFinite(scale) || scale <= 0) return;
+
+          const centerX = (p1.x + p2.x) / 2;
+          const centerY = (p1.y + p2.y) / 2;
+          const relCenterX = clamp(centerX - rect.left, 0, rect.width);
+          const relCenterY = clamp(centerY - rect.top, 0, rect.height);
+
+          const nextWidth = start.width / scale;
+          const nextHeight = start.height / scale;
+          const nextViewBox = clampViewBox({
+            x: touchGestureState.pinch.startCenterWorldX - (relCenterX / rect.width) * nextWidth,
+            y: touchGestureState.pinch.startCenterWorldY - (relCenterY / rect.height) * nextHeight,
+            width: nextWidth,
+            height: nextHeight
+          });
+
+          if (
+            Math.abs(scale - 1) > 0.01 ||
+            Math.abs(centerX - touchGestureState.pinch.startCenterClientX) > 4 ||
+            Math.abs(centerY - touchGestureState.pinch.startCenterClientY) > 4
+          ) {
+            touchGestureState.pinch.moved = true;
+          }
+
+          setViewBox(nextViewBox);
+          return;
+        }
+      }
+
       if (!dragState.active || dragState.pointerId !== event.pointerId || !svgElement) return;
       event.preventDefault();
       const rect = svgElement.getBoundingClientRect();
@@ -1710,6 +1950,35 @@
     }
 
     function handleMapPointerEnd(event) {
+      if (!svgElement) return;
+
+      if (event.pointerType === "touch") {
+        touchGestureState.pointers.delete(event.pointerId);
+      }
+
+      if (touchGestureState.pinch.active) {
+        try {
+          svgElement.releasePointerCapture(event.pointerId);
+        } catch (captureError) {
+        }
+
+        if (touchGestureState.pointers.size < 2) {
+          const wasPinched = touchGestureState.pinch.moved;
+          touchGestureState.pinch.active = false;
+          touchGestureState.pinch.moved = false;
+          touchGestureState.pinch.startDistance = 0;
+          touchGestureState.pinch.startViewBox = null;
+
+          if (wasPinched) {
+            suppressNextShelfClick = true;
+            setTimeout(() => {
+              suppressNextShelfClick = false;
+            }, 0);
+          }
+        }
+        return;
+      }
+
       if (!dragState.active || dragState.pointerId !== event.pointerId || !svgElement) return;
       try {
         svgElement.releasePointerCapture(event.pointerId);
@@ -1986,7 +2255,7 @@
       panelShelfIdValue.textContent = shelfId || "-";
       panelShelfIdValue.disabled = !shelfId;
 
-      panel.classList.add("open");
+      setProductPanelOpen(true);
       highlightZoneForProduct(product);
     }
     function renderCategories(items) {
@@ -2024,8 +2293,25 @@
     }
 
     function setSearchPanelOpen(open) {
+      // Mobile: keep only one bottom drawer open at a time.
+      if (open && isMobileViewport()) {
+        setSelectedPanelOpen(false);
+        setProductPanelOpen(false);
+      }
       searchSidePanel.classList.toggle("open", open);
       appEl.classList.toggle("has-side-panel", open);
+      updateMobileOverlayState();
+    }
+
+    function setProductPanelOpen(open) {
+      if (!panel) return;
+      // Mobile: keep only one bottom drawer open at a time.
+      if (open && isMobileViewport()) {
+        setSearchPanelOpen(false);
+        setSelectedPanelOpen(false);
+      }
+      panel.classList.toggle("open", Boolean(open));
+      updateMobileOverlayState();
     }
 
     function renderSearchResultBatch(reset) {
@@ -2278,7 +2564,7 @@
     });
 
     closePanel.addEventListener("click", () => {
-      panel.classList.remove("open");
+      setProductPanelOpen(false);
       activeProduct = null;
       activeShelfMatch = null;
       clearZoneHighlight(false);
@@ -2332,6 +2618,7 @@
     selectedProducts = loadSelectedProducts();
     renderSelectedProducts();
     setSelectedPanelOpen(false);
+    updateMobileOverlayState();
 
     initStoreSvg();
     loadShelves();
