@@ -58,7 +58,6 @@
     }
 
     .header-main {
-      position: relative;
       height: 100%;
       display: grid;
       place-items: center;
@@ -219,124 +218,6 @@
       transform: translateX(0);
     }
 
-    .selected-side-panel {
-      position: fixed;
-      top: 0;
-      left: 0;
-      bottom: 0;
-      width: min(92vw, 420px);
-      background: #ffffff;
-      border-right: 1px solid #e5e7eb;
-      box-shadow: 14px 0 28px rgba(17, 24, 39, 0.14);
-      transform: translateX(-103%);
-      transition: transform 240ms ease;
-      z-index: 54;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .selected-side-panel.open {
-      transform: translateX(0);
-    }
-
-    .selected-side-head {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 10px;
-      padding: 12px 12px 10px;
-      border-bottom: 1px solid #edf2f7;
-    }
-
-    .selected-side-title {
-      font-size: 1.12rem;
-      font-weight: 800;
-      color: #111827;
-    }
-
-    .selected-side-meta {
-      font-size: 0.95rem;
-      color: #6b7280;
-      padding: 8px 12px;
-      border-bottom: 1px solid #edf2f7;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 10px;
-    }
-
-    .selected-side-list {
-      list-style: none;
-      overflow-y: auto;
-      flex: 1;
-    }
-
-    .selected-item {
-      padding: 12px 12px;
-      border-bottom: 1px solid #f1f5f9;
-      display: grid;
-      gap: 6px;
-    }
-
-    .selected-item:last-child {
-      border-bottom: none;
-    }
-
-    .selected-item-name {
-      font-size: 0.98rem;
-      font-weight: 700;
-      color: #111827;
-      line-height: 1.2;
-    }
-
-    .selected-item-meta {
-      font-size: 0.9rem;
-      color: #6b7280;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-    }
-
-    .selected-item-actions {
-      display: flex;
-      gap: 8px;
-      flex-wrap: wrap;
-      margin-top: 4px;
-    }
-
-    .mini-btn {
-      border: 1px solid #cbd5e1;
-      background: #ffffff;
-      color: #111827;
-      border-radius: 999px;
-      padding: 7px 10px;
-      font-size: 0.84rem;
-      font-weight: 700;
-      cursor: pointer;
-    }
-
-    .mini-btn.danger {
-      border-color: #fecaca;
-      background: #fff1f2;
-      color: #991b1b;
-    }
-
-    .inline-link {
-      border: none;
-      background: transparent;
-      color: #2563eb;
-      text-decoration: underline;
-      padding: 0;
-      font: inherit;
-      cursor: pointer;
-    }
-
-    .inline-link[disabled] {
-      color: #9ca3af;
-      text-decoration: none;
-      cursor: default;
-    }
-
     .search-side-head {
       display: flex;
       align-items: center;
@@ -481,27 +362,14 @@
     }
 
     .svg-container .shelf-selected,
-    .svg-container .shelf-selected *,
-    .svg-container .shelf-bound,
-    .svg-container .shelf-bound *,
-    .svg-container .shelf-picked,
-    .svg-container .shelf-picked * {
+    .svg-container .shelf-selected * {
       fill: #22c55e !important;
       stroke: #166534 !important;
       transition: fill 220ms ease, stroke 220ms ease, filter 220ms ease;
       filter: drop-shadow(0 0 8px rgba(34, 197, 94, 0.65));
     }
 
-    .svg-container .shelf-selected text,
-    .svg-container .shelf-bound text,
-    .svg-container .shelf-picked text {
-      fill: #064e3b !important;
-      stroke: none !important;
-    }
-
-    .svg-container text.shelf-selected,
-    .svg-container text.shelf-bound,
-    .svg-container text.shelf-picked {
+    .svg-container .shelf-selected text {
       fill: #064e3b !important;
       stroke: none !important;
     }
@@ -745,7 +613,6 @@
   <main class="app">
     <header class="header">
       <div class="header-main">
-        <button class="icon-button" id="toggleSelectedPanel" type="button" aria-label="Valda produkter" style="position: absolute; left: 12px; top: 12px;">≡</button>
         <div class="logo">
           <span class="logo-text">Hitta i Butiken</span>
           <p class="logo-subtitle">Sök efter produkter för att hitta dem på kartan</p>
@@ -760,7 +627,7 @@
             <path d="M11 18a7 7 0 1 1 0-14 7 7 0 0 1 0 14Z" stroke="#6B7280" stroke-width="2"/>
             <path d="m20 20-3.5-3.5" stroke="#6B7280" stroke-width="2" stroke-linecap="round"/>
           </svg>
-          <input id="searchInput" type="text" placeholder="Sök efter produktnamn, EAN-nummer eller Artikelnummer..." autocomplete="off" />
+          <input id="searchInput" type="text" placeholder="Sök efter produktnamn, EAN-nummer eller kategori..." autocomplete="off" />
         </label>
       </div>
 
@@ -784,21 +651,9 @@
     </section>
   </main>
 
-  <aside class="selected-side-panel" id="selectedPanel" aria-label="Valda produkter">
-    <div class="selected-side-head">
-      <h3 class="selected-side-title">Valda produkter</h3>
-      <button class="close" id="closeSelectedPanel" aria-label="Stäng panel">X</button>
-    </div>
-    <div class="selected-side-meta">
-      <span id="selectedCount">0 valda</span>
-      <button class="mini-btn danger" id="clearSelectedList" type="button">Rensa</button>
-    </div>
-    <ul class="selected-side-list" id="selectedList"></ul>
-  </aside>
-
   <aside class="search-side-panel" id="searchSidePanel" aria-label="Sökresultat">
     <div class="search-side-head">
-      <h3 class="search-side-title" id="searchSideTitle">Sökresultat</h3>
+      <h3 class="search-side-title">Sökresultat</h3>
       <button class="close" id="closeSearchPanel" aria-label="Stäng sökresultat">X</button>
     </div>
     <p class="search-side-meta" id="searchResultCount">0 träffar</p>
@@ -812,23 +667,10 @@
       <div>
         <h2 class="panel-title" id="panelName">Organic Avocados</h2>
         <p class="panel-meta">
-          <span>Benämning: <span id="panelBenamning">-</span></span>
+          <span id="panelCategory">Category: Produce</span>
           <span id="panelEan">EAN: 0000000000000</span>
         </p>
-        <p class="panel-meta">
-          <span>Artikelnr: <span id="panelArtikelnr">-</span></span>
-          <span>Expo: <span id="panelExpo">-</span></span>
-          <span>Kategori: <span id="panelKategori">-</span></span>
-        </p>
-        <p class="panel-meta">
-          <span>Filnamn: <span id="panelFilnamn">-</span></span>
-          <span>Sektion: <span id="panelSektion">-</span></span>
-          <span>Hyll-ID: <button class="inline-link" id="panelShelfIdValue" type="button" disabled>-</button></span>
-        </p>
         <span class="status" id="panelStatus">tillgänglig</span>
-        <div style="margin-top: 10px; display: flex; gap: 10px; flex-wrap: wrap;">
-          <button class="map-reset-btn" id="addSelectedProduct" type="button" title="Lägg till produkten i din lista">Lägg till</button>
-        </div>
       </div>
       <button class="close" id="closePanel" aria-label="Close panel">X</button>
     </div>
@@ -846,44 +688,22 @@
     const searchSideList = document.getElementById("searchSideList");
     const loadMoreBtn = document.getElementById("loadMoreBtn");
     const panelName = document.getElementById("panelName");
-    const panelBenamning = document.getElementById("panelBenamning");
+    const panelCategory = document.getElementById("panelCategory");
     const panelEan = document.getElementById("panelEan");
     const panelStatus = document.getElementById("panelStatus");
-    const panelShelfIdValue = document.getElementById("panelShelfIdValue");
-    const panelArtikelnr = document.getElementById("panelArtikelnr");
-    const panelExpo = document.getElementById("panelExpo");
-    const panelKategori = document.getElementById("panelKategori");
-    const panelFilnamn = document.getElementById("panelFilnamn");
-    const panelSektion = document.getElementById("panelSektion");
-    const addSelectedProduct = document.getElementById("addSelectedProduct");
     const mapFrame = document.querySelector(".map-frame");
     const svgContainer = document.getElementById("svgContainer");
     const resetMapView = document.getElementById("resetMapView");
     const mapFallback = document.getElementById("mapFallback");
-    const toggleSelectedPanel = document.getElementById("toggleSelectedPanel");
-    const selectedPanel = document.getElementById("selectedPanel");
-    const closeSelectedPanel = document.getElementById("closeSelectedPanel");
-    const clearSelectedList = document.getElementById("clearSelectedList");
-    const selectedList = document.getElementById("selectedList");
-    const selectedCount = document.getElementById("selectedCount");
-    const searchSideTitle = document.getElementById("searchSideTitle");
     // Put your exported floorplan SVG in the project root and keep this path in sync.
     const STORE_SVG_PATH = "./%C3%84lmhult%20-%20250902.svg";
-    const DEFAULT_SHELVES_PATH = "./Hyll%C3%B6vers%C3%A4ttnnig-json.json";
-    const DEFAULT_PRODUCTS_PATH = "./planogram_sammanst%C3%A4llning-json.json";
     // Lower value = more zoom-in on first load.
     const INITIAL_MAP_SCALE = 0.60;
     // Negative value nudges the initial map view left.
     const INITIAL_MAP_OFFSET_X = -0.08;
-    // Center the focus camera when zooming to a shelf ID.
-    const FOCUS_OFFSET_X = 0;
-    const FOCUS_OFFSET_Y = 0;
     const ALL_CATEGORY = "ALLT";
 
     let products = [];
-    let shelves = [];
-    let activeProduct = null;
-    let activeShelfMatch = null;
     let activeCategory = ALL_CATEGORY;
     let activeQuery = "";
     let activeSearchResults = [];
@@ -891,22 +711,12 @@
     const RESULTS_PAGE_SIZE = 30;
     let activeZone = "";
     let svgElement = null;
-    let svgShelfIndex = new Map();
     let svgOriginalViewBox = null;
     // The "full map" viewBox shown on first load. This is the maximum zoom-out the user is allowed to reach.
     let svgMinZoomViewBox = null;
     let activeShelfElement = null;
-    let boundZoneIds = new Set();
-    let pickedZoneIds = new Set();
-    let pickedShelfIds = new Set();
     let viewBoxAnimationId = 0;
     let suppressNextShelfClick = false;
-
-    const SELECTED_PRODUCTS_KEY = "selectedProducts:v1";
-    let selectedProducts = [];
-    let productShelfIndex = new Map();
-    let shelvesReady = false;
-    let productsReady = false;
     const dragState = {
       active: false,
       moved: false,
@@ -933,42 +743,12 @@
     };
 
     function canonicalKey(value) {
-      return fixMojibake(String(value || ""))
+      return String(value || "")
         .toLowerCase()
         .normalize("NFD")
         .replace(/[\u0300-\u036f]/g, "")
         .replace(/[^a-z0-9/]/g, "");
     }
-
-    function fixMojibake(value) {
-      const text = String(value || "");
-      if (!text.includes("Ãƒ") && !text.includes("Ã‚")) return text;
-      try {
-        return decodeURIComponent(escape(text));
-      } catch (error) {
-        return text;
-      }
-    }
-
-    // Override the strict mojibake heuristic above so keys like "BenÃ¤mning" also get fixed.
-    fixMojibake = function fixMojibake(value) {
-      const text = String(value || "");
-      let maybeMojibake = false;
-      for (let i = 0; i < text.length; i += 1) {
-        const code = text.charCodeAt(i);
-        if (code === 194 || code === 195) {
-          maybeMojibake = true;
-          break;
-        }
-      }
-      if (!maybeMojibake) return text;
-      try {
-        const decoded = decodeURIComponent(escape(text));
-        return decoded.includes("�") ? text : decoded;
-      } catch (error) {
-        return text;
-      }
-    };
 
     function pickField(item, targets) {
       const keys = Object.keys(item || {});
@@ -983,60 +763,15 @@
       return "";
     }
 
-    function hasField(item, targets) {
-      const keys = Object.keys(item || {});
-      for (const key of keys) {
-        const parsed = canonicalKey(key);
-        for (const target of targets) {
-          if (parsed === target || parsed.includes(target)) {
-            return true;
-          }
-        }
-      }
-      return false;
-    }
-
-    function normalizeShelfIdValue(value) {
-      const shelfId = fixMojibake(String(value || "")).trim();
-      if (!shelfId) return "";
-      if (shelfId === "-" || shelfId === "—") return "";
-      if (shelfId.length === 1 && shelfId.charCodeAt(0) === 8212) return "";
-      if (shelfId.toUpperCase() === "C") return "";
-      if (/^c\s*[-_ ]?\s*kod/i.test(shelfId)) return "";
-      return shelfId;
-    }
     function normalizeProduct(item) {
-      const name = fixMojibake(String(pickField(item, ["benamning", "produktnamn", "namn", "name"])) ).trim();
-      const category = fixMojibake(String(pickField(item, ["kategori", "category"])) ).trim();
-      const ean = String(pickField(item, ["ean/plu", "ean", "plu"])) .trim();
-      const artikelnr = String(pickField(item, ["artikelnr", "artnr", "artikelnummer"])) .trim();
-      const expo = fixMojibake(String(pickField(item, ["expo"])) ).trim();
-      const section = String(pickField(item, ["sektion", "section", "sektion/disk", "sektiondisk"])) .trim();
-      const planogramFile = fixMojibake(String(pickField(item, ["filnamn", "planogram-fil", "planogramfil", "planogram"])) ).trim();
-      const hasHyllIdField = hasField(item, ["hyll-id", "hyllid", "shelfid", "shelf-id"]);
-      const hyllId = fixMojibake(String(pickField(item, ["hyll-id", "hyllid", "shelfid", "shelf-id"])) ).trim();
       return {
-        name,
-        category,
-        ean,
-        artikelnr,
-        expo,
-        section,
-        planogramFile,
-        hasHyllIdField,
-        hyllId,
-        sellable: String(pickField(item, ["saljbar", "sljbar", "sellable"])) .trim()
+        name: String(pickField(item, ["namn", "name"])).trim(),
+        category: String(pickField(item, ["kategori", "category"])).trim(),
+        ean: String(pickField(item, ["ean/plu", "ean", "plu"])).trim(),
+        sellable: String(pickField(item, ["saljbar", "sljbar", "sellable"])).trim()
       };
     }
 
-    function normalizeShelf(item) {
-      const shelfId = fixMojibake(String(pickField(item, ["hyll-id", "hyllid", "shelfid", "shelf-id"])) ).trim();
-      const category = fixMojibake(String(pickField(item, ["kategori", "category"])) ).trim();
-      const section = String(pickField(item, ["sektion/disk", "sektiondisk", "sektion", "section", "disk"])) .trim();
-      const planogramFile = fixMojibake(String(pickField(item, ["planogram-fil", "planogramfil", "filnamn", "planogram"])) ).trim();
-      const comment = fixMojibake(String(pickField(item, ["kommentar", "comment"])) ).trim();
-      return { shelfId, category, section, planogramFile, comment };
-    }
     function escapeHtml(value) {
       return String(value || "")
         .replace(/&/g, "&amp;")
@@ -1046,334 +781,11 @@
         .replace(/'/g, "&#39;");
     }
 
-    function loadSelectedProducts() {
-      try {
-        const raw = localStorage.getItem(SELECTED_PRODUCTS_KEY);
-        const parsed = raw ? JSON.parse(raw) : [];
-        return Array.isArray(parsed) ? parsed : [];
-      } catch (error) {
-        return [];
-      }
-    }
-
-    function saveSelectedProducts(list) {
-      try {
-        localStorage.setItem(SELECTED_PRODUCTS_KEY, JSON.stringify(list || []));
-      } catch (error) {
-      }
-    }
-
-    function setSelectedPanelOpen(open) {
-      if (!selectedPanel) return;
-      selectedPanel.classList.toggle("open", Boolean(open));
-    }
-
-    function renderSelectedProducts() {
-      if (!selectedList || !selectedCount) return;
-      selectedCount.textContent = (selectedProducts.length || 0) + " valda";
-
-      if (!selectedProducts.length) {
-        selectedList.innerHTML = "<li class=\"selected-item\"><div class=\"selected-item-name\">Inga valda produkter</div><div class=\"selected-item-meta\">Lägg till från en produkt för att bygga en inköpslista.</div></li>";
-        return;
-      }
-
-      selectedList.innerHTML = selectedProducts
-        .map((p, index) => {
-          const safeName = escapeHtml(p.name || "Okänd produkt");
-          const safeEan = escapeHtml(p.ean || "");
-          const safeShelf = escapeHtml(p.shelfId || "-");
-          const safeSection = escapeHtml(p.section || "-");
-          return (
-            "<li class=\"selected-item\" data-selected-index=\"" + String(index) + "\">" +
-              "<div class=\"selected-item-name\">" + safeName + "</div>" +
-              "<div class=\"selected-item-meta\">" +
-                "<span>EAN: " + safeEan + "</span>" +
-                "<span>Hyll: " + safeShelf + "</span>" +
-                "<span>Sektion: " + safeSection + "</span>" +
-              "</div>" +
-              "<div class=\"selected-item-actions\">" +
-                "<button class=\"mini-btn\" type=\"button\" data-action=\"view\">Visa</button>" +
-                "<button class=\"mini-btn danger\" type=\"button\" data-action=\"remove\">Ta bort</button>" +
-              "</div>" +
-            "</li>"
-          );
-        })
-        .join("");
-    }
-
-    function addProductToSelected(product, match) {
-      const item = product || null;
-      if (!item) return;
-      const ean = String(item.ean || "").trim();
-      if (!ean) return;
-      if (selectedProducts.some((p) => String(p.ean || "").trim() === ean)) {
-        return;
-      }
-      const shelfId = item.hasHyllIdField
-        ? normalizeShelfIdValue(item.hyllId)
-        : (match && match.shelf ? String(match.shelf.shelfId || "").trim() : "");
-      selectedProducts = [{ ...item, shelfId }, ...selectedProducts];
-      saveSelectedProducts(selectedProducts);
-      renderSelectedProducts();
-      refreshPickedZoneHighlights();
-      setSelectedPanelOpen(true);
-    }
-
-    function removeSelectedByIndex(index) {
-      const i = Number(index);
-      if (!Number.isFinite(i) || i < 0 || i >= selectedProducts.length) return;
-      selectedProducts = selectedProducts.filter((_, idx) => idx !== i);
-      saveSelectedProducts(selectedProducts);
-      renderSelectedProducts();
-      refreshPickedZoneHighlights();
-    }
-
-    function clearSelectedProducts() {
-      selectedProducts = [];
-      saveSelectedProducts(selectedProducts);
-      renderSelectedProducts();
-      refreshPickedZoneHighlights();
-    }
-
     function normalizeValue(value) {
       return String(value || "")
         .toUpperCase()
         .normalize("NFD")
         .replace(/[\u0300-\u036f]/g, "");
-    }
-
-    function normalizeMatchKey(value) {
-      return fixMojibake(String(value || ""))
-        .toLowerCase()
-        .normalize("NFD")
-        .replace(/[\u0300-\u036f]/g, "")
-        .replace(/[^a-z0-9]+/g, " ")
-        .trim();
-    }
-
-    function normalizeFilenameKey(value) {
-      const raw = fixMojibake(String(value || "")).trim();
-      if (!raw) return "";
-      const withSlashes = raw.replace(/\\/g, "/");
-      const base = withSlashes.split("/").pop() || "";
-      const withoutExt = base.replace(/\.(pdf|xlsx|xls|json|csv)$/i, "");
-      return withoutExt
-        .toLowerCase()
-        .normalize("NFD")
-        .replace(/[\u0300-\u036f]/g, "")
-        .replace(/[^a-z0-9]+/g, " ")
-        .trim();
-    }
-
-    function normalizeSectionKey(value) {
-      const raw = String(value ?? "").trim();
-      if (!raw) return null;
-      const num = Number(raw.replace(",", "."));
-      if (Number.isFinite(num) && Number.isInteger(num)) return num;
-      const match = raw.match(/(\d+)/);
-      return match ? Number(match[1]) : null;
-    }
-
-    function makeShelfJoinKey(planogramFile, section) {
-      const fileKey = normalizeFilenameKey(planogramFile);
-      const sectionKey = normalizeSectionKey(section);
-      if (!fileKey || sectionKey == null) return "";
-      return fileKey + "||" + String(sectionKey);
-    }
-
-    let shelfKeyIndex = new Map();
-    function rebuildShelfKeyIndex() {
-      const index = new Map();
-      for (const shelf of shelves) {
-        const key = makeShelfJoinKey(shelf.planogramFile, shelf.section);
-        if (!key) continue;
-        if (!index.has(key)) index.set(key, []);
-        index.get(key).push(shelf);
-      }
-
-      // Safety: a single (file+section) should map to exactly one Hyll-ID.
-      for (const [key, matches] of index.entries()) {
-        if (matches.length > 1) {
-          const ids = matches.map((m) => m.shelfId).filter(Boolean);
-          console.error(
-            "Ambiguous shelf mapping: multiple Hyll-ID share the same (Planogram-fil + Sektion/Disk):",
-            { key, shelfIds: ids }
-          );
-        }
-      }
-
-      shelfKeyIndex = index;
-    }
-
-    function tokenSimilarity(a, b) {
-      const aa = normalizeMatchKey(a).split(/\s+/).filter(Boolean);
-      const bb = normalizeMatchKey(b).split(/\s+/).filter(Boolean);
-      if (!aa.length || !bb.length) return 0;
-      const setA = new Set(aa.map((t) => (t.endsWith("s") ? t.slice(0, -1) : t)));
-      const setB = new Set(bb.map((t) => (t.endsWith("s") ? t.slice(0, -1) : t)));
-      let intersect = 0;
-      for (const t of setA) {
-        if (setB.has(t)) intersect += 1;
-      }
-      const union = new Set([...setA, ...setB]).size || 1;
-      return intersect / union;
-    }
-
-    function strictShelfMatchForProduct(product) {
-      if (!product) return null;
-      if (!shelves.length) return null;
-
-      const key = makeShelfJoinKey(product.planogramFile, product.section);
-      if (!key) return null;
-
-      const matches = shelfKeyIndex.get(key) || [];
-      if (matches.length === 0) return null;
-      if (matches.length === 1) return { shelf: matches[0], reason: "planogram+section", score: 1 };
-
-      // Critical safety: never default to the "first" match when data is ambiguous.
-      const ids = matches.map((m) => m.shelfId).filter(Boolean);
-      throw new Error(
-        "Ambiguous product -> shelf match. Multiple Hyll-ID match the same (Filnamn + Sektion): " +
-        JSON.stringify({ key, shelfIds: ids })
-      );
-    }
-
-    function bestShelfMatchForProduct(product) {
-      try {
-        return strictShelfMatchForProduct(product);
-      } catch (error) {
-        console.error(error);
-        return null;
-      }
-    }
-
-    const SHELF_SVG_MAP_KEY = "shelfSvgMap:v1";
-    function loadShelfSvgMap() {
-      try {
-        const raw = localStorage.getItem(SHELF_SVG_MAP_KEY);
-        const parsed = raw ? JSON.parse(raw) : {};
-        return parsed && typeof parsed === "object" ? parsed : {};
-      } catch (error) {
-        return {};
-      }
-    }
-
-    function saveShelfSvgMap(map) {
-      try {
-        localStorage.setItem(SHELF_SVG_MAP_KEY, JSON.stringify(map || {}));
-      } catch (error) {
-      }
-    }
-
-    function getSvgTargetIdForShelf(shelf) {
-      if (!shelf || !shelf.shelfId) return "";
-      const map = loadShelfSvgMap();
-      return String(map[shelf.shelfId] || "").trim();
-    }
-
-    function setZoneBound(zoneId, bound) {
-      const key = String(zoneId || "").trim();
-      if (!key || !svgElement) return;
-      const target = svgElement.querySelector("#" + escapeCssId(key));
-      if (!target) return;
-      target.classList.toggle("shelf-bound", Boolean(bound));
-    }
-
-    function refreshBoundZoneHighlights() {
-      if (!svgElement) return;
-
-      for (const zoneId of boundZoneIds) {
-        setZoneBound(zoneId, false);
-      }
-
-      const map = loadShelfSvgMap();
-      const next = new Set(
-        Object.values(map || {})
-          .map((value) => String(value || "").trim())
-          .filter(Boolean)
-      );
-
-      for (const zoneId of next) {
-        setZoneBound(zoneId, true);
-      }
-      boundZoneIds = next;
-    }
-
-    function setZonePicked(zoneId, picked) {
-      const key = String(zoneId || "").trim();
-      if (!key || !svgElement) return;
-      const target = svgElement.querySelector("#" + escapeCssId(key));
-      if (!target) return;
-      target.classList.toggle("shelf-picked", Boolean(picked));
-    }
-
-    function setShelfIdPicked(shelfId, picked) {
-      const key = String(shelfId || "").trim();
-      if (!key || !svgElement) return;
-
-      const fromIndex = svgShelfIndex.get(key);
-      if (fromIndex) {
-        fromIndex.classList.toggle("shelf-picked", Boolean(picked));
-      }
-
-      const direct = svgElement.querySelector("#" + escapeCssId(key));
-      if (direct) {
-        direct.classList.toggle("shelf-picked", Boolean(picked));
-      }
-    }
-
-    function refreshPickedZoneHighlights() {
-      if (!svgElement) return;
-
-      for (const zoneId of pickedZoneIds) {
-        setZonePicked(zoneId, false);
-      }
-      for (const shelfId of pickedShelfIds) {
-        setShelfIdPicked(shelfId, false);
-      }
-
-      const map = loadShelfSvgMap();
-      const nextZones = new Set();
-      const nextShelves = new Set();
-      for (const item of selectedProducts) {
-        const shelfId = String(item && item.shelfId ? item.shelfId : "").trim();
-        if (!shelfId) continue;
-        const zoneId = String(map && map[shelfId] ? map[shelfId] : "").trim();
-        if (zoneId) {
-          nextZones.add(zoneId);
-        } else {
-          nextShelves.add(shelfId);
-        }
-      }
-
-      for (const zoneId of nextZones) {
-        setZonePicked(zoneId, true);
-      }
-      for (const shelfId of nextShelves) {
-        setShelfIdPicked(shelfId, true);
-      }
-      pickedZoneIds = nextZones;
-      pickedShelfIds = nextShelves;
-    }
-
-    function clearAllHighlights(resetZoom = true) {
-      clearZoneHighlight(resetZoom);
-
-      if (svgElement) {
-        for (const zoneId of boundZoneIds) {
-          setZoneBound(zoneId, false);
-        }
-        for (const zoneId of pickedZoneIds) {
-          setZonePicked(zoneId, false);
-        }
-        for (const shelfId of pickedShelfIds) {
-          setShelfIdPicked(shelfId, false);
-        }
-      }
-
-      boundZoneIds = new Set();
-      pickedZoneIds = new Set();
-      pickedShelfIds = new Set();
     }
 
     function zoneRange(prefix, start, end) {
@@ -1517,67 +929,8 @@
 
     function getFocusedViewBox(target) {
       if (!svgOriginalViewBox || !target) return null;
-
-      const getBBoxSafe = (node) => {
-        if (!node || typeof node.getBBox !== "function") return null;
-        try {
-          const box = node.getBBox();
-          if (!box || box.width <= 0 || box.height <= 0) return null;
-          return box;
-        } catch (error) {
-          return null;
-        }
-      };
-
-      const getTextAnchorBox = (textNode) => {
-        if (!textNode) return null;
-        const tag = String(textNode.tagName || "").toLowerCase();
-        if (tag !== "text" && tag !== "tspan") return null;
-
-        const parseNum = (value) => {
-          const n = Number(String(value || "").trim());
-          return Number.isFinite(n) ? n : null;
-        };
-
-        let x = parseNum(textNode.getAttribute && textNode.getAttribute("x"));
-        let y = parseNum(textNode.getAttribute && textNode.getAttribute("y"));
-
-        if ((x === null || y === null) && textNode.querySelector) {
-          const tspan = textNode.querySelector("tspan");
-          if (tspan) {
-            if (x === null) x = parseNum(tspan.getAttribute("x"));
-            if (y === null) y = parseNum(tspan.getAttribute("y"));
-          }
-        }
-
-        if (x === null || y === null) return null;
-        return { x, y, width: 1, height: 1 };
-      };
-
-      const getClientRectAnchorBox = (node) => {
-        if (!node || !svgElement) return null;
-        if (typeof node.getBoundingClientRect !== "function") return null;
-        const nodeRect = node.getBoundingClientRect();
-        const svgRect = svgElement.getBoundingClientRect();
-        const current = getCurrentViewBox();
-        if (!current) return null;
-        if (!nodeRect.width || !nodeRect.height || !svgRect.width || !svgRect.height) return null;
-
-        const centerClientX = nodeRect.left + nodeRect.width / 2;
-        const centerClientY = nodeRect.top + nodeRect.height / 2;
-        const relX = (centerClientX - svgRect.left) / svgRect.width;
-        const relY = (centerClientY - svgRect.top) / svgRect.height;
-        const worldX = current.x + relX * current.width;
-        const worldY = current.y + relY * current.height;
-        return { x: worldX, y: worldY, width: 1, height: 1 };
-      };
-
-      const box =
-        getBBoxSafe(target) ||
-        getTextAnchorBox(target) ||
-        getClientRectAnchorBox(target);
-
-      if (!box) return null;
+      const box = target.getBBox();
+      if (!box || box.width <= 0 || box.height <= 0) return null;
 
       const base = svgOriginalViewBox;
       const aspect = base.width / base.height;
@@ -1603,8 +956,8 @@
       const maxY = base.y + base.height - focusHeight;
 
       return {
-        x: clamp(centerX - focusWidth / 2 + focusWidth * FOCUS_OFFSET_X, minX, maxX),
-        y: clamp(centerY - focusHeight / 2 + focusHeight * FOCUS_OFFSET_Y, minY, maxY),
+        x: clamp(centerX - focusWidth / 2, minX, maxX),
+        y: clamp(centerY - focusHeight / 2, minY, maxY),
         width: focusWidth,
         height: focusHeight
       };
@@ -1729,67 +1082,14 @@
         }, 0);
       }
     }
+
     function escapeCssId(id) {
       if (window.CSS && typeof window.CSS.escape === "function") {
         return window.CSS.escape(id);
       }
-      return String(id).replace(/([ !\"#$%&'()*+,./:;<=>?@[\\\]^`{|}~])/g, "\\$1");
+      return String(id).replace(/([ !"#$%&'()*+,./:;<=>?@[\\\]^`{|}~])/g, "\\$1");
     }
 
-    function isLikelyShelfIdText(value) {
-      const v = String(value || "").trim();
-      if (v.length < 3 || v.length > 16) return false;
-      if (/\s/.test(v)) return false;
-      if (!/[0-9]/.test(v)) return false;
-      if (!/[A-Za-zÅÄÖåäö]/.test(v)) return false;
-      return /^[A-Za-zÅÄÖåäö0-9_-]+$/.test(v);
-    }
-
-    function indexSvgShelfTargets() {
-      svgShelfIndex = new Map();
-      if (!svgElement) return;
-
-      // Prefer explicit element IDs.
-      svgElement.querySelectorAll("[id]").forEach((el) => {
-        const id = String(el.id || "").trim();
-        if (isLikelyShelfIdText(id) && !svgShelfIndex.has(id)) {
-          svgShelfIndex.set(id, el);
-        }
-      });
-
-      // Inkscape labels can also contain shelf IDs.
-      svgElement.querySelectorAll("[inkscape\\:label]").forEach((el) => {
-        const label = String(el.getAttribute("inkscape:label") || "").trim();
-        if (isLikelyShelfIdText(label) && !svgShelfIndex.has(label)) {
-          svgShelfIndex.set(label, el);
-        }
-      });
-
-      // Most commonly: shelf IDs exist as white text labels in the SVG.
-      svgElement.querySelectorAll("text").forEach((el) => {
-        const label = String(el.textContent || "").trim();
-        if (!isLikelyShelfIdText(label)) return;
-        if (!svgShelfIndex.has(label)) {
-          svgShelfIndex.set(label, el);
-        }
-      });
-    }
-
-    function highlightShelfIdOnMap(shelfId) {
-      const key = String(shelfId || "").trim();
-      if (!key || !svgElement) return false;
-      const fromIndex = svgShelfIndex.get(key);
-      if (fromIndex) {
-        focusShelf(fromIndex);
-        return true;
-      }
-      const direct = svgElement.querySelector("#" + escapeCssId(key));
-      if (direct) {
-        focusShelf(direct);
-        return true;
-      }
-      return false;
-    }
     function highlightZone(zone) {
       if (!zone || !svgElement) {
         clearZoneHighlight(false);
@@ -1821,7 +1121,6 @@
         const svgText = await response.text();
         svgContainer.innerHTML = svgText;
         svgElement = svgContainer.querySelector("svg");
-        indexSvgShelfTargets();
         if (!svgElement) throw new Error("No <svg> root in file");
 
         svgElement.removeAttribute("width");
@@ -1852,20 +1151,6 @@
           const target = findShelfNode(event.target);
           if (!target) return;
           focusShelf(target);
-
-          const label = String(event.target && event.target.textContent ? event.target.textContent : "").trim();
-          if (isLikelyShelfIdText(label)) {
-            showShelfProducts(label);
-            return;
-          }
-
-          const zoneId = String(target.id || "").trim();
-          if (zoneId) {
-            const shelfIds = getShelfIdsForZone(zoneId);
-            if (shelfIds.length) {
-              showZoneShelfProducts(zoneId, shelfIds);
-            }
-          }
         });
         svgElement.addEventListener("wheel", handleMapWheel, { passive: false });
         svgElement.addEventListener("pointerdown", handleMapPointerDown);
@@ -1903,43 +1188,10 @@
       if (category.includes("CHARK")) return zoneRange("B", 1, 4);
       return [];
     }
+
     function highlightZoneForProduct(product) {
-      // If the product data has an explicit Hyll-ID column, only that should drive highlights.
-      // C-coded products (missing/empty Hyll-ID) must still be searchable, but must not light up anything.
-      if (product && product.hasHyllIdField) {
-        activeShelfMatch = null;
-        const shelfId = normalizeShelfIdValue(product.hyllId);
-        if (!shelfId) {
-          clearZoneHighlight();
-          return;
-        }
-
-        const explicit = getSvgTargetIdForShelf({ shelfId });
-        if (explicit) {
-          highlightZone(explicit);
-          return;
-        }
-
-        highlightShelfIdOnMap(shelfId);
-        return;
-      }
-
-      const match = bestShelfMatchForProduct(product);
-      activeShelfMatch = match;
-      const shelf = match ? match.shelf : null;
-
-      const explicit = shelf ? getSvgTargetIdForShelf(shelf) : "";
-      if (explicit) {
-        highlightZone(explicit);
-        return;
-      }
-
-      if (shelf && shelf.shelfId && highlightShelfIdOnMap(shelf.shelfId)) {
-        return;
-      }
-
       const candidates = getZoneCandidates(product);
-      highlightZone(candidates[0] || "");
+      highlightZone(pickRandom(candidates));
     }
 
     function isAvailable(product) {
@@ -1956,39 +1208,18 @@
       const suffix = escapeHtml(ean.slice(-4));
       return prefix + "<span class=\"ean-highlight\">" + suffix + "</span>";
     }
+
     function openProductPanel(product) {
-      activeProduct = product || null;
-      const name = (product && product.name) ? product.name : "";
-      panelName.textContent = name || "Okänd produkt";
-      if (panelBenamning) panelBenamning.textContent = name || "-";
-
-      panelEan.innerHTML = "EAN: " + formatEanWithHighlight(product && product.ean);
-      if (panelArtikelnr) panelArtikelnr.textContent = String(product && product.artikelnr ? product.artikelnr : "").trim() || "-";
-      if (panelExpo) panelExpo.textContent = String(product && product.expo ? product.expo : "").trim() || "-";
-      if (panelKategori) panelKategori.textContent = String(product && product.category ? product.category : "").trim() || "-";
-      if (panelFilnamn) panelFilnamn.textContent = String(product && product.planogramFile ? product.planogramFile : "").trim() || "-";
-      if (panelSektion) panelSektion.textContent = String(product && product.section ? product.section : "").trim() || "-";
-
-      let shelfId = "";
-      if (product && product.hasHyllIdField) {
-        activeShelfMatch = null;
-        shelfId = normalizeShelfIdValue(product.hyllId);
-        panelStatus.textContent = shelfId ? "Hyll-ID hittad" : "ingen hylla (C-kodad)";
-        panelStatus.classList.toggle("unavailable", !shelfId);
-      } else {
-        const match = bestShelfMatchForProduct(product);
-        activeShelfMatch = match;
-        shelfId = match && match.shelf ? String(match.shelf.shelfId || "").trim() : "";
-        panelStatus.textContent = shelfId ? ("matchad (" + match.reason + ")") : "ingen hylla hittad";
-        panelStatus.classList.toggle("unavailable", !shelfId);
-      }
-
-      panelShelfIdValue.textContent = shelfId || "-";
-      panelShelfIdValue.disabled = !shelfId;
-
+      panelName.textContent = product.name || "Unknown product";
+      panelCategory.textContent = "Category: " + (product.category || "Unknown");
+      panelEan.innerHTML = "EAN: " + formatEanWithHighlight(product.ean);
+      const available = isAvailable(product);
+      panelStatus.textContent = available ? "tillgänglig" : "ej tillgänglig";
+      panelStatus.classList.toggle("unavailable", !available);
       panel.classList.add("open");
       highlightZoneForProduct(product);
     }
+
     function renderCategories(items) {
       const set = new Set();
       items.forEach((item) => {
@@ -2002,19 +1233,12 @@
 
     function productMatchesQuery(product, query) {
       if (!query) return false;
-      const raw = String(query || "").trim();
-      if (!raw) return false;
-
-      const digitsOnly = raw.replace(/[^\d]/g, "");
-      if (digitsOnly.length >= 6) {
-        const eanDigits = String(product.ean || "").replace(/[^\d]/g, "");
-        const articleDigits = String(product.artikelnr || "").replace(/[^\d]/g, "");
-        return (eanDigits && eanDigits === digitsOnly) || (articleDigits && articleDigits === digitsOnly);
-      }
-
-      const needle = normalizeMatchKey(raw);
-      const hay = normalizeMatchKey([product.name, product.category, product.ean, product.artikelnr].join(" "));
-      return hay.includes(needle);
+      const q = query.toLowerCase();
+      return (
+        product.name.toLowerCase().includes(q) ||
+        product.category.toLowerCase().includes(q) ||
+        product.ean.toLowerCase().includes(q)
+      );
     }
 
     function getFilteredProducts(query, category) {
@@ -2056,10 +1280,9 @@
       loadMoreBtn.hidden = renderedCount >= activeSearchResults.length;
     }
 
-    function showSideResults(results, summaryText, titleText = "Sökresultat") {
+    function showSideResults(results, summaryText) {
       activeSearchResults = results;
       searchResultCount.textContent = summaryText;
-      if (searchSideTitle) searchSideTitle.textContent = titleText;
       searchSideList.scrollTop = 0;
 
       if (!activeSearchResults.length) {
@@ -2078,7 +1301,7 @@
       const summary = category === ALL_CATEGORY
         ? results.length + " produkter i alla kategorier"
         : results.length + " produkter i " + category;
-      showSideResults(results, summary, "Sökresultat");
+      showSideResults(results, summary);
     }
 
     function runSearch(query) {
@@ -2092,154 +1315,23 @@
 
       const results = getFilteredProducts(activeQuery, activeCategory);
       const summary = results.length + " träffar för \"" + activeQuery + "\"";
-      showSideResults(results, summary, "Sökresultat");
+      showSideResults(results, summary);
       clearZoneHighlight();
-    }
-
-    function rebuildProductShelfIndex() {
-      const index = new Map();
-      if (!products.length) {
-        productShelfIndex = index;
-        return;
-      }
-      for (const product of products) {
-        let shelfId = "";
-        if (product && product.hasHyllIdField) {
-          shelfId = normalizeShelfIdValue(product.hyllId);
-        } else if (shelves.length) {
-          const match = bestShelfMatchForProduct(product);
-          shelfId = match && match.shelf ? String(match.shelf.shelfId || "").trim() : "";
-        }
-        if (!shelfId) continue;
-        if (!index.has(shelfId)) index.set(shelfId, []);
-        index.get(shelfId).push(product);
-      }
-      productShelfIndex = index;
-    }
-
-    function showShelfProducts(shelfId) {
-      const id = String(shelfId || "").trim();
-      if (!id) return;
-      const list = productShelfIndex.get(id) || [];
-      const summary = list.length + " produkter på " + id;
-      showSideResults(list, summary, "Hyll-ID: " + id);
-      setSearchPanelOpen(true);
-    }
-
-    function getShelfIdsForZone(zoneId) {
-      const key = String(zoneId || "").trim();
-      if (!key) return [];
-      const map = loadShelfSvgMap();
-      const ids = [];
-      for (const shelfId of Object.keys(map || {})) {
-        if (String(map[shelfId] || "").trim() === key) {
-          ids.push(String(shelfId || "").trim());
-        }
-      }
-      return ids.filter(Boolean).sort((a, b) => a.localeCompare(b));
-    }
-
-    function showZoneShelfProducts(zoneId, shelfIds) {
-      const ids = Array.isArray(shelfIds) ? shelfIds : [];
-      const seen = new Set();
-      const results = [];
-      for (const id of ids) {
-        const list = productShelfIndex.get(id) || [];
-        for (const product of list) {
-          const ean = String(product && product.ean ? product.ean : "").trim();
-          const key = ean || product.name || JSON.stringify(product);
-          if (seen.has(key)) continue;
-          seen.add(key);
-          results.push(product);
-        }
-      }
-      const title = ids.length === 1 ? "Hyll-ID: " + ids[0] : ("Zon: " + String(zoneId || "").trim());
-      const summary = results.length + " produkter";
-      showSideResults(results, summary, title);
-      setSearchPanelOpen(true);
     }
 
     async function loadProducts() {
       try {
-        const response = await fetch(DEFAULT_PRODUCTS_PATH);
-        if (!response.ok) throw new Error("Failed to load planogram data");
+        const response = await fetch("./products.json");
+        if (!response.ok) throw new Error("Failed to load products.json");
         const raw = await response.json();
         products = Array.isArray(raw) ? raw.map(normalizeProduct).filter((p) => p.name) : [];
         renderCategories(products);
-        productsReady = true;
-        if (shelvesReady) rebuildProductShelfIndex();
       } catch (error) {
-        try {
-          const response = await fetch("./products.json");
-          if (!response.ok) throw new Error("Failed to load products.json");
-          const raw = await response.json();
-          products = Array.isArray(raw) ? raw.map(normalizeProduct).filter((p) => p.name) : [];
-          renderCategories(products);
-          productsReady = true;
-          if (shelvesReady) rebuildProductShelfIndex();
-        } catch (fallbackError) {
-          products = [];
-          renderCategories(products);
-          productsReady = false;
-        }
+        products = [];
+        renderCategories(products);
       }
     }
 
-    async function loadShelves() {
-      try {
-        const response = await fetch(DEFAULT_SHELVES_PATH);
-        if (!response.ok) throw new Error("Failed to load shelf layout");
-        const raw = await response.json();
-        shelves = Array.isArray(raw) ? raw.map(normalizeShelf).filter((s) => s.shelfId) : [];
-        rebuildShelfKeyIndex();
-        shelvesReady = true;
-        if (productsReady) rebuildProductShelfIndex();
-      } catch (error) {
-        shelves = [];
-        shelfKeyIndex = new Map();
-        shelvesReady = false;
-      }
-    }
-
-    window.findProductLocation = function findProductLocation(query) {
-      const q = String(query || "").trim();
-      if (!q) return [];
-      const digitsOnly = q.replace(/[^\d]/g, "");
-      const matches = products.filter((p) => {
-        if (digitsOnly.length >= 6) {
-          const eanDigits = String(p.ean || "").replace(/[^\d]/g, "");
-          const articleDigits = String(p.artikelnr || "").replace(/[^\d]/g, "");
-          return (eanDigits && eanDigits === digitsOnly) || (articleDigits && articleDigits === digitsOnly);
-        }
-        const hay = normalizeMatchKey([p.name, p.category, p.ean, p.artikelnr].join(" "));
-        return hay.includes(normalizeMatchKey(q));
-      });
-      return matches.slice(0, 20).map((product) => {
-        if (product && product.hasHyllIdField) {
-          const shelfId = normalizeShelfIdValue(product.hyllId);
-          return {
-            product,
-            shelfId,
-            category: product.category || "",
-            section: product.section || "",
-            planogramFile: product.planogramFile || "",
-            matchReason: shelfId ? "hyll-id" : "",
-            matchScore: shelfId ? 1 : 0
-          };
-        }
-
-        const match = bestShelfMatchForProduct(product);
-        return {
-          product,
-          shelfId: (match && match.shelf && match.shelf.shelfId) || "",
-          category: (match && match.shelf && match.shelf.category) || product.category || "",
-          section: (match && match.shelf && match.shelf.section) || product.section || "",
-          planogramFile: (match && match.shelf && match.shelf.planogramFile) || product.planogramFile || "",
-          matchReason: (match && match.reason) || "",
-          matchScore: (match && match.score) || 0
-        };
-      });
-    };
     categoryScroll.addEventListener("click", (event) => {
       const button = event.target.closest(".category");
       if (!button) return;
@@ -2279,62 +1371,14 @@
 
     closePanel.addEventListener("click", () => {
       panel.classList.remove("open");
-      activeProduct = null;
-      activeShelfMatch = null;
-      clearZoneHighlight(false);
-    });
-
-
-    panelShelfIdValue.addEventListener("click", () => {
-      if (panelShelfIdValue.disabled) return;
-      showShelfProducts(panelShelfIdValue.textContent);
-    });
-
-    addSelectedProduct.addEventListener("click", () => {
-      if (!activeProduct) return;
-      addProductToSelected(activeProduct, activeShelfMatch);
-    });
-
-    toggleSelectedPanel.addEventListener("click", () => {
-      const isOpen = selectedPanel.classList.contains("open");
-      setSelectedPanelOpen(!isOpen);
-    });
-
-    closeSelectedPanel.addEventListener("click", () => {
-      setSelectedPanelOpen(false);
-    });
-
-    clearSelectedList.addEventListener("click", () => {
-      clearSelectedProducts();
-      clearAllHighlights(true);
-    });
-
-    selectedList.addEventListener("click", (event) => {
-      const item = event.target.closest("[data-selected-index]");
-      if (!item) return;
-      const index = Number(item.dataset.selectedIndex || "-1");
-      const action = event.target && event.target.dataset ? event.target.dataset.action : "";
-      if (action === "remove") {
-        removeSelectedByIndex(index);
-        return;
-      }
-      if (action === "view") {
-        const product = selectedProducts[index];
-        if (product) openProductPanel(product);
-        return;
-      }
+      clearZoneHighlight();
     });
 
     resetMapView.addEventListener("click", () => {
       clearZoneHighlight(true);
     });
 
-    selectedProducts = loadSelectedProducts();
-    renderSelectedProducts();
-    setSelectedPanelOpen(false);
-
     initStoreSvg();
-    loadShelves();
     loadProducts();
   </script>
 </body>

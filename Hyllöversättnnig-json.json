@@ -1,0 +1,4349 @@
+[
+  {
+    "Hyll-ID": "BMA01",
+    "Kategori": "BARN",
+    "Planogram-fil": "GWIL-1501-K00-02-BARNMAT_BARNVÄLLING 10 SEK.pdf",
+    "Sektion/Disk": 1,
+    "Kommentar": "BARNMAT/VÄLLING",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "BLJOR01",
+    "Kategori": "BARN",
+    "Planogram-fil": "GWIL-1502-K00-01-BLÖJOR-4S.pdf",
+    "Sektion/Disk": 1,
+    "Kommentar": "BLÖJOR",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "BABY01",
+    "Kategori": "BARN",
+    "Planogram-fil": "GWIL-1503-K00-01-BABYARTIKLAR-6S.pdf",
+    "Sektion/Disk": 1,
+    "Kommentar": "BABYARTIKLAR",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "KN01",
+    "Kategori": "BRÖD",
+    "Planogram-fil": "GWIL-0102-K00-01-KNÄCKEBRÖD_HÅRT TUNNBRÖD 4 SEK.pdf",
+    "Sektion/Disk": 1,
+    "Kommentar": "KNÄCKEBRÖD/HÅRT TUNNBRÖD",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "SK01",
+    "Kategori": "BRÖD",
+    "Planogram-fil": "GWIL-0103-K00-01 RISKAKOR_SKORPOR 2 SEK.pdf",
+    "Sektion/Disk": 1,
+    "Kommentar": "RISKAKOR/SKORPOR",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "BAKE01",
+    "Kategori": "BRÖD",
+    "Planogram-fil": "GWIL-0104-K00-01-LÖSBRÖD_BAKE OFF KAFFEBRÖD_MATBRÖD 5 SEK.pdf",
+    "Sektion/Disk": 1,
+    "Kommentar": "BAKE OFF",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "KAKOR01",
+    "Kategori": "BRÖD",
+    "Planogram-fil": "GWIL-0106-K00-02-SÖTA KEX_KAKOR 3 SEK.pdf",
+    "Sektion/Disk": 1,
+    "Kommentar": "SÖTA KEX/KAKOR",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "KX01",
+    "Kategori": "BRÖD",
+    "Planogram-fil": "GWIL-0107-K00-01 SMÖRGÅSKEX 2 SEK.pdf",
+    "Sektion/Disk": 1,
+    "Kommentar": "SMÖRGÅSKEX",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "KON01",
+    "Kategori": "BRÖD",
+    "Planogram-fil": "GWIL-0108-K00-01-KONDITORI 2 SEK+KYL.pdf",
+    "Sektion/Disk": 1,
+    "Kommentar": "KONDITORI",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "MJU01",
+    "Kategori": "BRÖD",
+    "Planogram-fil": "GWIL-0109-K00-01-MJUKT KAFFEBRÖD 3 SEK.pdf",
+    "Sektion/Disk": 1,
+    "Kommentar": "MJUKT KAFFEBRÖD",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "MRK01",
+    "Kategori": "BRÖD",
+    "Planogram-fil": "GWIL-0110-K00-01-PORTIONSBIT_MÖRKT SK_LIMPA 5 SEK TARGET 2254.pdf",
+    "Sektion/Disk": 1,
+    "Kommentar": "PORTION/MÖRKT SKIVAT/LIMPA",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "LNT01",
+    "Kategori": "BRÖD",
+    "Planogram-fil": "GWIL-0111-K00-01-LANT_ROST_ATMOSBRÖD 5 SEK TARGET 2254.pdf",
+    "Sektion/Disk": 1,
+    "Kommentar": "LANT/ROST/ATMOSBRÖD",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "BRDK01",
+    "Kategori": "BRÖD",
+    "Planogram-fil": "GWIL-0112-K00-02-BRÖDKAKOR_TUNNBRÖD 2 SEK TARGET 2254.pdf",
+    "Sektion/Disk": 1,
+    "Kommentar": "BRÖDKAKOR/TUNNBRÖD",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "FSTF01",
+    "Kategori": "BRÖD",
+    "Planogram-fil": "GWIL-0113-K00-01-FAST FOOD BRÖD 3 SEK TARGET 2254.pdf",
+    "Sektion/Disk": 1,
+    "Kommentar": "FAST FOOD BRÖD",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "CHARK01",
+    "Kategori": "CHARK",
+    "Planogram-fil": "GWIL-0601-K00-01-RIMMADE_RÖKTA CHARKPRODUKTER 3 SEK HÖG.pdf",
+    "Sektion/Disk": 1,
+    "Kommentar": "RIMMADE/RÖKTA CHARKPRODUKTER",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "KORV01",
+    "Kategori": "CHARK",
+    "Planogram-fil": "GWIL-0602-K00-01-KORV 7 SEK LÅG TARGET 2254.pdf",
+    "Sektion/Disk": 1,
+    "Kommentar": "KORV",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "CEK01",
+    "Kategori": "CHARK",
+    "Planogram-fil": "GWIL-0604-K00-01-CHARK_EJ KYLD 3 SEK LÅG.pdf",
+    "Sektion/Disk": 1,
+    "Kommentar": "CHARK/EJ KYLD",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "SKIVAD01",
+    "Kategori": "CHARK",
+    "Planogram-fil": "GWIL-0606-K50-01-SMÖRGÅSMAT SKIVAD URBAN 4 SEK HÖG.pdf",
+    "Sektion/Disk": 1,
+    "Kommentar": "SMÖRGÅSMAT SKIVAD",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "DELIC01",
+    "Kategori": "CHARK",
+    "Planogram-fil": "GWIL-0607-K00-03-DELI KONSUMENTPACKAD 2 SEK LÅG.pdf",
+    "Sektion/Disk": 1,
+    "Kommentar": "DELICHARK",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "PASTEJ01",
+    "Kategori": "CHARK",
+    "Planogram-fil": "GWIL-0608-K40-01-PASTEJ_SMÖRGÅSMAT I BIT BASPLUS 2 SEK HÖG.pdf",
+    "Sektion/Disk": 1,
+    "Kommentar": "PASTEJ/SMÖRGÅSMAT I BIT",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "FRUKTB01",
+    "Kategori": "DJUPFRYST",
+    "Planogram-fil": "GWIL-1202-K00-01-DJ FRUKT_BÄR-2DISK.pdf",
+    "Sektion/Disk": 1,
+    "Kommentar": "FRUKT/BÄR",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "GLASS01",
+    "Kategori": "DJUPFRYST",
+    "Planogram-fil": "GWIL-1204-K00-04-DJ HUSHÅLLSGLASS-5_5 DISK.pdf",
+    "Sektion/Disk": 1,
+    "Kommentar": "HUSHÅLLSGLASS",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "ENP01",
+    "Kategori": "DJUPFRYST",
+    "Planogram-fil": "GWIL-1205-K00-01-DJ ENPORTION-12SKÅP.pdf",
+    "Sektion/Disk": 1,
+    "Kommentar": "ENPORTION",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "PORTION01",
+    "Kategori": "DJUPFRYST",
+    "Planogram-fil": "GWIL-1206-K0-02-DJ FLERPORT_MÅLTIDSDEL-BASPLUS-4DISK.pdf",
+    "Sektion/Disk": 1,
+    "Kommentar": "FLERPORTION/MÅLTIDSDELAR",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "PIZZA01",
+    "Kategori": "DJUPFRYST",
+    "Planogram-fil": "GWIL-1207-K00-01-DJ PIZZA_SNACKS-4DISK.pdf",
+    "Sektion/Disk": 1,
+    "Kommentar": "PIZZA",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "GRNSK01",
+    "Kategori": "DJUPFRYST",
+    "Planogram-fil": "GWIL-1208-K00-02-DJ GRÖNSAKER-4DISK.pdf",
+    "Sektion/Disk": 1,
+    "Kommentar": "GRÖNSAKER DJUPFRYST",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "POTATIS01",
+    "Kategori": "DJUPFRYST",
+    "Planogram-fil": "GWIL-1209-K00-01-DJ POTATIS 3DISK.pdf",
+    "Sektion/Disk": 1,
+    "Kommentar": "POTATIS",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "FGEL01",
+    "Kategori": "DJUPFRYST",
+    "Planogram-fil": "GWIL-1210-K00-02-DJ FÅGEL-5DISK.pdf",
+    "Sektion/Disk": 1,
+    "Kommentar": "FÅGEL DJUPFRYST",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "SKAL01",
+    "Kategori": "DJUPFRYST",
+    "Planogram-fil": "GWIL-1211-K00-02-DJ FISK_SKALDJUR-4_5DISK.pdf",
+    "Sektion/Disk": 1,
+    "Kommentar": "FISK/SKALDJUR",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "BD01",
+    "Kategori": "DJUPFRYST",
+    "Planogram-fil": "GWIL-1212-K00-01-DJ BRÖD_DESSERT 4 SKÅP.pdf",
+    "Sektion/Disk": 1,
+    "Kommentar": "BRÖD/DESSERT",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "DAL01",
+    "Kategori": "DJUPFRYST",
+    "Planogram-fil": "GWIL-1213-K00-02-DJ ALLERGI-2SKÅP.pdf",
+    "Sektion/Disk": 1,
+    "Kommentar": "ALLERGI DJUPFRYST",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "DVE01",
+    "Kategori": "DJUPFRYST",
+    "Planogram-fil": "GWIL-1214-K00-01-DJ VEGETARISKT 5 SKÅP.pdf",
+    "Sektion/Disk": 1,
+    "Kommentar": "VEGETARISKT DJUPFRYST",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "KATT01",
+    "Kategori": "DJUR",
+    "Planogram-fil": "GWIL-1602-K00-03-KATT-6S INKLUSIVE DJUR ÖVRIGT MAT_TILLBEHÖR.pdf",
+    "Sektion/Disk": 1,
+    "Kommentar": "KATT",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "HUND01",
+    "Kategori": "DJUR",
+    "Planogram-fil": "GWIL-1603-K30-01-HUND-5S-BAS.pdf",
+    "Sektion/Disk": 1,
+    "Kommentar": "HUND",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "VAT01",
+    "Kategori": "DRYCKER",
+    "Planogram-fil": "GWIL-1101-K00-02-VATTEN- 2S.pdf",
+    "Sektion/Disk": 1,
+    "Kommentar": "VATTEN",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "ÖL01",
+    "Kategori": "DRYCKER",
+    "Planogram-fil": "GWIL-1102-K50-02-ÖL-URBAN-3S - ETABLERING.pdf",
+    "Sektion/Disk": 1,
+    "Kommentar": "ÖL",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "CID01",
+    "Kategori": "DRYCKER",
+    "Planogram-fil": "GWIL-03-K00-01-CIDER_MUST_VIN-1S.pdf",
+    "Sektion/Disk": 1,
+    "Kommentar": "CIDER",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "LSK01",
+    "Kategori": "DRYCKER",
+    "Planogram-fil": "GWIL-1106-K00-01-LÄSK_DRINKMIX_VIN-7S INKL. PICKMIX.pdf",
+    "Sektion/Disk": 1,
+    "Kommentar": "LÄSK/DRINKMIX",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "LSK02",
+    "Kategori": "DRYCKER",
+    "Planogram-fil": "GWIL-1106-K00-01-LÄSK_DRINKMIX_VIN-7S INKL. PICKMIX.pdf",
+    "Sektion/Disk": 2,
+    "Kommentar": "LÄSK/DRINKMIX",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "LSK03",
+    "Kategori": "DRYCKER",
+    "Planogram-fil": "GWIL-1106-K00-01-LÄSK_DRINKMIX_VIN-7S INKL. PICKMIX.pdf",
+    "Sektion/Disk": 3,
+    "Kommentar": "LÄSK/DRINKMIX",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "LSK04",
+    "Kategori": "DRYCKER",
+    "Planogram-fil": "GWIL-1106-K00-01-LÄSK_DRINKMIX_VIN-7S INKL. PICKMIX.pdf",
+    "Sektion/Disk": 4,
+    "Kommentar": "LÄSK/DRINKMIX",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "STILL01",
+    "Kategori": "DRYCKER",
+    "Planogram-fil": "GWIL-1107-K00-01-STILLDRINK_ISTE-1S.pdf",
+    "Sektion/Disk": 1,
+    "Kommentar": "STILLDRINK",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "FU01",
+    "Kategori": "DRYCKER",
+    "Planogram-fil": "GWIL-1108-01-FUNKTIONELLA DRYCKER-3S.pdf",
+    "Sektion/Disk": 1,
+    "Kommentar": "FUNKTIONELLA DRYCKER",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "FLP01",
+    "Kategori": "FISK",
+    "Planogram-fil": "GWIL-0801-K40-02-FISK_LAKEPRODUKTER BASPLUS 1 SEK HÖG.pdf",
+    "Sektion/Disk": 1,
+    "Kommentar": "FISK/LAKEPRODUKTER",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "SILL01",
+    "Kategori": "FISK",
+    "Planogram-fil": "GWIL-0802-K00-01-SILL_ANSJOVIS_KAVIAR 2 SEK HÖG.pdf",
+    "Sektion/Disk": 1,
+    "Kommentar": "SILL/ANSJOVIS/KAVIAR",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "",
+    "Kategori": "FRUKT-GRÖNT",
+    "Planogram-fil": "GWIL-030-K00-03-FRUKT 3-BORD 9 SEK C.pdf",
+    "Sektion/Disk": "",
+    "Kommentar": "",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "",
+    "Kategori": "FRUKT-GRÖNT",
+    "Planogram-fil": "GWIL-0305-K00-03-GRÖNSAKER 3-BORD SEK 9 SEK C.pdf",
+    "Sektion/Disk": "",
+    "Kommentar": "",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "FG01",
+    "Kategori": "FRUKT-GRÖNT",
+    "Planogram-fil": "GWIL-0306-K00-03-KYLDA GRÖNSAKER 8 SEK + 1 SEK FESTFRUKT_EXOTISKT.pdf",
+    "Sektion/Disk": 1,
+    "Kommentar": "FRUKT & GRÖNT",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "FRDLAT01",
+    "Kategori": "FRUKT-GRÖNT",
+    "Planogram-fil": "GWIL-0309-K30-02-FÖRÄDLAT 2 SEK 6 HP.pdf",
+    "Sektion/Disk": 1,
+    "Kommentar": "FÖRÄDLAT",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "FRDIG01",
+    "Kategori": "FÄRDIGMAT-SNABBLAGAT",
+    "Planogram-fil": "GWIL-0201-K30-02-FÄRDIGLAGAT BAS 5 SEK LÅG.pdf",
+    "Sektion/Disk": 1,
+    "Kommentar": "MÅLTIDSLÖSNINGAR",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "FP01",
+    "Kategori": "FÄRDIGMAT-SNABBLAGAT",
+    "Planogram-fil": "GWIL-0206-K20-01-FÄRSK PASTA 2 SEK LÅG.pdf",
+    "Sektion/Disk": 1,
+    "Kommentar": "FÄRSK PASTA",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "TS01",
+    "Kategori": "FÄRDIGMAT-SNABBLAGAT",
+    "Planogram-fil": "GWIL-0207-K00-02-TILLBEHÖRSSALLADER 1 SEK HÖG.pdf",
+    "Sektion/Disk": 1,
+    "Kommentar": "TILLBEHÖRSSALLADER",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "KSAS01",
+    "Kategori": "FÄRDIGMAT-SNABBLAGAT",
+    "Planogram-fil": "GWIL-0208-K00-02-KYLD SÅS_AROMSMÖR 2 SEK LÅG TARGET 2254.pdf",
+    "Sektion/Disk": 1,
+    "Kommentar": "KYLD SÅS/AROMSMÖR",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "REN01",
+    "Kategori": "GROV KEM",
+    "Planogram-fil": "GWIL-1801-K00-01-RENGÖRING_DOFTMEDEL 3 SEK.pdf",
+    "Sektion/Disk": 1,
+    "Kommentar": "RENGÖRING/DOFTMEDEL",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "DISK01",
+    "Kategori": "GROV KEM",
+    "Planogram-fil": "GWIL-1802-K00-01-DISKMEDEL 2 SEK.pdf",
+    "Sektion/Disk": 1,
+    "Kommentar": "DISKMEDEL",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "TVTT01",
+    "Kategori": "GROV KEM",
+    "Planogram-fil": "GWIL-1803-K00-01-TVÄTTA 2.5 SEK.pdf",
+    "Sektion/Disk": 1,
+    "Kommentar": "TVÄTTA",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "SKLJ01",
+    "Kategori": "GROV KEM",
+    "Planogram-fil": "GWIL-1803-K00-01-TVÄTTA SKÖLJMEDEL 2 SEK.pdf",
+    "Sektion/Disk": 1,
+    "Kommentar": "TVÄTTA/SKÖLJMEDEL",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "PAPPER01",
+    "Kategori": "GROV KEM",
+    "Planogram-fil": "GWIL-1804-K00-01-PAPPER 7 SEK.pdf",
+    "Sektion/Disk": 1,
+    "Kommentar": "PAPPER",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "GVA01",
+    "Kategori": "KONFEKTYR",
+    "Planogram-fil": "GWIL-1404-K00-01-GÅVA 2 SEK HÖG.pdf",
+    "Sektion/Disk": 1,
+    "Kommentar": "GÅVA",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "BA01",
+    "Kategori": "KONFEKTYR",
+    "Planogram-fil": "GWIL-1405-K00-02-SOCKER-_BARNGODIS BARNGODIS 2 SEK HÖG.pdf",
+    "Sektion/Disk": 1,
+    "Kommentar": "BARNGODIS",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "GO01",
+    "Kategori": "KONFEKTYR",
+    "Planogram-fil": "GWIL-1405-K00-02-SOCKER-_BARNGODIS SOCKERGODIS 4 SEK HÖG.pdf",
+    "Sektion/Disk": 1,
+    "Kommentar": "SOCKERGODIS",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "CH01",
+    "Kategori": "KONFEKTYR",
+    "Planogram-fil": "GWIL-1406-K00-02 CHOKLADGODIS 8 SEK HÖG.pdf",
+    "Sektion/Disk": 1,
+    "Kommentar": "CHOKLADGODIS",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "UPP01",
+    "Kategori": "KONFEKTYR",
+    "Planogram-fil": "GWIL-1407-K00-01-UPPFRÄSCHARE 2 SEK HÖG.pdf",
+    "Sektion/Disk": 1,
+    "Kommentar": "UPPFRÄSCHARE",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "UPP02",
+    "Kategori": "KONFEKTYR",
+    "Planogram-fil": "GWIL-1407-K00-01-UPPFRÄSCHARE 2 SEK HÖG.pdf",
+    "Sektion/Disk": 2,
+    "Kommentar": "UPPFRÄSCHARE",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "MAN01",
+    "Kategori": "KROPPSVÅRD",
+    "Planogram-fil": "GWIL-1701-K00-01-MANLIG KROPPSVÅRD 3 SEK LÅG.pdf",
+    "Sektion/Disk": 1,
+    "Kommentar": "KROPPSVÅRD MAN",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "DAM01",
+    "Kategori": "KROPPSVÅRD",
+    "Planogram-fil": "GWIL-1701-K00-01-RAK_DEODORANTER DAM 2 SEK LÅG.pdf",
+    "Sektion/Disk": 1,
+    "Kommentar": "KROPPSVÅRD DAM",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "SB01",
+    "Kategori": "KROPPSVÅRD",
+    "Planogram-fil": "GWIL-1702-K00-01-SCHAMPO_BALSAM 4 SEK HÖG.pdf",
+    "Sektion/Disk": 1,
+    "Kommentar": "SCHAMPO/BALSAM",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "HH01",
+    "Kategori": "KROPPSVÅRD",
+    "Planogram-fil": "GWIL-1702-K00-01-STYLING_HÅRFÄRG 4 SEK HÖG.pdf",
+    "Sektion/Disk": 1,
+    "Kommentar": "HÅRVÅRD/HÅRFÄRG",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "MH01",
+    "Kategori": "KROPPSVÅRD",
+    "Planogram-fil": "GWIL-1703-K00-01-MUNHYGIEN 4S HÖG.pdf",
+    "Sektion/Disk": 1,
+    "Kommentar": "MUNHYGIEN",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "IH01",
+    "Kategori": "KROPPSVÅRD",
+    "Planogram-fil": "GWIL-1704-K00-01-INTIMHYGIEN 4 SEK HÖG.pdf",
+    "Sektion/Disk": 1,
+    "Kommentar": "INTIMHYGIEN",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "SRV01",
+    "Kategori": "KROPPSVÅRD",
+    "Planogram-fil": "GWIL-1705-K00-01-TOALETTARTIKLAR SÅRVÅRD 3 SEK HÖG.pdf",
+    "Sektion/Disk": 1,
+    "Kommentar": "TOALETTARTIKLAR/SÅRVÅRD",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "HAV01",
+    "Kategori": "KROPPSVÅRD",
+    "Planogram-fil": "GWIL-1707-K00-01-HUDVÅRD-4 SEK LÅG.pdf",
+    "Sektion/Disk": 1,
+    "Kommentar": "HUDVÅRD/ANSIKTSVÅRD",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "DTS01",
+    "Kategori": "KROPPSVÅRD",
+    "Planogram-fil": "GWIL-1708-K00-01-TVÅL_DUSCH-4 SEK HÖG.pdf",
+    "Sektion/Disk": 1,
+    "Kommentar": "DUSCH/TVÅL/SPA",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "KVB01",
+    "Kategori": "KROPPSVÅRD",
+    "Planogram-fil": "GWIL-1708-K00-02-TVÅL_DUSCH-1 SEK LÅG-EH BARN.pdf",
+    "Sektion/Disk": 1,
+    "Kommentar": "KROPPSVÅRD BARN",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "HM01",
+    "Kategori": "KROPPSVÅRD",
+    "Planogram-fil": "GWIL-1709-K00-02-HÅRMODE&HEMMASPA 0_60.pdf",
+    "Sektion/Disk": 1,
+    "Kommentar": "HÅRMODE",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "VEGK01",
+    "Kategori": "KYLT VEGETARISKT",
+    "Planogram-fil": "GWIL-3001-K00-01-VEGETARISKT KYLT 2 SEK LÅG.pdf",
+    "Sektion/Disk": 1,
+    "Kommentar": "VEGETARISKT KYLT",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "FK01",
+    "Kategori": "KÖTT",
+    "Planogram-fil": "GWIL-0704-K00-02-FRYST KÖTT-6-7S 2 DÖRRAR.pdf",
+    "Sektion/Disk": 1,
+    "Kommentar": "FRYST KÖTT",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "KF01",
+    "Kategori": "KÖTT",
+    "Planogram-fil": "GWIL-0706-K40-01-KÖTT-FÅGEL BASPLUS 8 SEK TARGET 2254 SPEGLING.pdf",
+    "Sektion/Disk": 1,
+    "Kommentar": "KÖTT/FÅGEL",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "MM01",
+    "Kategori": "MEJERI",
+    "Planogram-fil": "GWIL-0401-K30-01-MJÖLK_MATLAGNING-ARLA 7 SEK TARGET 2254.pdf",
+    "Sektion/Disk": 1,
+    "Kommentar": "MJÖLK/MATLAGNING",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "FKOST01",
+    "Kategori": "MEJERI",
+    "Planogram-fil": "GWIL-0402-K30-02-FRUKOST-ARLA 5 SEK TARGET 2254.pdf",
+    "Sektion/Disk": 1,
+    "Kommentar": "FRUKOST",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "MFBJ01",
+    "Kategori": "MEJERI",
+    "Planogram-fil": "GWIL-0403-K00-01-MATFETT_BAK_JÄST 4 SEK.pdf",
+    "Sektion/Disk": 1,
+    "Kommentar": "MATFETT/BAK/JÄST",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "E01",
+    "Kategori": "MEJERI",
+    "Planogram-fil": "GWIL-0404-01-ÄGG 4 SEK 4 HALVPALLAR.pdf",
+    "Sektion/Disk": 1,
+    "Kommentar": "ÄGG",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "JUICE01",
+    "Kategori": "MEJERI",
+    "Planogram-fil": "GWIL-0405-K30-02-JUICE_KYLD URBAN 3 SEK TARGET 2254.pdf",
+    "Sektion/Disk": 1,
+    "Kommentar": "JUICE/KYLD",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "EKJUICE01",
+    "Kategori": "MEJERI",
+    "Planogram-fil": "GWIL-0406-K00-01-JUICE_EJ KYLD 3 SEK.pdf",
+    "Sektion/Disk": 1,
+    "Kommentar": "JUICE/EJ KYLD",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "LF01",
+    "Kategori": "MEJERI",
+    "Planogram-fil": "GWIL-0407-K32-02-LF_VÄXTB MEJERI-ARLA URBAN 5 SEK TARGET 2254.pdf",
+    "Sektion/Disk": 1,
+    "Kommentar": "LAKTOSFRITT/VÄXTB MEJERI",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "VXTB01",
+    "Kategori": "MEJERI",
+    "Planogram-fil": "GWIL-0408-K00-01-VÄXTBASERAT_MEJERI EJ KYLD 3 SEK.pdf",
+    "Sektion/Disk": 1,
+    "Kommentar": "VÄXTB MEJERI/EJ KYLD",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "SM01",
+    "Kategori": "MEJERI",
+    "Planogram-fil": "GWIL-0409-K00-02-SMÅMÅL 2 SEK.pdf",
+    "Sektion/Disk": 1,
+    "Kommentar": "SMÅMÅL",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "HO01",
+    "Kategori": "OST",
+    "Planogram-fil": "GWIL-0501-K00-01-HÅRDOST_MESSMÖR_OST 6-PLAN-5S.pdf",
+    "Sektion/Disk": 1,
+    "Kommentar": "HÅRDOST/MESSMÖR/OST",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "MO01",
+    "Kategori": "OST",
+    "Planogram-fil": "GWIL-0502-K00-01-MJUKOST-3S LÅG.pdf",
+    "Sektion/Disk": 1,
+    "Kommentar": "MJUKOST",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "DO01",
+    "Kategori": "OST",
+    "Planogram-fil": "GWIL-0503-K00-01-DESSERT-_FÄRSKOST-3S LÅG.pdf",
+    "Sektion/Disk": 1,
+    "Kommentar": "DESSERTOST/FÄRSKOST",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "OM01",
+    "Kategori": "OST",
+    "Planogram-fil": "GWIL-0504-K50-01-OST I MAT URBAN 4 SEK LÅG+GAVEL TARGET 2254.pdf",
+    "Sektion/Disk": 1,
+    "Kommentar": "OST I MAT",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "DELIO01",
+    "Kategori": "OST",
+    "Planogram-fil": "GWIL-0505-K00-02-HALVM DESSERTOST_FÄRSKOST-1S LÅG.pdf",
+    "Sektion/Disk": 1,
+    "Kommentar": "HALVM DESSERTOST/FÄRSKOST",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "CHIPS01",
+    "Kategori": "SNACKS",
+    "Planogram-fil": "GWIL-1301-K50-02-CHIPS_OSTB_POPCRN-URB-6S.pdf",
+    "Sektion/Disk": 1,
+    "Kommentar": "CHIPS",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "NT01",
+    "Kategori": "SNACKS",
+    "Planogram-fil": "GWIL-1302-K00-02-NÖTTER_ÖVRIGA SNACKS-6S (90cm).pdf",
+    "Sektion/Disk": 1,
+    "Kommentar": "NÖTTER/ÖVR SNACKS",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "TFR01",
+    "Kategori": "SNACKS",
+    "Planogram-fil": "GWIL-1303-K00-01-TORKAD FRUKT_NYTTIGA SNA-5S (90cm).pdf",
+    "Sektion/Disk": 1,
+    "Kommentar": "TORKAD FRUKT/NYTTIGA SNACKS",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "NATUR01",
+    "Kategori": "SNACKS",
+    "Planogram-fil": "GWIL-1304-K00-02-PICK & MIX-2S.pdf",
+    "Sektion/Disk": 1,
+    "Kommentar": "PICK & MIX",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "KA01",
+    "Kategori": "SPECERIER",
+    "Planogram-fil": "GWIL-1001-K00-02-KAFFE GEVALIA 6 SEK TARGET 2254.pdf",
+    "Sektion/Disk": 1,
+    "Kommentar": "KAFFE",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "TE01",
+    "Kategori": "SPECERIER",
+    "Planogram-fil": "GWIL-1002-K00-02-TE_DRICKCHOKLAD-2S.pdf",
+    "Sektion/Disk": 1,
+    "Kommentar": "TE",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "TACO01",
+    "Kategori": "SPECERIER",
+    "Planogram-fil": "GWIL-1003-K00-01-TACO 6 SEK.pdf",
+    "Sektion/Disk": 1,
+    "Kommentar": "TACO",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "AS01",
+    "Kategori": "SPECERIER",
+    "Planogram-fil": "GWIL-1004-K00-01-ASIEN 4 SEK.pdf",
+    "Sektion/Disk": 1,
+    "Kommentar": "ASIEN",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "PASTA01",
+    "Kategori": "SPECERIER",
+    "Planogram-fil": "GWIL-1005-K50-01-PASTA_SÅS TILL PASTA-URB-7S-EH.pdf",
+    "Sektion/Disk": 1,
+    "Kommentar": "PASTA",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "RIS01",
+    "Kategori": "SPECERIER",
+    "Planogram-fil": "GWIL-1006-K0-01-RIS_MOS_MATGRYN_SÅSTILLRIS-4S-EH.pdf",
+    "Sektion/Disk": 1,
+    "Kommentar": "RIS/MOS/MATGRYN",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "TBALJ01",
+    "Kategori": "SPECERIER",
+    "Planogram-fil": "GWIL-1007-K00-01-TORRA BALJVÄXTER 2 SEK.pdf",
+    "Sektion/Disk": 1,
+    "Kommentar": "TORRRA BALJVÄXTER",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "SOJA01",
+    "Kategori": "SPECERIER",
+    "Planogram-fil": "GWIL-1008-K00-01-SMAKSÄTTNING_SOJA-2S.pdf",
+    "Sektion/Disk": 1,
+    "Kommentar": "VÅT OCH TORR SÅS",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "KR01",
+    "Kategori": "SPECERIER",
+    "Planogram-fil": "GWIL-1009-K00-01-KRYDDOR_SALT_BULJONG_GRILL 5 SEK EH.pdf",
+    "Sektion/Disk": 1,
+    "Kommentar": "KRYDDOR/SALT/BULJONG",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "DRESS01",
+    "Kategori": "SPECERIER",
+    "Planogram-fil": "GWIL-1011-K00-01-DRESSING_MAJONNÄS_SÅSER 2 SEK.pdf",
+    "Sektion/Disk": 1,
+    "Kommentar": "DRESSING/MAJONÄS",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "MAT01",
+    "Kategori": "SPECERIER",
+    "Planogram-fil": "GWIL-1012-K50-01-MATOLJA_ÄTTIKA_VINÄGER-URB-3S-EH MED PALL.pdf",
+    "Sektion/Disk": 1,
+    "Kommentar": "MATOLJA/ÄTTIKA/VINÄGER",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "KE01",
+    "Kategori": "SPECERIER",
+    "Planogram-fil": "GWIL-1013-K00-01-KETCHUP_SENAP 3 SEK.pdf",
+    "Sektion/Disk": 1,
+    "Kommentar": "KETCHUP/SENAP",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "SYLT01",
+    "Kategori": "SPECERIER",
+    "Planogram-fil": "GWIL-1014-K00-02-SYLT_MARMELAD-2S.pdf",
+    "Sektion/Disk": 1,
+    "Kommentar": "SYLT/MARMELAD",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "VIT01",
+    "Kategori": "SPECERIER",
+    "Planogram-fil": "GWIL-1015-K00-03-HÄLSOKOST_VITAMINER 4 SEK.pdf",
+    "Sektion/Disk": 1,
+    "Kommentar": "HÄLSOKOST/VITAMINER",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "AL01",
+    "Kategori": "SPECERIER",
+    "Planogram-fil": "GWIL-1016-K00-01-ALLERGI 2 SEK.pdf",
+    "Sektion/Disk": 1,
+    "Kommentar": "ALLERGI",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "INGR01",
+    "Kategori": "SPECERIER",
+    "Planogram-fil": "GWIL-1017-K00-01-TRAD INLAGDA GRÖNSAKER-2S.pdf",
+    "Sektion/Disk": 1,
+    "Kommentar": "INLAGDA GRÖNSAKER",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "GRK01",
+    "Kategori": "SPECERIER",
+    "Planogram-fil": "GWIL-1018-K00-01-GRÖNSAKSKONSERVER-3S.pdf",
+    "Sektion/Disk": 1,
+    "Kommentar": "GRÖNSAKSKONSERVER",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "OLIV01",
+    "Kategori": "SPECERIER",
+    "Planogram-fil": "GWIL-1019-K00-01-OLIV_DELIKATESSKONSERV 2 SEK.pdf",
+    "Sektion/Disk": 1,
+    "Kommentar": "OLIV/DELIKATESSKONSERV",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "KBALJ01",
+    "Kategori": "SPECERIER",
+    "Planogram-fil": "GWIL-1020-K00-01-KONSERVERADE BALJVÄXTER-2S.pdf",
+    "Sektion/Disk": 1,
+    "Kommentar": "KONSERVERADE BALJVÄXTER",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "KTTKONS01",
+    "Kategori": "SPECERIER",
+    "Planogram-fil": "GWIL-1021-K90-01-KÖTT_FISKKONSRV_MATMXER-GL-4S.pdf",
+    "Sektion/Disk": 1,
+    "Kommentar": "KÖTT/FISKKONSERV/MATMIXER",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "GRYN01",
+    "Kategori": "SPECERIER",
+    "Planogram-fil": "GWIL-1022-K00-01-GRYNER_VÄLLING 2 SEK.pdf",
+    "Sektion/Disk": 1,
+    "Kommentar": "GRYNER/VÄLLING",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "FLI01",
+    "Kategori": "SPECERIER",
+    "Planogram-fil": "GWIL-1023-K50-01-FLINGOR_MUSLI-URB-8S-EH.pdf",
+    "Sektion/Disk": 1,
+    "Kommentar": "FLINGOR/MUSLI",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "SK01",
+    "Kategori": "SPECERIER",
+    "Planogram-fil": "GWIL-1024-K00-01-SOPPA_KRÄM-1S.pdf",
+    "Sektion/Disk": 1,
+    "Kommentar": "SOPPA/KRÄM",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "FR01",
+    "Kategori": "SPECERIER",
+    "Planogram-fil": "GWIL-1025-K00-01-FRUKTKONSERVER-2S HÖG.pdf",
+    "Sektion/Disk": 1,
+    "Kommentar": "FRUKTKONSERVER",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "DE01",
+    "Kategori": "SPECERIER",
+    "Planogram-fil": "GWIL-1026-K00-01-DESSERT_GLASSTILLBEHÖR-2S (90 CM) HÖG.pdf",
+    "Sektion/Disk": 1,
+    "Kommentar": "DESSERT/GLASSTILLBEHÖR",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "MJL01",
+    "Kategori": "SPECERIER",
+    "Planogram-fil": "GWIL-1027-K00-01-MJÖL_BAKMIXER 3 SEK.pdf",
+    "Sektion/Disk": 1,
+    "Kommentar": "MJÖL/BAKMIXER",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "SOCKER01",
+    "Kategori": "SPECERIER",
+    "Planogram-fil": "GWIL-1028-K00-01-SOCKER_HONUNG 2 SEK.pdf",
+    "Sektion/Disk": 1,
+    "Kommentar": "SOCKER/HONUNG",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "BAK01",
+    "Kategori": "SPECERIER",
+    "Planogram-fil": "GWIL-1029-K00-02-BAKTILLBEHÖR 2_5 SEK.pdf",
+    "Sektion/Disk": 1,
+    "Kommentar": "BAKTILLBEHÖR",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "SOPPA01",
+    "Kategori": "SPECERIER",
+    "Planogram-fil": "GWIL-1030-K00-01-SOPPA-2S.pdf",
+    "Sektion/Disk": 1,
+    "Kommentar": "SOPPA",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "SAFT01",
+    "Kategori": "SPECERIER",
+    "Planogram-fil": "GWIL-1031-K00-02-SAFT 1 SEK.pdf",
+    "Sektion/Disk": 1,
+    "Kommentar": "SAFT",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "TMAT01",
+    "Kategori": "SPECERIER",
+    "Planogram-fil": "GWIL-1032-K00-03-TORR FÄRDIGMAT-1S.pdf",
+    "Sektion/Disk": 1,
+    "Kommentar": "TORR FÄRDIGMAT",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "LA01",
+    "Kategori": "SPECIAL",
+    "Planogram-fil": "GWIL-1901-K00-02-BATTERIER_LJUSKÄLLOR_PROPPAR 2_25 SEK + GDS 0_75 SEK HÖG.pdf",
+    "Sektion/Disk": 1,
+    "Kommentar": "LAMPOR/BATTERIER",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "STD01",
+    "Kategori": "SPECIAL",
+    "Planogram-fil": "GWIL-1903-K00-01-STÄDARTIKLAR 8 SEK HÖG.pdf",
+    "Sektion/Disk": 1,
+    "Kommentar": "STÄDARTIKLAR",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "MH01",
+    "Kategori": "SPECIAL",
+    "Planogram-fil": "GWIL-906-K00-0-MEDIA HÅRDVARA -3HP.pdf",
+    "Sektion/Disk": 1,
+    "Kommentar": "MEDIA HÅRDVARA",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "HUS01",
+    "Kategori": "SPECIAL",
+    "Planogram-fil": "GWIL-1907-K00-02-KÖKET-1SEK.pdf",
+    "Sektion/Disk": 1,
+    "Kommentar": "HUSGERÅD",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "MATF01",
+    "Kategori": "SPECIAL",
+    "Planogram-fil": "GWIL-1908-K00-01-MATFÖRVARING ENGÅNG 4 SEK HÖG.pdf",
+    "Sektion/Disk": 1,
+    "Kommentar": "MATFÖRVARING ENGÅNG",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "FRV01",
+    "Kategori": "SPECIAL",
+    "Planogram-fil": "GWIL-1909-K00-01-MATFÖRVARING FLERGÅNG SEK.pdf",
+    "Sektion/Disk": 1,
+    "Kommentar": "HUSHÅLLSPLAST/GLASPORSLIN",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "KLD01",
+    "Kategori": "SPECIAL",
+    "Planogram-fil": "GWIL-1912-K00-02-KLÄDER 1 SEK HÖG.pdf",
+    "Sektion/Disk": 1,
+    "Kommentar": "KLÄDER",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "HEM01",
+    "Kategori": "SPECIAL",
+    "Planogram-fil": "GWIL-1914-K00-01-HEMKONTOR-1S.pdf",
+    "Sektion/Disk": 1,
+    "Kommentar": "HEMKONTOR",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "ENG01",
+    "Kategori": "SPECIAL",
+    "Planogram-fil": "GWIL-1916-K00-02-ENGÅNGSARTIKLAR-3S.pdf",
+    "Sektion/Disk": 1,
+    "Kommentar": "ENGÅNGSARTIKLAR",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "LJUS01",
+    "Kategori": "SPECIAL",
+    "Planogram-fil": "GWIL-1917-K00-02-LJUS_SERVETT-4S.pdf",
+    "Sektion/Disk": 1,
+    "Kommentar": "LJUS/SERVETTER",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "GRILL01",
+    "Kategori": "SPECIAL",
+    "Planogram-fil": "GWIL-1920-K00-01-GRILL-1SEK.pdf",
+    "Sektion/Disk": 1,
+    "Kommentar": "GRILL",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "BIL01",
+    "Kategori": "SPECIAL",
+    "Planogram-fil": "GWIL-1924-K00-01-BILISTISKT 1 SEK HÖG.pdf",
+    "Sektion/Disk": 1,
+    "Kommentar": "BILISTISKT",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "TRD01",
+    "Kategori": "SPECIAL",
+    "Planogram-fil": "GWIL-1925-K00-01-TRÄDGÅRD-2S.pdf",
+    "Sektion/Disk": 1,
+    "Kommentar": "TRÄDGÅRD",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "VAS01",
+    "Kategori": "SPECIAL",
+    "Planogram-fil": "GWIL-1926-K00-01-KRUKOR_VASER-1S.pdf",
+    "Sektion/Disk": 1,
+    "Kommentar": "KRUKOR/VASER",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "MAT02",
+    "Kategori": "SPECERIER",
+    "Planogram-fil": "GWIL-1012-K50-01-MATOLJA_ÄTTIKA_VINÄGER-URB-3S-EH MED PALL.pdf",
+    "Sektion/Disk": 2,
+    "Kommentar": "MATOLJA/ÄTTIKA/VINÄGER",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "MAT03",
+    "Kategori": "SPECERIER",
+    "Planogram-fil": "GWIL-1012-K50-01-MATOLJA_ÄTTIKA_VINÄGER-URB-3S-EH MED PALL.pdf",
+    "Sektion/Disk": 3,
+    "Kommentar": "MATOLJA/ÄTTIKA/VINÄGER",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "TACO02",
+    "Kategori": "SPECERIER",
+    "Planogram-fil": "GWIL-1003-K00-01-TACO 6 SEK.pdf",
+    "Sektion/Disk": 2,
+    "Kommentar": "TACO",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "TACO03",
+    "Kategori": "SPECERIER",
+    "Planogram-fil": "GWIL-1003-K00-01-TACO 6 SEK.pdf",
+    "Sektion/Disk": 3,
+    "Kommentar": "TACO",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "TACO04",
+    "Kategori": "SPECERIER",
+    "Planogram-fil": "GWIL-1003-K00-01-TACO 6 SEK.pdf",
+    "Sektion/Disk": 4,
+    "Kommentar": "TACO",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "TACO05",
+    "Kategori": "SPECERIER",
+    "Planogram-fil": "GWIL-1003-K00-01-TACO 6 SEK.pdf",
+    "Sektion/Disk": 5,
+    "Kommentar": "TACO",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "TACO06",
+    "Kategori": "SPECERIER",
+    "Planogram-fil": "GWIL-1003-K00-01-TACO 6 SEK.pdf",
+    "Sektion/Disk": 6,
+    "Kommentar": "TACO",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "KE02",
+    "Kategori": "SPECERIER",
+    "Planogram-fil": "GWIL-1013-K00-01-KETCHUP_SENAP 3 SEK.pdf",
+    "Sektion/Disk": 2,
+    "Kommentar": "KETCHUP/SENAP",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "KE03",
+    "Kategori": "SPECERIER",
+    "Planogram-fil": "GWIL-1013-K00-01-KETCHUP_SENAP 3 SEK.pdf",
+    "Sektion/Disk": 3,
+    "Kommentar": "KETCHUP/SENAP",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "INGR02",
+    "Kategori": "SPECERIER",
+    "Planogram-fil": "GWIL-1017-K00-01-TRAD INLAGDA GRÖNSAKER-2S.pdf",
+    "Sektion/Disk": 2,
+    "Kommentar": "INLAGDA GRÖNSAKER",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "KBALJ02",
+    "Kategori": "SPECERIER",
+    "Planogram-fil": "GWIL-1020-K00-01-KONSERVERADE BALJVÄXTER-2S.pdf",
+    "Sektion/Disk": 2,
+    "Kommentar": "KONSERVERADE BALJVÄXTER",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "SOPPA02",
+    "Kategori": "SPECERIER",
+    "Planogram-fil": "GWIL-1030-K00-01-SOPPA-2S.pdf",
+    "Sektion/Disk": 2,
+    "Kommentar": "SOPPA",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "GRK02",
+    "Kategori": "SPECERIER",
+    "Planogram-fil": "GWIL-1018-K00-01-GRÖNSAKSKONSERVER-3S.pdf",
+    "Sektion/Disk": 2,
+    "Kommentar": "GRÖNSAKSKONSERVER",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "GRK03",
+    "Kategori": "SPECERIER",
+    "Planogram-fil": "GWIL-1018-K00-01-GRÖNSAKSKONSERVER-3S.pdf",
+    "Sektion/Disk": 3,
+    "Kommentar": "GRÖNSAKSKONSERVER",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "OLIV02",
+    "Kategori": "SPECERIER",
+    "Planogram-fil": "GWIL-1019-K00-01-OLIV_DELIKATESSKONSERV 2 SEK.pdf",
+    "Sektion/Disk": 2,
+    "Kommentar": "OLIV/DELIKATESSKONSERV",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "KTTKONS02",
+    "Kategori": "SPECERIER",
+    "Planogram-fil": "GWIL-1021-K90-01-KÖTT_FISKKONSRV_MATMXER-GL-4S.pdf",
+    "Sektion/Disk": 2,
+    "Kommentar": "KÖTT/FISKKONSERV/MATMIXER",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "KTTKONS03",
+    "Kategori": "SPECERIER",
+    "Planogram-fil": "GWIL-1021-K90-01-KÖTT_FISKKONSRV_MATMXER-GL-4S.pdf",
+    "Sektion/Disk": 3,
+    "Kommentar": "KÖTT/FISKKONSERV/MATMIXER",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "KTTKONS04",
+    "Kategori": "SPECERIER",
+    "Planogram-fil": "GWIL-1021-K90-01-KÖTT_FISKKONSRV_MATMXER-GL-4S.pdf",
+    "Sektion/Disk": 4,
+    "Kommentar": "KÖTT/FISKKONSERV/MATMIXER",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "RIS02",
+    "Kategori": "SPECERIER",
+    "Planogram-fil": "GWIL-1006-K0-01-RIS_MOS_MATGRYN_SÅSTILLRIS-4S-EH.pdf",
+    "Sektion/Disk": 2,
+    "Kommentar": "RIS/MOS/MATGRYN",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "RIS03",
+    "Kategori": "SPECERIER",
+    "Planogram-fil": "GWIL-1006-K0-01-RIS_MOS_MATGRYN_SÅSTILLRIS-4S-EH.pdf",
+    "Sektion/Disk": 3,
+    "Kommentar": "RIS/MOS/MATGRYN",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "RIS04",
+    "Kategori": "SPECERIER",
+    "Planogram-fil": "GWIL-1006-K0-01-RIS_MOS_MATGRYN_SÅSTILLRIS-4S-EH.pdf",
+    "Sektion/Disk": 4,
+    "Kommentar": "RIS/MOS/MATGRYN",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "PASTA02",
+    "Kategori": "SPECERIER",
+    "Planogram-fil": "GWIL-1005-K50-01-PASTA_SÅS TILL PASTA-URB-7S-EH.pdf",
+    "Sektion/Disk": 2,
+    "Kommentar": "PASTA",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "PASTA03",
+    "Kategori": "SPECERIER",
+    "Planogram-fil": "GWIL-1005-K50-01-PASTA_SÅS TILL PASTA-URB-7S-EH.pdf",
+    "Sektion/Disk": 3,
+    "Kommentar": "PASTA",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "PASTA04",
+    "Kategori": "SPECERIER",
+    "Planogram-fil": "GWIL-1005-K50-01-PASTA_SÅS TILL PASTA-URB-7S-EH.pdf",
+    "Sektion/Disk": 4,
+    "Kommentar": "PASTA",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "PASTA05",
+    "Kategori": "SPECERIER",
+    "Planogram-fil": "GWIL-1005-K50-01-PASTA_SÅS TILL PASTA-URB-7S-EH.pdf",
+    "Sektion/Disk": 5,
+    "Kommentar": "PASTA",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "PASTA06",
+    "Kategori": "SPECERIER",
+    "Planogram-fil": "GWIL-1005-K50-01-PASTA_SÅS TILL PASTA-URB-7S-EH.pdf",
+    "Sektion/Disk": 6,
+    "Kommentar": "PASTA",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "PASTA07",
+    "Kategori": "SPECERIER",
+    "Planogram-fil": "GWIL-1005-K50-01-PASTA_SÅS TILL PASTA-URB-7S-EH.pdf",
+    "Sektion/Disk": 7,
+    "Kommentar": "PASTA",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "FLI02",
+    "Kategori": "SPECERIER",
+    "Planogram-fil": "GWIL-1023-K50-01-FLINGOR_MUSLI-URB-8S-EH.pdf",
+    "Sektion/Disk": 2,
+    "Kommentar": "FLINGOR/MUSLI",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "FLI03",
+    "Kategori": "SPECERIER",
+    "Planogram-fil": "GWIL-1023-K50-01-FLINGOR_MUSLI-URB-8S-EH.pdf",
+    "Sektion/Disk": 3,
+    "Kommentar": "FLINGOR/MUSLI",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "FLI04",
+    "Kategori": "SPECERIER",
+    "Planogram-fil": "GWIL-1023-K50-01-FLINGOR_MUSLI-URB-8S-EH.pdf",
+    "Sektion/Disk": 4,
+    "Kommentar": "FLINGOR/MUSLI",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "FLI05",
+    "Kategori": "SPECERIER",
+    "Planogram-fil": "GWIL-1023-K50-01-FLINGOR_MUSLI-URB-8S-EH.pdf",
+    "Sektion/Disk": 5,
+    "Kommentar": "FLINGOR/MUSLI",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "FLI06",
+    "Kategori": "SPECERIER",
+    "Planogram-fil": "GWIL-1023-K50-01-FLINGOR_MUSLI-URB-8S-EH.pdf",
+    "Sektion/Disk": 6,
+    "Kommentar": "FLINGOR/MUSLI",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "FLI07",
+    "Kategori": "SPECERIER",
+    "Planogram-fil": "GWIL-1023-K50-01-FLINGOR_MUSLI-URB-8S-EH.pdf",
+    "Sektion/Disk": 7,
+    "Kommentar": "FLINGOR/MUSLI",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "FLI08",
+    "Kategori": "SPECERIER",
+    "Planogram-fil": "GWIL-1023-K50-01-FLINGOR_MUSLI-URB-8S-EH.pdf",
+    "Sektion/Disk": 8,
+    "Kommentar": "FLINGOR/MUSLI",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "MJL02",
+    "Kategori": "SPECERIER",
+    "Planogram-fil": "GWIL-1027-K00-01-MJÖL_BAKMIXER 3 SEK.pdf",
+    "Sektion/Disk": 2,
+    "Kommentar": "MJÖL/BAKMIXER",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "MJL03",
+    "Kategori": "SPECERIER",
+    "Planogram-fil": "GWIL-1027-K00-01-MJÖL_BAKMIXER 3 SEK.pdf",
+    "Sektion/Disk": 3,
+    "Kommentar": "MJÖL/BAKMIXER",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "SOCKER02",
+    "Kategori": "SPECERIER",
+    "Planogram-fil": "GWIL-1028-K00-01-SOCKER_HONUNG 2 SEK.pdf",
+    "Sektion/Disk": 2,
+    "Kommentar": "SOCKER/HONUNG",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "TFR02",
+    "Kategori": "SNACKS",
+    "Planogram-fil": "GWIL-1303-K00-01-TORKAD FRUKT_NYTTIGA SNA-5S (90cm).pdf",
+    "Sektion/Disk": 2,
+    "Kommentar": "TORKAD FRUKT/NYTTIGA SNACKS",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "TFR03",
+    "Kategori": "SNACKS",
+    "Planogram-fil": "GWIL-1303-K00-01-TORKAD FRUKT_NYTTIGA SNA-5S (90cm).pdf",
+    "Sektion/Disk": 3,
+    "Kommentar": "TORKAD FRUKT/NYTTIGA SNACKS",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "TFR04",
+    "Kategori": "SNACKS",
+    "Planogram-fil": "GWIL-1303-K00-01-TORKAD FRUKT_NYTTIGA SNA-5S (90cm).pdf",
+    "Sektion/Disk": 4,
+    "Kommentar": "TORKAD FRUKT/NYTTIGA SNACKS",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "TFR05",
+    "Kategori": "SNACKS",
+    "Planogram-fil": "GWIL-1303-K00-01-TORKAD FRUKT_NYTTIGA SNA-5S (90cm).pdf",
+    "Sektion/Disk": 5,
+    "Kommentar": "TORKAD FRUKT/NYTTIGA SNACKS",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "BAK02",
+    "Kategori": "SPECERIER",
+    "Planogram-fil": "GWIL-1029-K00-02-BAKTILLBEHÖR 2_5 SEK.pdf",
+    "Sektion/Disk": 2,
+    "Kommentar": "BAKTILLBEHÖR",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "BAK03",
+    "Kategori": "SPECERIER",
+    "Planogram-fil": "GWIL-1029-K00-02-BAKTILLBEHÖR 2_5 SEK.pdf",
+    "Sektion/Disk": 3,
+    "Kommentar": "BAKTILLBEHÖR",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "BAK04",
+    "Kategori": "SPECERIER",
+    "Planogram-fil": "GWIL-1029-K00-02-BAKTILLBEHÖR 2_5 SEK.pdf",
+    "Sektion/Disk": 4,
+    "Kommentar": "BAKTILLBEHÖR",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "BAK05",
+    "Kategori": "SPECERIER",
+    "Planogram-fil": "GWIL-1029-K00-02-BAKTILLBEHÖR 2_5 SEK.pdf",
+    "Sektion/Disk": 5,
+    "Kommentar": "BAKTILLBEHÖR",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "TBALJ02",
+    "Kategori": "SPECERIER",
+    "Planogram-fil": "GWIL-1007-K00-01-TORRA BALJVÄXTER 2 SEK.pdf",
+    "Sektion/Disk": 2,
+    "Kommentar": "TORRRA BALJVÄXTER",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "SYLT02",
+    "Kategori": "SPECERIER",
+    "Planogram-fil": "GWIL-1014-K00-02-SYLT_MARMELAD-2S.pdf",
+    "Sektion/Disk": 2,
+    "Kommentar": "SYLT/MARMELAD",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "GRYN02",
+    "Kategori": "SPECERIER",
+    "Planogram-fil": "GWIL-1022-K00-01-GRYNER_VÄLLING 2 SEK.pdf",
+    "Sektion/Disk": 2,
+    "Kommentar": "GRYNER/VÄLLING",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "BMA02",
+    "Kategori": "BARN",
+    "Planogram-fil": "GWIL-1501-K00-02-BARNMAT_BARNVÄLLING 10 SEK.pdf",
+    "Sektion/Disk": 2,
+    "Kommentar": "BARNMAT/VÄLLING",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "BMA03",
+    "Kategori": "BARN",
+    "Planogram-fil": "GWIL-1501-K00-02-BARNMAT_BARNVÄLLING 10 SEK.pdf",
+    "Sektion/Disk": 3,
+    "Kommentar": "BARNMAT/VÄLLING",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "BMA04",
+    "Kategori": "BARN",
+    "Planogram-fil": "GWIL-1501-K00-02-BARNMAT_BARNVÄLLING 10 SEK.pdf",
+    "Sektion/Disk": 4,
+    "Kommentar": "BARNMAT/VÄLLING",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "BMA05",
+    "Kategori": "BARN",
+    "Planogram-fil": "GWIL-1501-K00-02-BARNMAT_BARNVÄLLING 10 SEK.pdf",
+    "Sektion/Disk": 5,
+    "Kommentar": "BARNMAT/VÄLLING",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "BMA06",
+    "Kategori": "BARN",
+    "Planogram-fil": "GWIL-1501-K00-02-BARNMAT_BARNVÄLLING 10 SEK.pdf",
+    "Sektion/Disk": 6,
+    "Kommentar": "BARNMAT/VÄLLING",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "BMA07",
+    "Kategori": "BARN",
+    "Planogram-fil": "GWIL-1501-K00-02-BARNMAT_BARNVÄLLING 10 SEK.pdf",
+    "Sektion/Disk": 7,
+    "Kommentar": "BARNMAT/VÄLLING",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "BMA08",
+    "Kategori": "BARN",
+    "Planogram-fil": "GWIL-1501-K00-02-BARNMAT_BARNVÄLLING 10 SEK.pdf",
+    "Sektion/Disk": 8,
+    "Kommentar": "BARNMAT/VÄLLING",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "BMA09",
+    "Kategori": "BARN",
+    "Planogram-fil": "GWIL-1501-K00-02-BARNMAT_BARNVÄLLING 10 SEK.pdf",
+    "Sektion/Disk": 9,
+    "Kommentar": "BARNMAT/VÄLLING",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "BMA010",
+    "Kategori": "BARN",
+    "Planogram-fil": "GWIL-1501-K00-02-BARNMAT_BARNVÄLLING 10 SEK.pdf",
+    "Sektion/Disk": 10,
+    "Kommentar": "BARNMAT/VÄLLING",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "BABY02",
+    "Kategori": "BARN",
+    "Planogram-fil": "GWIL-1503-K00-01-BABYARTIKLAR-6S.pdf",
+    "Sektion/Disk": 2,
+    "Kommentar": "BABYARTIKLAR",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "BABY03",
+    "Kategori": "BARN",
+    "Planogram-fil": "GWIL-1503-K00-01-BABYARTIKLAR-6S.pdf",
+    "Sektion/Disk": 3,
+    "Kommentar": "BABYARTIKLAR",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "BABY04",
+    "Kategori": "BARN",
+    "Planogram-fil": "GWIL-1503-K00-01-BABYARTIKLAR-6S.pdf",
+    "Sektion/Disk": 4,
+    "Kommentar": "BABYARTIKLAR",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "BABY05",
+    "Kategori": "BARN",
+    "Planogram-fil": "GWIL-1503-K00-01-BABYARTIKLAR-6S.pdf",
+    "Sektion/Disk": 5,
+    "Kommentar": "BABYARTIKLAR",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "BABY06",
+    "Kategori": "BARN",
+    "Planogram-fil": "GWIL-1503-K00-01-BABYARTIKLAR-6S.pdf",
+    "Sektion/Disk": 6,
+    "Kommentar": "BABYARTIKLAR",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "BLJOR02",
+    "Kategori": "BARN",
+    "Planogram-fil": "GWIL-1502-K00-01-BLÖJOR-4S.pdf",
+    "Sektion/Disk": 2,
+    "Kommentar": "BLÖJOR",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "BLJOR03",
+    "Kategori": "BARN",
+    "Planogram-fil": "GWIL-1502-K00-01-BLÖJOR-4S.pdf",
+    "Sektion/Disk": 3,
+    "Kommentar": "BLÖJOR",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "BLJOR04",
+    "Kategori": "BARN",
+    "Planogram-fil": "GWIL-1502-K00-01-BLÖJOR-4S.pdf",
+    "Sektion/Disk": 4,
+    "Kommentar": "BLÖJOR",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "PAPPER02",
+    "Kategori": "GROV KEM",
+    "Planogram-fil": "GWIL-1804-K00-01-PAPPER 7 SEK.pdf",
+    "Sektion/Disk": 2,
+    "Kommentar": "PAPPER",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "PAPPER03",
+    "Kategori": "GROV KEM",
+    "Planogram-fil": "GWIL-1804-K00-01-PAPPER 7 SEK.pdf",
+    "Sektion/Disk": 3,
+    "Kommentar": "PAPPER",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "PAPPER04",
+    "Kategori": "GROV KEM",
+    "Planogram-fil": "GWIL-1804-K00-01-PAPPER 7 SEK.pdf",
+    "Sektion/Disk": 4,
+    "Kommentar": "PAPPER",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "PAPPER05",
+    "Kategori": "GROV KEM",
+    "Planogram-fil": "GWIL-1804-K00-01-PAPPER 7 SEK.pdf",
+    "Sektion/Disk": 5,
+    "Kommentar": "PAPPER",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "PAPPER06",
+    "Kategori": "GROV KEM",
+    "Planogram-fil": "GWIL-1804-K00-01-PAPPER 7 SEK.pdf",
+    "Sektion/Disk": 6,
+    "Kommentar": "PAPPER",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "PAPPER07",
+    "Kategori": "GROV KEM",
+    "Planogram-fil": "GWIL-1804-K00-01-PAPPER 7 SEK.pdf",
+    "Sektion/Disk": 7,
+    "Kommentar": "PAPPER",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "DRESS02",
+    "Kategori": "SPECERIER",
+    "Planogram-fil": "GWIL-1011-K00-01-DRESSING_MAJONNÄS_SÅSER 2 SEK.pdf",
+    "Sektion/Disk": 2,
+    "Kommentar": "DRESSING/MAJONÄS",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "SOJA02",
+    "Kategori": "SPECERIER",
+    "Planogram-fil": "GWIL-1008-K00-01-SMAKSÄTTNING_SOJA-2S.pdf",
+    "Sektion/Disk": 2,
+    "Kommentar": "VÅT OCH TORR SÅS",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "KA02",
+    "Kategori": "SPECERIER",
+    "Planogram-fil": "GWIL-1001-K00-02-KAFFE GEVALIA 6 SEK TARGET 2254.pdf",
+    "Sektion/Disk": 2,
+    "Kommentar": "KAFFE",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "KA03",
+    "Kategori": "SPECERIER",
+    "Planogram-fil": "GWIL-1001-K00-02-KAFFE GEVALIA 6 SEK TARGET 2254.pdf",
+    "Sektion/Disk": 3,
+    "Kommentar": "KAFFE",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "KA04",
+    "Kategori": "SPECERIER",
+    "Planogram-fil": "GWIL-1001-K00-02-KAFFE GEVALIA 6 SEK TARGET 2254.pdf",
+    "Sektion/Disk": 4,
+    "Kommentar": "KAFFE",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "KA05",
+    "Kategori": "SPECERIER",
+    "Planogram-fil": "GWIL-1001-K00-02-KAFFE GEVALIA 6 SEK TARGET 2254.pdf",
+    "Sektion/Disk": 5,
+    "Kommentar": "KAFFE",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "KA06",
+    "Kategori": "SPECERIER",
+    "Planogram-fil": "GWIL-1001-K00-02-KAFFE GEVALIA 6 SEK TARGET 2254.pdf",
+    "Sektion/Disk": 6,
+    "Kommentar": "KAFFE",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "TE02",
+    "Kategori": "SPECERIER",
+    "Planogram-fil": "GWIL-1002-K00-02-TE_DRICKCHOKLAD-2S.pdf",
+    "Sektion/Disk": 2,
+    "Kommentar": "TE",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "AS02",
+    "Kategori": "SPECERIER",
+    "Planogram-fil": "GWIL-1004-K00-01-ASIEN 4 SEK.pdf",
+    "Sektion/Disk": 2,
+    "Kommentar": "ASIEN",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "AS03",
+    "Kategori": "SPECERIER",
+    "Planogram-fil": "GWIL-1004-K00-01-ASIEN 4 SEK.pdf",
+    "Sektion/Disk": 3,
+    "Kommentar": "ASIEN",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "AS04",
+    "Kategori": "SPECERIER",
+    "Planogram-fil": "GWIL-1004-K00-01-ASIEN 4 SEK.pdf",
+    "Sektion/Disk": 4,
+    "Kommentar": "ASIEN",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "KR02",
+    "Kategori": "SPECERIER",
+    "Planogram-fil": "GWIL-1009-K00-01-KRYDDOR_SALT_BULJONG_GRILL 5 SEK EH.pdf",
+    "Sektion/Disk": 2,
+    "Kommentar": "KRYDDOR/SALT/BULJONG",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "KR03",
+    "Kategori": "SPECERIER",
+    "Planogram-fil": "GWIL-1009-K00-01-KRYDDOR_SALT_BULJONG_GRILL 5 SEK EH.pdf",
+    "Sektion/Disk": 3,
+    "Kommentar": "KRYDDOR/SALT/BULJONG",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "KR04",
+    "Kategori": "SPECERIER",
+    "Planogram-fil": "GWIL-1009-K00-01-KRYDDOR_SALT_BULJONG_GRILL 5 SEK EH.pdf",
+    "Sektion/Disk": 4,
+    "Kommentar": "KRYDDOR/SALT/BULJONG",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "KR05",
+    "Kategori": "SPECERIER",
+    "Planogram-fil": "GWIL-1009-K00-01-KRYDDOR_SALT_BULJONG_GRILL 5 SEK EH.pdf",
+    "Sektion/Disk": 5,
+    "Kommentar": "KRYDDOR/SALT/BULJONG",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "KR06",
+    "Kategori": "SPECERIER",
+    "Planogram-fil": "GWIL-1009-K00-01-KRYDDOR_SALT_BULJONG_GRILL 5 SEK EH.pdf",
+    "Sektion/Disk": 6,
+    "Kommentar": "KRYDDOR/SALT/BULJONG",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "KR07",
+    "Kategori": "SPECERIER",
+    "Planogram-fil": "GWIL-1009-K00-01-KRYDDOR_SALT_BULJONG_GRILL 5 SEK EH.pdf",
+    "Sektion/Disk": 7,
+    "Kommentar": "KRYDDOR/SALT/BULJONG",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "KR08",
+    "Kategori": "SPECERIER",
+    "Planogram-fil": "GWIL-1009-K00-01-KRYDDOR_SALT_BULJONG_GRILL 5 SEK EH.pdf",
+    "Sektion/Disk": 8,
+    "Kommentar": "KRYDDOR/SALT/BULJONG",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "VIT02",
+    "Kategori": "SPECERIER",
+    "Planogram-fil": "GWIL-1015-K00-03-HÄLSOKOST_VITAMINER 4 SEK.pdf",
+    "Sektion/Disk": 2,
+    "Kommentar": "HÄLSOKOST/VITAMINER",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "VIT03",
+    "Kategori": "SPECERIER",
+    "Planogram-fil": "GWIL-1015-K00-03-HÄLSOKOST_VITAMINER 4 SEK.pdf",
+    "Sektion/Disk": 3,
+    "Kommentar": "HÄLSOKOST/VITAMINER",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "VIT04",
+    "Kategori": "SPECERIER",
+    "Planogram-fil": "GWIL-1015-K00-03-HÄLSOKOST_VITAMINER 4 SEK.pdf",
+    "Sektion/Disk": 4,
+    "Kommentar": "HÄLSOKOST/VITAMINER",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "AL02",
+    "Kategori": "SPECERIER",
+    "Planogram-fil": "GWIL-1016-K00-01-ALLERGI 2 SEK.pdf",
+    "Sektion/Disk": 2,
+    "Kommentar": "ALLERGI",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "DE02",
+    "Kategori": "SPECERIER",
+    "Planogram-fil": "GWIL-1026-K00-01-DESSERT_GLASSTILLBEHÖR-2S (90 CM) HÖG.pdf",
+    "Sektion/Disk": 2,
+    "Kommentar": "DESSERT/GLASSTILLBEHÖR",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "LA02",
+    "Kategori": "SPECIAL",
+    "Planogram-fil": "GWIL-1901-K00-02-BATTERIER_LJUSKÄLLOR_PROPPAR 2_25 SEK + GDS 0_75 SEK HÖG.pdf",
+    "Sektion/Disk": 2,
+    "Kommentar": "LAMPOR/BATTERIER",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "LA03",
+    "Kategori": "SPECIAL",
+    "Planogram-fil": "GWIL-1901-K00-02-BATTERIER_LJUSKÄLLOR_PROPPAR 2_25 SEK + GDS 0_75 SEK HÖG.pdf",
+    "Sektion/Disk": 3,
+    "Kommentar": "LAMPOR/BATTERIER",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "STD02",
+    "Kategori": "SPECIAL",
+    "Planogram-fil": "GWIL-1903-K00-01-STÄDARTIKLAR 8 SEK HÖG.pdf",
+    "Sektion/Disk": 2,
+    "Kommentar": "STÄDARTIKLAR",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "STD03",
+    "Kategori": "SPECIAL",
+    "Planogram-fil": "GWIL-1903-K00-01-STÄDARTIKLAR 8 SEK HÖG.pdf",
+    "Sektion/Disk": 3,
+    "Kommentar": "STÄDARTIKLAR",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "STD04",
+    "Kategori": "SPECIAL",
+    "Planogram-fil": "GWIL-1903-K00-01-STÄDARTIKLAR 8 SEK HÖG.pdf",
+    "Sektion/Disk": 4,
+    "Kommentar": "STÄDARTIKLAR",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "STD05",
+    "Kategori": "SPECIAL",
+    "Planogram-fil": "GWIL-1903-K00-01-STÄDARTIKLAR 8 SEK HÖG.pdf",
+    "Sektion/Disk": 5,
+    "Kommentar": "STÄDARTIKLAR",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "STD06",
+    "Kategori": "SPECIAL",
+    "Planogram-fil": "GWIL-1903-K00-01-STÄDARTIKLAR 8 SEK HÖG.pdf",
+    "Sektion/Disk": 6,
+    "Kommentar": "STÄDARTIKLAR",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "STD07",
+    "Kategori": "SPECIAL",
+    "Planogram-fil": "GWIL-1903-K00-01-STÄDARTIKLAR 8 SEK HÖG.pdf",
+    "Sektion/Disk": 7,
+    "Kommentar": "STÄDARTIKLAR",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "STD08",
+    "Kategori": "SPECIAL",
+    "Planogram-fil": "GWIL-1903-K00-01-STÄDARTIKLAR 8 SEK HÖG.pdf",
+    "Sektion/Disk": 8,
+    "Kommentar": "STÄDARTIKLAR",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "MATF02",
+    "Kategori": "SPECIAL",
+    "Planogram-fil": "GWIL-1908-K00-01-MATFÖRVARING ENGÅNG 4 SEK HÖG.pdf",
+    "Sektion/Disk": 2,
+    "Kommentar": "MATFÖRVARING ENGÅNG",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "MATF03",
+    "Kategori": "SPECIAL",
+    "Planogram-fil": "GWIL-1908-K00-01-MATFÖRVARING ENGÅNG 4 SEK HÖG.pdf",
+    "Sektion/Disk": 3,
+    "Kommentar": "MATFÖRVARING ENGÅNG",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "MATF04",
+    "Kategori": "SPECIAL",
+    "Planogram-fil": "GWIL-1908-K00-01-MATFÖRVARING ENGÅNG 4 SEK HÖG.pdf",
+    "Sektion/Disk": 4,
+    "Kommentar": "MATFÖRVARING ENGÅNG",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "ENG02",
+    "Kategori": "SPECIAL",
+    "Planogram-fil": "GWIL-1916-K00-02-ENGÅNGSARTIKLAR-3S.pdf",
+    "Sektion/Disk": 2,
+    "Kommentar": "ENGÅNGSARTIKLAR",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "ENG03",
+    "Kategori": "SPECIAL",
+    "Planogram-fil": "GWIL-1916-K00-02-ENGÅNGSARTIKLAR-3S.pdf",
+    "Sektion/Disk": 3,
+    "Kommentar": "ENGÅNGSARTIKLAR",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "LJUS02",
+    "Kategori": "SPECIAL",
+    "Planogram-fil": "GWIL-1917-K00-02-LJUS_SERVETT-4S.pdf",
+    "Sektion/Disk": 2,
+    "Kommentar": "LJUS/SERVETTER",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "LJUS03",
+    "Kategori": "SPECIAL",
+    "Planogram-fil": "GWIL-1917-K00-02-LJUS_SERVETT-4S.pdf",
+    "Sektion/Disk": 3,
+    "Kommentar": "LJUS/SERVETTER",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "LJUS04",
+    "Kategori": "SPECIAL",
+    "Planogram-fil": "GWIL-1917-K00-02-LJUS_SERVETT-4S.pdf",
+    "Sektion/Disk": 4,
+    "Kommentar": "LJUS/SERVETTER",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "TRD02",
+    "Kategori": "SPECIAL",
+    "Planogram-fil": "GWIL-1925-K00-01-TRÄDGÅRD-2S.pdf",
+    "Sektion/Disk": 2,
+    "Kommentar": "TRÄDGÅRD",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "CHIPS02",
+    "Kategori": "SNACKS",
+    "Planogram-fil": "GWIL-1301-K50-02-CHIPS_OSTB_POPCRN-URB-6S.pdf",
+    "Sektion/Disk": 2,
+    "Kommentar": "CHIPS",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "CHIPS03",
+    "Kategori": "SNACKS",
+    "Planogram-fil": "GWIL-1301-K50-02-CHIPS_OSTB_POPCRN-URB-6S.pdf",
+    "Sektion/Disk": 3,
+    "Kommentar": "CHIPS",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "CHIPS04",
+    "Kategori": "SNACKS",
+    "Planogram-fil": "GWIL-1301-K50-02-CHIPS_OSTB_POPCRN-URB-6S.pdf",
+    "Sektion/Disk": 4,
+    "Kommentar": "CHIPS",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "CHIPS05",
+    "Kategori": "SNACKS",
+    "Planogram-fil": "GWIL-1301-K50-02-CHIPS_OSTB_POPCRN-URB-6S.pdf",
+    "Sektion/Disk": 5,
+    "Kommentar": "CHIPS",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "CHIPS06",
+    "Kategori": "SNACKS",
+    "Planogram-fil": "GWIL-1301-K50-02-CHIPS_OSTB_POPCRN-URB-6S.pdf",
+    "Sektion/Disk": 6,
+    "Kommentar": "CHIPS",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "NT02",
+    "Kategori": "SNACKS",
+    "Planogram-fil": "GWIL-1302-K00-02-NÖTTER_ÖVRIGA SNACKS-6S (90cm).pdf",
+    "Sektion/Disk": 2,
+    "Kommentar": "NÖTTER/ÖVR SNACKS",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "NT03",
+    "Kategori": "SNACKS",
+    "Planogram-fil": "GWIL-1302-K00-02-NÖTTER_ÖVRIGA SNACKS-6S (90cm).pdf",
+    "Sektion/Disk": 3,
+    "Kommentar": "NÖTTER/ÖVR SNACKS",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "NT04",
+    "Kategori": "SNACKS",
+    "Planogram-fil": "GWIL-1302-K00-02-NÖTTER_ÖVRIGA SNACKS-6S (90cm).pdf",
+    "Sektion/Disk": 4,
+    "Kommentar": "NÖTTER/ÖVR SNACKS",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "NT05",
+    "Kategori": "SNACKS",
+    "Planogram-fil": "GWIL-1302-K00-02-NÖTTER_ÖVRIGA SNACKS-6S (90cm).pdf",
+    "Sektion/Disk": 5,
+    "Kommentar": "NÖTTER/ÖVR SNACKS",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "NT06",
+    "Kategori": "SNACKS",
+    "Planogram-fil": "GWIL-1302-K00-02-NÖTTER_ÖVRIGA SNACKS-6S (90cm).pdf",
+    "Sektion/Disk": 6,
+    "Kommentar": "NÖTTER/ÖVR SNACKS",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "NATUR02",
+    "Kategori": "SNACKS",
+    "Planogram-fil": "GWIL-1304-K00-02-PICK & MIX-2S.pdf",
+    "Sektion/Disk": 2,
+    "Kommentar": "PICK & MIX",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "KN02",
+    "Kategori": "BRÖD",
+    "Planogram-fil": "GWIL-0102-K00-01-KNÄCKEBRÖD_HÅRT TUNNBRÖD 4 SEK.pdf",
+    "Sektion/Disk": 2,
+    "Kommentar": "KNÄCKEBRÖD/HÅRT TUNNBRÖD",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "KNO3",
+    "Kategori": "BRÖD",
+    "Planogram-fil": "GWIL-0102-K00-01-KNÄCKEBRÖD_HÅRT TUNNBRÖD 4 SEK.pdf",
+    "Sektion/Disk": 3,
+    "Kommentar": "KNÄCKEBRÖD/HÅRT TUNNBRÖD",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "KNO4",
+    "Kategori": "BRÖD",
+    "Planogram-fil": "GWIL-0102-K00-01-KNÄCKEBRÖD_HÅRT TUNNBRÖD 4 SEK.pdf",
+    "Sektion/Disk": 4,
+    "Kommentar": "KNÄCKEBRÖD/HÅRT TUNNBRÖD",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "SK02",
+    "Kategori": "BRÖD",
+    "Planogram-fil": "GWIL-0103-K00-01 RISKAKOR_SKORPOR 2 SEK.pdf",
+    "Sektion/Disk": 2,
+    "Kommentar": "RISKAKOR/SKORPOR",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "BAKE02",
+    "Kategori": "BRÖD",
+    "Planogram-fil": "GWIL-0104-K00-01-LÖSBRÖD_BAKE OFF KAFFEBRÖD_MATBRÖD 5 SEK.pdf",
+    "Sektion/Disk": 2,
+    "Kommentar": "BAKE OFF",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "BAKE03",
+    "Kategori": "BRÖD",
+    "Planogram-fil": "GWIL-0104-K00-01-LÖSBRÖD_BAKE OFF KAFFEBRÖD_MATBRÖD 5 SEK.pdf",
+    "Sektion/Disk": 3,
+    "Kommentar": "BAKE OFF",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "BAKE04",
+    "Kategori": "BRÖD",
+    "Planogram-fil": "GWIL-0104-K00-01-LÖSBRÖD_BAKE OFF KAFFEBRÖD_MATBRÖD 5 SEK.pdf",
+    "Sektion/Disk": 4,
+    "Kommentar": "BAKE OFF",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "BAKE05",
+    "Kategori": "BRÖD",
+    "Planogram-fil": "GWIL-0104-K00-01-LÖSBRÖD_BAKE OFF KAFFEBRÖD_MATBRÖD 5 SEK.pdf",
+    "Sektion/Disk": 5,
+    "Kommentar": "BAKE OFF",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "KAKOR02",
+    "Kategori": "BRÖD",
+    "Planogram-fil": "GWIL-0106-K00-02-SÖTA KEX_KAKOR 3 SEK.pdf",
+    "Sektion/Disk": 2,
+    "Kommentar": "SÖTA KEX/KAKOR",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "KAKOR03",
+    "Kategori": "BRÖD",
+    "Planogram-fil": "GWIL-0106-K00-02-SÖTA KEX_KAKOR 3 SEK.pdf",
+    "Sektion/Disk": 3,
+    "Kommentar": "SÖTA KEX/KAKOR",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "KX02",
+    "Kategori": "BRÖD",
+    "Planogram-fil": "GWIL-0107-K00-01 SMÖRGÅSKEX 2 SEK.pdf",
+    "Sektion/Disk": 2,
+    "Kommentar": "SMÖRGÅSKEX",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "KON02",
+    "Kategori": "BRÖD",
+    "Planogram-fil": "GWIL-0108-K00-01-KONDITORI 2 SEK+KYL.pdf",
+    "Sektion/Disk": 2,
+    "Kommentar": "KONDITORI",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "KON03",
+    "Kategori": "BRÖD",
+    "Planogram-fil": "GWIL-0108-K00-01-KONDITORI 2 SEK+KYL.pdf",
+    "Sektion/Disk": 3,
+    "Kommentar": "KONDITORI",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "MJU02",
+    "Kategori": "BRÖD",
+    "Planogram-fil": "GWIL-0109-K00-01-MJUKT KAFFEBRÖD 3 SEK.pdf",
+    "Sektion/Disk": 2,
+    "Kommentar": "MJUKT KAFFEBRÖD",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "MJU03",
+    "Kategori": "BRÖD",
+    "Planogram-fil": "GWIL-0109-K00-01-MJUKT KAFFEBRÖD 3 SEK.pdf",
+    "Sektion/Disk": 3,
+    "Kommentar": "MJUKT KAFFEBRÖD",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "MRK02",
+    "Kategori": "BRÖD",
+    "Planogram-fil": "GWIL-0110-K00-01-PORTIONSBIT_MÖRKT SK_LIMPA 5 SEK TARGET 2254.pdf",
+    "Sektion/Disk": 2,
+    "Kommentar": "PORTION/MÖRKT SKIVAT/LIMPA",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "MRK03",
+    "Kategori": "BRÖD",
+    "Planogram-fil": "GWIL-0110-K00-01-PORTIONSBIT_MÖRKT SK_LIMPA 5 SEK TARGET 2254.pdf",
+    "Sektion/Disk": 3,
+    "Kommentar": "PORTION/MÖRKT SKIVAT/LIMPA",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "MRK04",
+    "Kategori": "BRÖD",
+    "Planogram-fil": "GWIL-0110-K00-01-PORTIONSBIT_MÖRKT SK_LIMPA 5 SEK TARGET 2254.pdf",
+    "Sektion/Disk": 4,
+    "Kommentar": "PORTION/MÖRKT SKIVAT/LIMPA",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "MRK05",
+    "Kategori": "BRÖD",
+    "Planogram-fil": "GWIL-0110-K00-01-PORTIONSBIT_MÖRKT SK_LIMPA 5 SEK TARGET 2254.pdf",
+    "Sektion/Disk": 5,
+    "Kommentar": "PORTION/MÖRKT SKIVAT/LIMPA",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "LNT02",
+    "Kategori": "BRÖD",
+    "Planogram-fil": "GWIL-0111-K00-01-LANT_ROST_ATMOSBRÖD 5 SEK TARGET 2254.pdf",
+    "Sektion/Disk": 2,
+    "Kommentar": "LANT/ROST/ATMOSBRÖD",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "LNT03",
+    "Kategori": "BRÖD",
+    "Planogram-fil": "GWIL-0111-K00-01-LANT_ROST_ATMOSBRÖD 5 SEK TARGET 2254.pdf",
+    "Sektion/Disk": 3,
+    "Kommentar": "LANT/ROST/ATMOSBRÖD",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "LNT04",
+    "Kategori": "BRÖD",
+    "Planogram-fil": "GWIL-0111-K00-01-LANT_ROST_ATMOSBRÖD 5 SEK TARGET 2254.pdf",
+    "Sektion/Disk": 4,
+    "Kommentar": "LANT/ROST/ATMOSBRÖD",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "LNT05",
+    "Kategori": "BRÖD",
+    "Planogram-fil": "GWIL-0111-K00-01-LANT_ROST_ATMOSBRÖD 5 SEK TARGET 2254.pdf",
+    "Sektion/Disk": 5,
+    "Kommentar": "LANT/ROST/ATMOSBRÖD",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "BRDK02",
+    "Kategori": "BRÖD",
+    "Planogram-fil": "GWIL-0112-K00-02-BRÖDKAKOR_TUNNBRÖD 2 SEK TARGET 2254.pdf",
+    "Sektion/Disk": 2,
+    "Kommentar": "BRÖDKAKOR/TUNNBRÖD",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "FSTF02",
+    "Kategori": "BRÖD",
+    "Planogram-fil": "GWIL-0113-K00-01-FAST FOOD BRÖD 3 SEK TARGET 2254.pdf",
+    "Sektion/Disk": 2,
+    "Kommentar": "FAST FOOD BRÖD",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "FSTF03",
+    "Kategori": "BRÖD",
+    "Planogram-fil": "GWIL-0113-K00-01-FAST FOOD BRÖD 3 SEK TARGET 2254.pdf",
+    "Sektion/Disk": 3,
+    "Kommentar": "FAST FOOD BRÖD",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "CHARK02",
+    "Kategori": "CHARK",
+    "Planogram-fil": "GWIL-0601-K00-01-RIMMADE_RÖKTA CHARKPRODUKTER 3 SEK HÖG.pdf",
+    "Sektion/Disk": 2,
+    "Kommentar": "RIMMADE/RÖKTA CHARKPRODUKTER",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "CHARK03",
+    "Kategori": "CHARK",
+    "Planogram-fil": "GWIL-0601-K00-01-RIMMADE_RÖKTA CHARKPRODUKTER 3 SEK HÖG.pdf",
+    "Sektion/Disk": 3,
+    "Kommentar": "RIMMADE/RÖKTA CHARKPRODUKTER",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "KORV02",
+    "Kategori": "CHARK",
+    "Planogram-fil": "GWIL-0602-K00-01-KORV 7 SEK LÅG TARGET 2254.pdf",
+    "Sektion/Disk": 2,
+    "Kommentar": "KORV",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "KORV03",
+    "Kategori": "CHARK",
+    "Planogram-fil": "GWIL-0602-K00-01-KORV 7 SEK LÅG TARGET 2254.pdf",
+    "Sektion/Disk": 3,
+    "Kommentar": "KORV",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "KORV04",
+    "Kategori": "CHARK",
+    "Planogram-fil": "GWIL-0602-K00-01-KORV 7 SEK LÅG TARGET 2254.pdf",
+    "Sektion/Disk": 4,
+    "Kommentar": "KORV",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "KORV05",
+    "Kategori": "CHARK",
+    "Planogram-fil": "GWIL-0602-K00-01-KORV 7 SEK LÅG TARGET 2254.pdf",
+    "Sektion/Disk": 5,
+    "Kommentar": "KORV",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "KORV06",
+    "Kategori": "CHARK",
+    "Planogram-fil": "GWIL-0602-K00-01-KORV 7 SEK LÅG TARGET 2254.pdf",
+    "Sektion/Disk": 6,
+    "Kommentar": "KORV",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "KORV07",
+    "Kategori": "CHARK",
+    "Planogram-fil": "GWIL-0602-K00-01-KORV 7 SEK LÅG TARGET 2254.pdf",
+    "Sektion/Disk": 7,
+    "Kommentar": "KORV",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "CEK02",
+    "Kategori": "CHARK",
+    "Planogram-fil": "GWIL-0604-K00-01-CHARK_EJ KYLD 3 SEK LÅG.pdf",
+    "Sektion/Disk": 2,
+    "Kommentar": "CHARK/EJ KYLD",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "CEK03",
+    "Kategori": "CHARK",
+    "Planogram-fil": "GWIL-0604-K00-01-CHARK_EJ KYLD 3 SEK LÅG.pdf",
+    "Sektion/Disk": 3,
+    "Kommentar": "CHARK/EJ KYLD",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "SKIVAD02",
+    "Kategori": "CHARK",
+    "Planogram-fil": "GWIL-0606-K50-01-SMÖRGÅSMAT SKIVAD URBAN 4 SEK HÖG.pdf",
+    "Sektion/Disk": 2,
+    "Kommentar": "SMÖRGÅSMAT SKIVAD",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "SKIVAD03",
+    "Kategori": "CHARK",
+    "Planogram-fil": "GWIL-0606-K50-01-SMÖRGÅSMAT SKIVAD URBAN 4 SEK HÖG.pdf",
+    "Sektion/Disk": 3,
+    "Kommentar": "SMÖRGÅSMAT SKIVAD",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "SKIVAD04",
+    "Kategori": "CHARK",
+    "Planogram-fil": "GWIL-0606-K50-01-SMÖRGÅSMAT SKIVAD URBAN 4 SEK HÖG.pdf",
+    "Sektion/Disk": 4,
+    "Kommentar": "SMÖRGÅSMAT SKIVAD",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "DELIC02",
+    "Kategori": "CHARK",
+    "Planogram-fil": "GWIL-0607-K00-03-DELI KONSUMENTPACKAD 2 SEK LÅG.pdf",
+    "Sektion/Disk": 2,
+    "Kommentar": "DELICHARK",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "PASTEJ02",
+    "Kategori": "CHARK",
+    "Planogram-fil": "GWIL-0608-K40-01-PASTEJ_SMÖRGÅSMAT I BIT BASPLUS 2 SEK HÖG.pdf",
+    "Sektion/Disk": 2,
+    "Kommentar": "PASTEJ/SMÖRGÅSMAT I BIT",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "HO02",
+    "Kategori": "OST",
+    "Planogram-fil": "GWIL-0501-K00-01-HÅRDOST_MESSMÖR_OST 6-PLAN-5S.pdf",
+    "Sektion/Disk": 2,
+    "Kommentar": "HÅRDOST/MESSMÖR/OST",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "HO03",
+    "Kategori": "OST",
+    "Planogram-fil": "GWIL-0501-K00-01-HÅRDOST_MESSMÖR_OST 6-PLAN-5S.pdf",
+    "Sektion/Disk": 3,
+    "Kommentar": "HÅRDOST/MESSMÖR/OST",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "HO04",
+    "Kategori": "OST",
+    "Planogram-fil": "GWIL-0501-K00-01-HÅRDOST_MESSMÖR_OST 6-PLAN-5S.pdf",
+    "Sektion/Disk": 4,
+    "Kommentar": "HÅRDOST/MESSMÖR/OST",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "HO05",
+    "Kategori": "OST",
+    "Planogram-fil": "GWIL-0501-K00-01-HÅRDOST_MESSMÖR_OST 6-PLAN-5S.pdf",
+    "Sektion/Disk": 5,
+    "Kommentar": "HÅRDOST/MESSMÖR/OST",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "MO02",
+    "Kategori": "OST",
+    "Planogram-fil": "GWIL-0502-K00-01-MJUKOST-3S LÅG.pdf",
+    "Sektion/Disk": 2,
+    "Kommentar": "MJUKOST",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "MO03",
+    "Kategori": "OST",
+    "Planogram-fil": "GWIL-0502-K00-01-MJUKOST-3S LÅG.pdf",
+    "Sektion/Disk": 3,
+    "Kommentar": "MJUKOST",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "DO02",
+    "Kategori": "OST",
+    "Planogram-fil": "GWIL-0503-K00-01-DESSERT-_FÄRSKOST-3S LÅG.pdf",
+    "Sektion/Disk": 2,
+    "Kommentar": "DESSERTOST/FÄRSKOST",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "DO03",
+    "Kategori": "OST",
+    "Planogram-fil": "GWIL-0503-K00-01-DESSERT-_FÄRSKOST-3S LÅG.pdf",
+    "Sektion/Disk": 3,
+    "Kommentar": "DESSERTOST/FÄRSKOST",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "OM02",
+    "Kategori": "OST",
+    "Planogram-fil": "GWIL-0504-K50-01-OST I MAT URBAN 4 SEK LÅG+GAVEL TARGET 2254.pdf",
+    "Sektion/Disk": 2,
+    "Kommentar": "OST I MAT",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "OM03",
+    "Kategori": "OST",
+    "Planogram-fil": "GWIL-0504-K50-01-OST I MAT URBAN 4 SEK LÅG+GAVEL TARGET 2254.pdf",
+    "Sektion/Disk": 3,
+    "Kommentar": "OST I MAT",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "OM04",
+    "Kategori": "OST",
+    "Planogram-fil": "GWIL-0504-K50-01-OST I MAT URBAN 4 SEK LÅG+GAVEL TARGET 2254.pdf",
+    "Sektion/Disk": 4,
+    "Kommentar": "OST I MAT",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "OM05",
+    "Kategori": "OST",
+    "Planogram-fil": "GWIL-0504-K50-01-OST I MAT URBAN 4 SEK LÅG+GAVEL TARGET 2254.pdf",
+    "Sektion/Disk": 5,
+    "Kommentar": "OST I MAT",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "OM06",
+    "Kategori": "OST",
+    "Planogram-fil": "GWIL-0504-K50-01-OST I MAT URBAN 4 SEK LÅG+GAVEL TARGET 2254.pdf",
+    "Sektion/Disk": 6,
+    "Kommentar": "OST I MAT",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "MM02",
+    "Kategori": "MEJERI",
+    "Planogram-fil": "GWIL-0401-K30-01-MJÖLK_MATLAGNING-ARLA 7 SEK TARGET 2254.pdf",
+    "Sektion/Disk": 2,
+    "Kommentar": "MJÖLK/MATLAGNING",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "MM03",
+    "Kategori": "MEJERI",
+    "Planogram-fil": "GWIL-0401-K30-01-MJÖLK_MATLAGNING-ARLA 7 SEK TARGET 2254.pdf",
+    "Sektion/Disk": 3,
+    "Kommentar": "MJÖLK/MATLAGNING",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "MM04",
+    "Kategori": "MEJERI",
+    "Planogram-fil": "GWIL-0401-K30-01-MJÖLK_MATLAGNING-ARLA 7 SEK TARGET 2254.pdf",
+    "Sektion/Disk": 4,
+    "Kommentar": "MJÖLK/MATLAGNING",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "MM05",
+    "Kategori": "MEJERI",
+    "Planogram-fil": "GWIL-0401-K30-01-MJÖLK_MATLAGNING-ARLA 7 SEK TARGET 2254.pdf",
+    "Sektion/Disk": 5,
+    "Kommentar": "MJÖLK/MATLAGNING",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "MM06",
+    "Kategori": "MEJERI",
+    "Planogram-fil": "GWIL-0401-K30-01-MJÖLK_MATLAGNING-ARLA 7 SEK TARGET 2254.pdf",
+    "Sektion/Disk": 6,
+    "Kommentar": "MJÖLK/MATLAGNING",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "MM07",
+    "Kategori": "MEJERI",
+    "Planogram-fil": "GWIL-0401-K30-01-MJÖLK_MATLAGNING-ARLA 7 SEK TARGET 2254.pdf",
+    "Sektion/Disk": 7,
+    "Kommentar": "MJÖLK/MATLAGNING",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "FKOST02",
+    "Kategori": "MEJERI",
+    "Planogram-fil": "GWIL-0402-K30-02-FRUKOST-ARLA 5 SEK TARGET 2254.pdf",
+    "Sektion/Disk": 2,
+    "Kommentar": "FRUKOST",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "FKOST03",
+    "Kategori": "MEJERI",
+    "Planogram-fil": "GWIL-0402-K30-02-FRUKOST-ARLA 5 SEK TARGET 2254.pdf",
+    "Sektion/Disk": 3,
+    "Kommentar": "FRUKOST",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "FKOST04",
+    "Kategori": "MEJERI",
+    "Planogram-fil": "GWIL-0402-K30-02-FRUKOST-ARLA 5 SEK TARGET 2254.pdf",
+    "Sektion/Disk": 4,
+    "Kommentar": "FRUKOST",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "FKOST05",
+    "Kategori": "MEJERI",
+    "Planogram-fil": "GWIL-0402-K30-02-FRUKOST-ARLA 5 SEK TARGET 2254.pdf",
+    "Sektion/Disk": 5,
+    "Kommentar": "FRUKOST",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "MFBJ02",
+    "Kategori": "MEJERI",
+    "Planogram-fil": "GWIL-0403-K00-01-MATFETT_BAK_JÄST 4 SEK.pdf",
+    "Sektion/Disk": 2,
+    "Kommentar": "MATFETT/BAK/JÄST",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "MFBJ03",
+    "Kategori": "MEJERI",
+    "Planogram-fil": "GWIL-0403-K00-01-MATFETT_BAK_JÄST 4 SEK.pdf",
+    "Sektion/Disk": 3,
+    "Kommentar": "MATFETT/BAK/JÄST",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "MFBJ04",
+    "Kategori": "MEJERI",
+    "Planogram-fil": "GWIL-0403-K00-01-MATFETT_BAK_JÄST 4 SEK.pdf",
+    "Sektion/Disk": 4,
+    "Kommentar": "MATFETT/BAK/JÄST",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "E02",
+    "Kategori": "MEJERI",
+    "Planogram-fil": "GWIL-0404-01-ÄGG 4 SEK 4 HALVPALLAR.pdf",
+    "Sektion/Disk": 2,
+    "Kommentar": "ÄGG",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "E03",
+    "Kategori": "MEJERI",
+    "Planogram-fil": "GWIL-0404-01-ÄGG 4 SEK 4 HALVPALLAR.pdf",
+    "Sektion/Disk": 3,
+    "Kommentar": "ÄGG",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "E04",
+    "Kategori": "MEJERI",
+    "Planogram-fil": "GWIL-0404-01-ÄGG 4 SEK 4 HALVPALLAR.pdf",
+    "Sektion/Disk": 4,
+    "Kommentar": "ÄGG",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "JUICE02",
+    "Kategori": "MEJERI",
+    "Planogram-fil": "GWIL-0405-K30-02-JUICE_KYLD URBAN 3 SEK TARGET 2254.pdf",
+    "Sektion/Disk": 2,
+    "Kommentar": "JUICE/KYLD",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "JUICE03",
+    "Kategori": "MEJERI",
+    "Planogram-fil": "GWIL-0405-K30-02-JUICE_KYLD URBAN 3 SEK TARGET 2254.pdf",
+    "Sektion/Disk": 3,
+    "Kommentar": "JUICE/KYLD",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "EKJUICE02",
+    "Kategori": "MEJERI",
+    "Planogram-fil": "GWIL-0406-K00-01-JUICE_EJ KYLD 3 SEK.pdf",
+    "Sektion/Disk": 2,
+    "Kommentar": "JUICE/EJ KYLD",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "EKJUICE03",
+    "Kategori": "MEJERI",
+    "Planogram-fil": "GWIL-0406-K00-01-JUICE_EJ KYLD 3 SEK.pdf",
+    "Sektion/Disk": 3,
+    "Kommentar": "JUICE/EJ KYLD",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "LF02",
+    "Kategori": "MEJERI",
+    "Planogram-fil": "GWIL-0407-K32-02-LF_VÄXTB MEJERI-ARLA URBAN 5 SEK TARGET 2254.pdf",
+    "Sektion/Disk": 2,
+    "Kommentar": "LAKTOSFRITT/VÄXTB MEJERI",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "LF03",
+    "Kategori": "MEJERI",
+    "Planogram-fil": "GWIL-0407-K32-02-LF_VÄXTB MEJERI-ARLA URBAN 5 SEK TARGET 2254.pdf",
+    "Sektion/Disk": 3,
+    "Kommentar": "LAKTOSFRITT/VÄXTB MEJERI",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "LF04",
+    "Kategori": "MEJERI",
+    "Planogram-fil": "GWIL-0407-K32-02-LF_VÄXTB MEJERI-ARLA URBAN 5 SEK TARGET 2254.pdf",
+    "Sektion/Disk": 4,
+    "Kommentar": "LAKTOSFRITT/VÄXTB MEJERI",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "LF05",
+    "Kategori": "MEJERI",
+    "Planogram-fil": "GWIL-0407-K32-02-LF_VÄXTB MEJERI-ARLA URBAN 5 SEK TARGET 2254.pdf",
+    "Sektion/Disk": 5,
+    "Kommentar": "LAKTOSFRITT/VÄXTB MEJERI",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "VXTB02",
+    "Kategori": "MEJERI",
+    "Planogram-fil": "GWIL-0408-K00-01-VÄXTBASERAT_MEJERI EJ KYLD 3 SEK.pdf",
+    "Sektion/Disk": 2,
+    "Kommentar": "VÄXTB MEJERI/EJ KYLD",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "VXTB03",
+    "Kategori": "MEJERI",
+    "Planogram-fil": "GWIL-0408-K00-01-VÄXTBASERAT_MEJERI EJ KYLD 3 SEK.pdf",
+    "Sektion/Disk": 3,
+    "Kommentar": "VÄXTB MEJERI/EJ KYLD",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "SM02",
+    "Kategori": "MEJERI",
+    "Planogram-fil": "GWIL-0409-K00-02-SMÅMÅL 2 SEK.pdf",
+    "Sektion/Disk": 2,
+    "Kommentar": "SMÅMÅL",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "FK02",
+    "Kategori": "KÖTT",
+    "Planogram-fil": "GWIL-0704-K00-02-FRYST KÖTT-6-7S 2 DÖRRAR.pdf",
+    "Sektion/Disk": 2,
+    "Kommentar": "FRYST KÖTT",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "KF02",
+    "Kategori": "KÖTT",
+    "Planogram-fil": "GWIL-0706-K40-01-KÖTT-FÅGEL BASPLUS 8 SEK TARGET 2254 SPEGLING.pdf",
+    "Sektion/Disk": 2,
+    "Kommentar": "KÖTT/FÅGEL",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "KF03",
+    "Kategori": "KÖTT",
+    "Planogram-fil": "GWIL-0706-K40-01-KÖTT-FÅGEL BASPLUS 8 SEK TARGET 2254 SPEGLING.pdf",
+    "Sektion/Disk": 3,
+    "Kommentar": "KÖTT/FÅGEL",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "KF04",
+    "Kategori": "KÖTT",
+    "Planogram-fil": "GWIL-0706-K40-01-KÖTT-FÅGEL BASPLUS 8 SEK TARGET 2254 SPEGLING.pdf",
+    "Sektion/Disk": 4,
+    "Kommentar": "KÖTT/FÅGEL",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "KF05",
+    "Kategori": "KÖTT",
+    "Planogram-fil": "GWIL-0706-K40-01-KÖTT-FÅGEL BASPLUS 8 SEK TARGET 2254 SPEGLING.pdf",
+    "Sektion/Disk": 5,
+    "Kommentar": "KÖTT/FÅGEL",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "KF06",
+    "Kategori": "KÖTT",
+    "Planogram-fil": "GWIL-0706-K40-01-KÖTT-FÅGEL BASPLUS 8 SEK TARGET 2254 SPEGLING.pdf",
+    "Sektion/Disk": 6,
+    "Kommentar": "KÖTT/FÅGEL",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "KF07",
+    "Kategori": "KÖTT",
+    "Planogram-fil": "GWIL-0706-K40-01-KÖTT-FÅGEL BASPLUS 8 SEK TARGET 2254 SPEGLING.pdf",
+    "Sektion/Disk": 7,
+    "Kommentar": "KÖTT/FÅGEL",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "KF08",
+    "Kategori": "KÖTT",
+    "Planogram-fil": "GWIL-0706-K40-01-KÖTT-FÅGEL BASPLUS 8 SEK TARGET 2254 SPEGLING.pdf",
+    "Sektion/Disk": 8,
+    "Kommentar": "KÖTT/FÅGEL",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "VEGK02",
+    "Kategori": "KYLT VEGETARISKT",
+    "Planogram-fil": "GWIL-3001-K00-01-VEGETARISKT KYLT 2 SEK LÅG.pdf",
+    "Sektion/Disk": 2,
+    "Kommentar": "VEGETARISKT KYLT",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "MAN02",
+    "Kategori": "KROPPSVÅRD",
+    "Planogram-fil": "GWIL-1701-K00-01-MANLIG KROPPSVÅRD 3 SEK LÅG.pdf",
+    "Sektion/Disk": 2,
+    "Kommentar": "KROPPSVÅRD MAN",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "MAN03",
+    "Kategori": "KROPPSVÅRD",
+    "Planogram-fil": "GWIL-1701-K00-01-MANLIG KROPPSVÅRD 3 SEK LÅG.pdf",
+    "Sektion/Disk": 3,
+    "Kommentar": "KROPPSVÅRD MAN",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "DAM02",
+    "Kategori": "KROPPSVÅRD",
+    "Planogram-fil": "GWIL-1701-K00-01-RAK_DEODORANTER DAM 2 SEK LÅG.pdf",
+    "Sektion/Disk": 2,
+    "Kommentar": "KROPPSVÅRD DAM",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "SB02",
+    "Kategori": "KROPPSVÅRD",
+    "Planogram-fil": "GWIL-1702-K00-01-SCHAMPO_BALSAM 4 SEK HÖG.pdf",
+    "Sektion/Disk": 2,
+    "Kommentar": "SCHAMPO/BALSAM",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "SB03",
+    "Kategori": "KROPPSVÅRD",
+    "Planogram-fil": "GWIL-1702-K00-01-SCHAMPO_BALSAM 4 SEK HÖG.pdf",
+    "Sektion/Disk": 3,
+    "Kommentar": "SCHAMPO/BALSAM",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "SB04",
+    "Kategori": "KROPPSVÅRD",
+    "Planogram-fil": "GWIL-1702-K00-01-SCHAMPO_BALSAM 4 SEK HÖG.pdf",
+    "Sektion/Disk": 4,
+    "Kommentar": "SCHAMPO/BALSAM",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "HH02",
+    "Kategori": "KROPPSVÅRD",
+    "Planogram-fil": "GWIL-1702-K00-01-STYLING_HÅRFÄRG 4 SEK HÖG.pdf",
+    "Sektion/Disk": 2,
+    "Kommentar": "HÅRVÅRD/HÅRFÄRG",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "HH03",
+    "Kategori": "KROPPSVÅRD",
+    "Planogram-fil": "GWIL-1702-K00-01-STYLING_HÅRFÄRG 4 SEK HÖG.pdf",
+    "Sektion/Disk": 3,
+    "Kommentar": "HÅRVÅRD/HÅRFÄRG",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "HH04",
+    "Kategori": "KROPPSVÅRD",
+    "Planogram-fil": "GWIL-1702-K00-01-STYLING_HÅRFÄRG 4 SEK HÖG.pdf",
+    "Sektion/Disk": 4,
+    "Kommentar": "HÅRVÅRD/HÅRFÄRG",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "MH02",
+    "Kategori": "KROPPSVÅRD",
+    "Planogram-fil": "GWIL-1703-K00-01-MUNHYGIEN 4S HÖG.pdf",
+    "Sektion/Disk": 2,
+    "Kommentar": "MUNHYGIEN",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "MH03",
+    "Kategori": "KROPPSVÅRD",
+    "Planogram-fil": "GWIL-1703-K00-01-MUNHYGIEN 4S HÖG.pdf",
+    "Sektion/Disk": 3,
+    "Kommentar": "MUNHYGIEN",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "MH04",
+    "Kategori": "KROPPSVÅRD",
+    "Planogram-fil": "GWIL-1703-K00-01-MUNHYGIEN 4S HÖG.pdf",
+    "Sektion/Disk": 4,
+    "Kommentar": "MUNHYGIEN",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "IH02",
+    "Kategori": "KROPPSVÅRD",
+    "Planogram-fil": "GWIL-1704-K00-01-INTIMHYGIEN 4 SEK HÖG.pdf",
+    "Sektion/Disk": 2,
+    "Kommentar": "INTIMHYGIEN",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "IH03",
+    "Kategori": "KROPPSVÅRD",
+    "Planogram-fil": "GWIL-1704-K00-01-INTIMHYGIEN 4 SEK HÖG.pdf",
+    "Sektion/Disk": 3,
+    "Kommentar": "INTIMHYGIEN",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "IH04",
+    "Kategori": "KROPPSVÅRD",
+    "Planogram-fil": "GWIL-1704-K00-01-INTIMHYGIEN 4 SEK HÖG.pdf",
+    "Sektion/Disk": 4,
+    "Kommentar": "INTIMHYGIEN",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "SRV02",
+    "Kategori": "KROPPSVÅRD",
+    "Planogram-fil": "GWIL-1705-K00-01-TOALETTARTIKLAR SÅRVÅRD 3 SEK HÖG.pdf",
+    "Sektion/Disk": 2,
+    "Kommentar": "TOALETTARTIKLAR/SÅRVÅRD",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "SRV03",
+    "Kategori": "KROPPSVÅRD",
+    "Planogram-fil": "GWIL-1705-K00-01-TOALETTARTIKLAR SÅRVÅRD 3 SEK HÖG.pdf",
+    "Sektion/Disk": 3,
+    "Kommentar": "TOALETTARTIKLAR/SÅRVÅRD",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "HAV02",
+    "Kategori": "KROPPSVÅRD",
+    "Planogram-fil": "GWIL-1707-K00-01-HUDVÅRD-4 SEK LÅG.pdf",
+    "Sektion/Disk": 2,
+    "Kommentar": "HUDVÅRD/ANSIKTSVÅRD",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "HAV03",
+    "Kategori": "KROPPSVÅRD",
+    "Planogram-fil": "GWIL-1707-K00-01-HUDVÅRD-4 SEK LÅG.pdf",
+    "Sektion/Disk": 3,
+    "Kommentar": "HUDVÅRD/ANSIKTSVÅRD",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "HAV04",
+    "Kategori": "KROPPSVÅRD",
+    "Planogram-fil": "GWIL-1707-K00-01-HUDVÅRD-4 SEK LÅG.pdf",
+    "Sektion/Disk": 4,
+    "Kommentar": "HUDVÅRD/ANSIKTSVÅRD",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "DTS02",
+    "Kategori": "KROPPSVÅRD",
+    "Planogram-fil": "GWIL-1708-K00-01-TVÅL_DUSCH-4 SEK HÖG.pdf",
+    "Sektion/Disk": 2,
+    "Kommentar": "DUSCH/TVÅL/SPA",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "DTS03",
+    "Kategori": "KROPPSVÅRD",
+    "Planogram-fil": "GWIL-1708-K00-01-TVÅL_DUSCH-4 SEK HÖG.pdf",
+    "Sektion/Disk": 3,
+    "Kommentar": "DUSCH/TVÅL/SPA",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "DTS04",
+    "Kategori": "KROPPSVÅRD",
+    "Planogram-fil": "GWIL-1708-K00-01-TVÅL_DUSCH-4 SEK HÖG.pdf",
+    "Sektion/Disk": 4,
+    "Kommentar": "DUSCH/TVÅL/SPA",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "GVA02",
+    "Kategori": "KONFEKTYR",
+    "Planogram-fil": "GWIL-1404-K00-01-GÅVA 2 SEK HÖG.pdf",
+    "Sektion/Disk": 2,
+    "Kommentar": "GÅVA",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "BA02",
+    "Kategori": "KONFEKTYR",
+    "Planogram-fil": "GWIL-1405-K00-02-SOCKER-_BARNGODIS BARNGODIS 2 SEK HÖG.pdf",
+    "Sektion/Disk": 2,
+    "Kommentar": "BARNGODIS",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "GO02",
+    "Kategori": "KONFEKTYR",
+    "Planogram-fil": "GWIL-1405-K00-02-SOCKER-_BARNGODIS SOCKERGODIS 4 SEK HÖG.pdf",
+    "Sektion/Disk": 2,
+    "Kommentar": "SOCKERGODIS",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "GO03",
+    "Kategori": "KONFEKTYR",
+    "Planogram-fil": "GWIL-1405-K00-02-SOCKER-_BARNGODIS SOCKERGODIS 4 SEK HÖG.pdf",
+    "Sektion/Disk": 3,
+    "Kommentar": "SOCKERGODIS",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "GO04",
+    "Kategori": "KONFEKTYR",
+    "Planogram-fil": "GWIL-1405-K00-02-SOCKER-_BARNGODIS SOCKERGODIS 4 SEK HÖG.pdf",
+    "Sektion/Disk": 4,
+    "Kommentar": "SOCKERGODIS",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "CH02",
+    "Kategori": "KONFEKTYR",
+    "Planogram-fil": "GWIL-1406-K00-02 CHOKLADGODIS 8 SEK HÖG.pdf",
+    "Sektion/Disk": 2,
+    "Kommentar": "CHOKLADGODIS",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "CH03",
+    "Kategori": "KONFEKTYR",
+    "Planogram-fil": "GWIL-1406-K00-02 CHOKLADGODIS 8 SEK HÖG.pdf",
+    "Sektion/Disk": 3,
+    "Kommentar": "CHOKLADGODIS",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "CH04",
+    "Kategori": "KONFEKTYR",
+    "Planogram-fil": "GWIL-1406-K00-02 CHOKLADGODIS 8 SEK HÖG.pdf",
+    "Sektion/Disk": 4,
+    "Kommentar": "CHOKLADGODIS",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "CH05",
+    "Kategori": "KONFEKTYR",
+    "Planogram-fil": "GWIL-1406-K00-02 CHOKLADGODIS 8 SEK HÖG.pdf",
+    "Sektion/Disk": 5,
+    "Kommentar": "CHOKLADGODIS",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "CH06",
+    "Kategori": "KONFEKTYR",
+    "Planogram-fil": "GWIL-1406-K00-02 CHOKLADGODIS 8 SEK HÖG.pdf",
+    "Sektion/Disk": 6,
+    "Kommentar": "CHOKLADGODIS",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "CH07",
+    "Kategori": "KONFEKTYR",
+    "Planogram-fil": "GWIL-1406-K00-02 CHOKLADGODIS 8 SEK HÖG.pdf",
+    "Sektion/Disk": 7,
+    "Kommentar": "CHOKLADGODIS",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "CH08",
+    "Kategori": "KONFEKTYR",
+    "Planogram-fil": "GWIL-1406-K00-02 CHOKLADGODIS 8 SEK HÖG.pdf",
+    "Sektion/Disk": 8,
+    "Kommentar": "CHOKLADGODIS",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "REN02",
+    "Kategori": "GROV KEM",
+    "Planogram-fil": "GWIL-1801-K00-01-RENGÖRING_DOFTMEDEL 3 SEK.pdf",
+    "Sektion/Disk": 2,
+    "Kommentar": "RENGÖRING/DOFTMEDEL",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "REN03",
+    "Kategori": "GROV KEM",
+    "Planogram-fil": "GWIL-1801-K00-01-RENGÖRING_DOFTMEDEL 3 SEK.pdf",
+    "Sektion/Disk": 3,
+    "Kommentar": "RENGÖRING/DOFTMEDEL",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "REN04",
+    "Kategori": "GROV KEM",
+    "Planogram-fil": "GWIL-1801-K00-01-RENGÖRING_DOFTMEDEL 3 SEK.pdf",
+    "Sektion/Disk": 4,
+    "Kommentar": "RENGÖRING/DOFTMEDEL",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "DISK02",
+    "Kategori": "GROV KEM",
+    "Planogram-fil": "GWIL-1802-K00-01-DISKMEDEL 2 SEK.pdf",
+    "Sektion/Disk": 2,
+    "Kommentar": "DISKMEDEL",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "SKLJ02",
+    "Kategori": "GROV KEM",
+    "Planogram-fil": "GWIL-1803-K00-01-TVÄTTA SKÖLJMEDEL 2 SEK.pdf",
+    "Sektion/Disk": 2,
+    "Kommentar": "TVÄTTA/SKÖLJMEDEL",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "TVTT02",
+    "Kategori": "GROV KEM",
+    "Planogram-fil": "GWIL-1803-K00-01-TVÄTTA 2.5 SEK.pdf",
+    "Sektion/Disk": 2,
+    "Kommentar": "TVÄTTA",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "TVTT03",
+    "Kategori": "GROV KEM",
+    "Planogram-fil": "GWIL-1803-K00-01-TVÄTTA 2.5 SEK.pdf",
+    "Sektion/Disk": 3,
+    "Kommentar": "TVÄTTA",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "TVTT04",
+    "Kategori": "GROV KEM",
+    "Planogram-fil": "GWIL-1803-K00-01-TVÄTTA 2.5 SEK.pdf",
+    "Sektion/Disk": 4,
+    "Kommentar": "TVÄTTA",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "TVTT05",
+    "Kategori": "GROV KEM",
+    "Planogram-fil": "GWIL-1803-K00-01-TVÄTTA 2.5 SEK.pdf",
+    "Sektion/Disk": 5,
+    "Kommentar": "TVÄTTA",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "FRDIG02",
+    "Kategori": "FÄRDIGMAT-SNABBLAGAT",
+    "Planogram-fil": "GWIL-0201-K30-02-FÄRDIGLAGAT BAS 5 SEK LÅG.pdf",
+    "Sektion/Disk": 2,
+    "Kommentar": "MÅLTIDSLÖSNINGAR",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "FRDIG03",
+    "Kategori": "FÄRDIGMAT-SNABBLAGAT",
+    "Planogram-fil": "GWIL-0201-K30-02-FÄRDIGLAGAT BAS 5 SEK LÅG.pdf",
+    "Sektion/Disk": 3,
+    "Kommentar": "MÅLTIDSLÖSNINGAR",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "FRDIG04",
+    "Kategori": "FÄRDIGMAT-SNABBLAGAT",
+    "Planogram-fil": "GWIL-0201-K30-02-FÄRDIGLAGAT BAS 5 SEK LÅG.pdf",
+    "Sektion/Disk": 4,
+    "Kommentar": "MÅLTIDSLÖSNINGAR",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "FRDIG05",
+    "Kategori": "FÄRDIGMAT-SNABBLAGAT",
+    "Planogram-fil": "GWIL-0201-K30-02-FÄRDIGLAGAT BAS 5 SEK LÅG.pdf",
+    "Sektion/Disk": 5,
+    "Kommentar": "MÅLTIDSLÖSNINGAR",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "FP02",
+    "Kategori": "FÄRDIGMAT-SNABBLAGAT",
+    "Planogram-fil": "GWIL-0206-K20-01-FÄRSK PASTA 2 SEK LÅG.pdf",
+    "Sektion/Disk": 2,
+    "Kommentar": "FÄRSK PASTA",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "KSAS02",
+    "Kategori": "FÄRDIGMAT-SNABBLAGAT",
+    "Planogram-fil": "GWIL-0208-K00-02-KYLD SÅS_AROMSMÖR 2 SEK LÅG TARGET 2254.pdf",
+    "Sektion/Disk": 2,
+    "Kommentar": "KYLD SÅS/AROMSMÖR",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "FRDLAT02",
+    "Kategori": "FRUKT-GRÖNT",
+    "Planogram-fil": "GWIL-0309-K30-02-FÖRÄDLAT 2 SEK 6 HP.pdf",
+    "Sektion/Disk": 2,
+    "Kommentar": "FÖRÄDLAT",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "FG02",
+    "Kategori": "FRUKT-GRÖNT",
+    "Planogram-fil": "GWIL-0306-K00-03-KYLDA GRÖNSAKER 8 SEK + 1 SEK FESTFRUKT_EXOTISKT.pdf",
+    "Sektion/Disk": 2,
+    "Kommentar": "FRUKT & GRÖNT",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "FG03",
+    "Kategori": "FRUKT-GRÖNT",
+    "Planogram-fil": "GWIL-0306-K00-03-KYLDA GRÖNSAKER 8 SEK + 1 SEK FESTFRUKT_EXOTISKT.pdf",
+    "Sektion/Disk": 3,
+    "Kommentar": "FRUKT & GRÖNT",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "FG04",
+    "Kategori": "FRUKT-GRÖNT",
+    "Planogram-fil": "GWIL-0306-K00-03-KYLDA GRÖNSAKER 8 SEK + 1 SEK FESTFRUKT_EXOTISKT.pdf",
+    "Sektion/Disk": 4,
+    "Kommentar": "FRUKT & GRÖNT",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "FG05",
+    "Kategori": "FRUKT-GRÖNT",
+    "Planogram-fil": "GWIL-0306-K00-03-KYLDA GRÖNSAKER 8 SEK + 1 SEK FESTFRUKT_EXOTISKT.pdf",
+    "Sektion/Disk": 5,
+    "Kommentar": "FRUKT & GRÖNT",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "FG06",
+    "Kategori": "FRUKT-GRÖNT",
+    "Planogram-fil": "GWIL-0306-K00-03-KYLDA GRÖNSAKER 8 SEK + 1 SEK FESTFRUKT_EXOTISKT.pdf",
+    "Sektion/Disk": 6,
+    "Kommentar": "FRUKT & GRÖNT",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "FG07",
+    "Kategori": "FRUKT-GRÖNT",
+    "Planogram-fil": "GWIL-0306-K00-03-KYLDA GRÖNSAKER 8 SEK + 1 SEK FESTFRUKT_EXOTISKT.pdf",
+    "Sektion/Disk": 7,
+    "Kommentar": "FRUKT & GRÖNT",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "FG08",
+    "Kategori": "FRUKT-GRÖNT",
+    "Planogram-fil": "GWIL-0306-K00-03-KYLDA GRÖNSAKER 8 SEK + 1 SEK FESTFRUKT_EXOTISKT.pdf",
+    "Sektion/Disk": 8,
+    "Kommentar": "FRUKT & GRÖNT",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "FG09",
+    "Kategori": "FRUKT-GRÖNT",
+    "Planogram-fil": "GWIL-0306-K00-03-KYLDA GRÖNSAKER 8 SEK + 1 SEK FESTFRUKT_EXOTISKT.pdf",
+    "Sektion/Disk": 9,
+    "Kommentar": "FRUKT & GRÖNT",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "SILL02",
+    "Kategori": "FISK",
+    "Planogram-fil": "GWIL-0802-K00-01-SILL_ANSJOVIS_KAVIAR 2 SEK HÖG.pdf",
+    "Sektion/Disk": 2,
+    "Kommentar": "SILL/ANSJOVIS/KAVIAR",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "VAT02",
+    "Kategori": "DRYCKER",
+    "Planogram-fil": "GWIL-1101-K00-02-VATTEN- 2S.pdf",
+    "Sektion/Disk": 2,
+    "Kommentar": "VATTEN",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "ÖL02",
+    "Kategori": "DRYCKER",
+    "Planogram-fil": "GWIL-1102-K50-02-ÖL-URBAN-3S - ETABLERING.pdf",
+    "Sektion/Disk": 2,
+    "Kommentar": "ÖL",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "ÖL03",
+    "Kategori": "DRYCKER",
+    "Planogram-fil": "GWIL-1102-K50-02-ÖL-URBAN-3S - ETABLERING.pdf",
+    "Sektion/Disk": 3,
+    "Kommentar": "ÖL",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "LSK05",
+    "Kategori": "DRYCKER",
+    "Planogram-fil": "GWIL-1106-K00-01-LÄSK_DRINKMIX_VIN-7S INKL. PICKMIX.pdf",
+    "Sektion/Disk": 5,
+    "Kommentar": "LÄSK/DRINKMIX",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "LSK06",
+    "Kategori": "DRYCKER",
+    "Planogram-fil": "GWIL-1106-K00-01-LÄSK_DRINKMIX_VIN-7S INKL. PICKMIX.pdf",
+    "Sektion/Disk": 6,
+    "Kommentar": "LÄSK/DRINKMIX",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "LSK07",
+    "Kategori": "DRYCKER",
+    "Planogram-fil": "GWIL-1106-K00-01-LÄSK_DRINKMIX_VIN-7S INKL. PICKMIX.pdf",
+    "Sektion/Disk": 7,
+    "Kommentar": "LÄSK/DRINKMIX",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "FU02",
+    "Kategori": "DRYCKER",
+    "Planogram-fil": "GWIL-1108-01-FUNKTIONELLA DRYCKER-3S.pdf",
+    "Sektion/Disk": 2,
+    "Kommentar": "FUNKTIONELLA DRYCKER",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "FU03",
+    "Kategori": "DRYCKER",
+    "Planogram-fil": "GWIL-1108-01-FUNKTIONELLA DRYCKER-3S.pdf",
+    "Sektion/Disk": 3,
+    "Kommentar": "FUNKTIONELLA DRYCKER",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "HUND02",
+    "Kategori": "DJUR",
+    "Planogram-fil": "GWIL-1603-K30-01-HUND-5S-BAS.pdf",
+    "Sektion/Disk": 2,
+    "Kommentar": "HUND",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "HUND03",
+    "Kategori": "DJUR",
+    "Planogram-fil": "GWIL-1603-K30-01-HUND-5S-BAS.pdf",
+    "Sektion/Disk": 3,
+    "Kommentar": "HUND",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "HUND04",
+    "Kategori": "DJUR",
+    "Planogram-fil": "GWIL-1603-K30-01-HUND-5S-BAS.pdf",
+    "Sektion/Disk": 4,
+    "Kommentar": "HUND",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "HUND05",
+    "Kategori": "DJUR",
+    "Planogram-fil": "GWIL-1603-K30-01-HUND-5S-BAS.pdf",
+    "Sektion/Disk": 5,
+    "Kommentar": "HUND",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "HUND06",
+    "Kategori": "DJUR",
+    "Planogram-fil": "GWIL-1603-K30-01-HUND-5S-BAS.pdf",
+    "Sektion/Disk": 6,
+    "Kommentar": "HUND",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "HUND07",
+    "Kategori": "DJUR",
+    "Planogram-fil": "GWIL-1603-K30-01-HUND-5S-BAS.pdf",
+    "Sektion/Disk": 7,
+    "Kommentar": "HUND",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "KATT02",
+    "Kategori": "DJUR",
+    "Planogram-fil": "GWIL-1602-K00-03-KATT-6S INKLUSIVE DJUR ÖVRIGT MAT_TILLBEHÖR.pdf",
+    "Sektion/Disk": 2,
+    "Kommentar": "KATT",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "KATT03",
+    "Kategori": "DJUR",
+    "Planogram-fil": "GWIL-1602-K00-03-KATT-6S INKLUSIVE DJUR ÖVRIGT MAT_TILLBEHÖR.pdf",
+    "Sektion/Disk": 3,
+    "Kommentar": "KATT",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "KATT04",
+    "Kategori": "DJUR",
+    "Planogram-fil": "GWIL-1602-K00-03-KATT-6S INKLUSIVE DJUR ÖVRIGT MAT_TILLBEHÖR.pdf",
+    "Sektion/Disk": 4,
+    "Kommentar": "KATT",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "KATT05",
+    "Kategori": "DJUR",
+    "Planogram-fil": "GWIL-1602-K00-03-KATT-6S INKLUSIVE DJUR ÖVRIGT MAT_TILLBEHÖR.pdf",
+    "Sektion/Disk": 5,
+    "Kommentar": "KATT",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "KATT06",
+    "Kategori": "DJUR",
+    "Planogram-fil": "GWIL-1602-K00-03-KATT-6S INKLUSIVE DJUR ÖVRIGT MAT_TILLBEHÖR.pdf",
+    "Sektion/Disk": 6,
+    "Kommentar": "KATT",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "FRUKTB02",
+    "Kategori": "DJUPFRYST",
+    "Planogram-fil": "GWIL-1202-K00-01-DJ FRUKT_BÄR-2DISK.pdf",
+    "Sektion/Disk": 2,
+    "Kommentar": "FRUKT/BÄR",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "GLASS02",
+    "Kategori": "DJUPFRYST",
+    "Planogram-fil": "GWIL-1204-K00-04-DJ HUSHÅLLSGLASS-5_5 DISK.pdf",
+    "Sektion/Disk": 2,
+    "Kommentar": "HUSHÅLLSGLASS",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "GLASS03",
+    "Kategori": "DJUPFRYST",
+    "Planogram-fil": "GWIL-1204-K00-04-DJ HUSHÅLLSGLASS-5_5 DISK.pdf",
+    "Sektion/Disk": 3,
+    "Kommentar": "HUSHÅLLSGLASS",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "GLASS04",
+    "Kategori": "DJUPFRYST",
+    "Planogram-fil": "GWIL-1204-K00-04-DJ HUSHÅLLSGLASS-5_5 DISK.pdf",
+    "Sektion/Disk": 4,
+    "Kommentar": "HUSHÅLLSGLASS",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "GLASS05",
+    "Kategori": "DJUPFRYST",
+    "Planogram-fil": "GWIL-1204-K00-04-DJ HUSHÅLLSGLASS-5_5 DISK.pdf",
+    "Sektion/Disk": 5,
+    "Kommentar": "HUSHÅLLSGLASS",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "GLASS06",
+    "Kategori": "DJUPFRYST",
+    "Planogram-fil": "GWIL-1204-K00-04-DJ HUSHÅLLSGLASS-5_5 DISK.pdf",
+    "Sektion/Disk": 6,
+    "Kommentar": "HUSHÅLLSGLASS",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "ENP02",
+    "Kategori": "DJUPFRYST",
+    "Planogram-fil": "GWIL-1205-K00-01-DJ ENPORTION-12SKÅP.pdf",
+    "Sektion/Disk": 2,
+    "Kommentar": "ENPORTION",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "ENP03",
+    "Kategori": "DJUPFRYST",
+    "Planogram-fil": "GWIL-1205-K00-01-DJ ENPORTION-12SKÅP.pdf",
+    "Sektion/Disk": 3,
+    "Kommentar": "ENPORTION",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "ENP04",
+    "Kategori": "DJUPFRYST",
+    "Planogram-fil": "GWIL-1205-K00-01-DJ ENPORTION-12SKÅP.pdf",
+    "Sektion/Disk": 4,
+    "Kommentar": "ENPORTION",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "ENP05",
+    "Kategori": "DJUPFRYST",
+    "Planogram-fil": "GWIL-1205-K00-01-DJ ENPORTION-12SKÅP.pdf",
+    "Sektion/Disk": 5,
+    "Kommentar": "ENPORTION",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "ENP06",
+    "Kategori": "DJUPFRYST",
+    "Planogram-fil": "GWIL-1205-K00-01-DJ ENPORTION-12SKÅP.pdf",
+    "Sektion/Disk": 6,
+    "Kommentar": "ENPORTION",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "ENP07",
+    "Kategori": "DJUPFRYST",
+    "Planogram-fil": "GWIL-1205-K00-01-DJ ENPORTION-12SKÅP.pdf",
+    "Sektion/Disk": 7,
+    "Kommentar": "ENPORTION",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "ENP08",
+    "Kategori": "DJUPFRYST",
+    "Planogram-fil": "GWIL-1205-K00-01-DJ ENPORTION-12SKÅP.pdf",
+    "Sektion/Disk": 8,
+    "Kommentar": "ENPORTION",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "ENP09",
+    "Kategori": "DJUPFRYST",
+    "Planogram-fil": "GWIL-1205-K00-01-DJ ENPORTION-12SKÅP.pdf",
+    "Sektion/Disk": 9,
+    "Kommentar": "ENPORTION",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "ENP10",
+    "Kategori": "DJUPFRYST",
+    "Planogram-fil": "GWIL-1205-K00-01-DJ ENPORTION-12SKÅP.pdf",
+    "Sektion/Disk": 10,
+    "Kommentar": "ENPORTION",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "ENP11",
+    "Kategori": "DJUPFRYST",
+    "Planogram-fil": "GWIL-1205-K00-01-DJ ENPORTION-12SKÅP.pdf",
+    "Sektion/Disk": 11,
+    "Kommentar": "ENPORTION",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "ENP12",
+    "Kategori": "DJUPFRYST",
+    "Planogram-fil": "GWIL-1205-K00-01-DJ ENPORTION-12SKÅP.pdf",
+    "Sektion/Disk": 12,
+    "Kommentar": "ENPORTION",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "PORTION02",
+    "Kategori": "DJUPFRYST",
+    "Planogram-fil": "GWIL-1206-K0-02-DJ FLERPORT_MÅLTIDSDEL-BASPLUS-4DISK.pdf",
+    "Sektion/Disk": 2,
+    "Kommentar": "FLERPORTION/MÅLTIDSDELAR",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "PORTION03",
+    "Kategori": "DJUPFRYST",
+    "Planogram-fil": "GWIL-1206-K0-02-DJ FLERPORT_MÅLTIDSDEL-BASPLUS-4DISK.pdf",
+    "Sektion/Disk": 3,
+    "Kommentar": "FLERPORTION/MÅLTIDSDELAR",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "PORTION04",
+    "Kategori": "DJUPFRYST",
+    "Planogram-fil": "GWIL-1206-K0-02-DJ FLERPORT_MÅLTIDSDEL-BASPLUS-4DISK.pdf",
+    "Sektion/Disk": 4,
+    "Kommentar": "FLERPORTION/MÅLTIDSDELAR",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "PIZZA02",
+    "Kategori": "DJUPFRYST",
+    "Planogram-fil": "GWIL-1207-K00-01-DJ PIZZA_SNACKS-4DISK.pdf",
+    "Sektion/Disk": 2,
+    "Kommentar": "PIZZA",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "PIZZA03",
+    "Kategori": "DJUPFRYST",
+    "Planogram-fil": "GWIL-1207-K00-01-DJ PIZZA_SNACKS-4DISK.pdf",
+    "Sektion/Disk": 3,
+    "Kommentar": "PIZZA",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "PIZZA04",
+    "Kategori": "DJUPFRYST",
+    "Planogram-fil": "GWIL-1207-K00-01-DJ PIZZA_SNACKS-4DISK.pdf",
+    "Sektion/Disk": 4,
+    "Kommentar": "PIZZA",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "GRNSK02",
+    "Kategori": "DJUPFRYST",
+    "Planogram-fil": "GWIL-1208-K00-02-DJ GRÖNSAKER-4DISK.pdf",
+    "Sektion/Disk": 2,
+    "Kommentar": "GRÖNSAKER DJUPFRYST",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "GRNSK03",
+    "Kategori": "DJUPFRYST",
+    "Planogram-fil": "GWIL-1208-K00-02-DJ GRÖNSAKER-4DISK.pdf",
+    "Sektion/Disk": 3,
+    "Kommentar": "GRÖNSAKER DJUPFRYST",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "GRNSK04",
+    "Kategori": "DJUPFRYST",
+    "Planogram-fil": "GWIL-1208-K00-02-DJ GRÖNSAKER-4DISK.pdf",
+    "Sektion/Disk": 4,
+    "Kommentar": "GRÖNSAKER DJUPFRYST",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "POTATIS02",
+    "Kategori": "DJUPFRYST",
+    "Planogram-fil": "GWIL-1209-K00-01-DJ POTATIS 3DISK.pdf",
+    "Sektion/Disk": 2,
+    "Kommentar": "POTATIS",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "POTATIS03",
+    "Kategori": "DJUPFRYST",
+    "Planogram-fil": "GWIL-1209-K00-01-DJ POTATIS 3DISK.pdf",
+    "Sektion/Disk": 3,
+    "Kommentar": "POTATIS",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "FGEL02",
+    "Kategori": "DJUPFRYST",
+    "Planogram-fil": "GWIL-1210-K00-02-DJ FÅGEL-5DISK.pdf",
+    "Sektion/Disk": 2,
+    "Kommentar": "FÅGEL DJUPFRYST",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "FGEL03",
+    "Kategori": "DJUPFRYST",
+    "Planogram-fil": "GWIL-1210-K00-02-DJ FÅGEL-5DISK.pdf",
+    "Sektion/Disk": 3,
+    "Kommentar": "FÅGEL DJUPFRYST",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "FGEL04",
+    "Kategori": "DJUPFRYST",
+    "Planogram-fil": "GWIL-1210-K00-02-DJ FÅGEL-5DISK.pdf",
+    "Sektion/Disk": 4,
+    "Kommentar": "FÅGEL DJUPFRYST",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "FGEL05",
+    "Kategori": "DJUPFRYST",
+    "Planogram-fil": "GWIL-1210-K00-02-DJ FÅGEL-5DISK.pdf",
+    "Sektion/Disk": 5,
+    "Kommentar": "FÅGEL DJUPFRYST",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "SKAL02",
+    "Kategori": "DJUPFRYST",
+    "Planogram-fil": "GWIL-1211-K00-02-DJ FISK_SKALDJUR-4_5DISK.pdf",
+    "Sektion/Disk": 2,
+    "Kommentar": "FISK/SKALDJUR",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "SKAL03",
+    "Kategori": "DJUPFRYST",
+    "Planogram-fil": "GWIL-1211-K00-02-DJ FISK_SKALDJUR-4_5DISK.pdf",
+    "Sektion/Disk": 3,
+    "Kommentar": "FISK/SKALDJUR",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "SKAL04",
+    "Kategori": "DJUPFRYST",
+    "Planogram-fil": "GWIL-1211-K00-02-DJ FISK_SKALDJUR-4_5DISK.pdf",
+    "Sektion/Disk": 4,
+    "Kommentar": "FISK/SKALDJUR",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "SKAL05",
+    "Kategori": "DJUPFRYST",
+    "Planogram-fil": "GWIL-1211-K00-02-DJ FISK_SKALDJUR-4_5DISK.pdf",
+    "Sektion/Disk": 5,
+    "Kommentar": "FISK/SKALDJUR",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "BD02",
+    "Kategori": "DJUPFRYST",
+    "Planogram-fil": "GWIL-1212-K00-01-DJ BRÖD_DESSERT 4 SKÅP.pdf",
+    "Sektion/Disk": 2,
+    "Kommentar": "BRÖD/DESSERT",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "BD03",
+    "Kategori": "DJUPFRYST",
+    "Planogram-fil": "GWIL-1212-K00-01-DJ BRÖD_DESSERT 4 SKÅP.pdf",
+    "Sektion/Disk": 3,
+    "Kommentar": "BRÖD/DESSERT",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "BD04",
+    "Kategori": "DJUPFRYST",
+    "Planogram-fil": "GWIL-1212-K00-01-DJ BRÖD_DESSERT 4 SKÅP.pdf",
+    "Sektion/Disk": 4,
+    "Kommentar": "BRÖD/DESSERT",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "DAL02",
+    "Kategori": "DJUPFRYST",
+    "Planogram-fil": "GWIL-1213-K00-02-DJ ALLERGI-2SKÅP.pdf",
+    "Sektion/Disk": 2,
+    "Kommentar": "ALLERGI DJUPFRYST",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "DVE02",
+    "Kategori": "DJUPFRYST",
+    "Planogram-fil": "GWIL-1214-K00-01-DJ VEGETARISKT 5 SKÅP.pdf",
+    "Sektion/Disk": 2,
+    "Kommentar": "VEGETARISKT DJUPFRYST",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "DVE03",
+    "Kategori": "DJUPFRYST",
+    "Planogram-fil": "GWIL-1214-K00-01-DJ VEGETARISKT 5 SKÅP.pdf",
+    "Sektion/Disk": 3,
+    "Kommentar": "VEGETARISKT DJUPFRYST",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "DVE04",
+    "Kategori": "DJUPFRYST",
+    "Planogram-fil": "GWIL-1214-K00-01-DJ VEGETARISKT 5 SKÅP.pdf",
+    "Sektion/Disk": 4,
+    "Kommentar": "VEGETARISKT DJUPFRYST",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "DVE05",
+    "Kategori": "DJUPFRYST",
+    "Planogram-fil": "GWIL-1214-K00-01-DJ VEGETARISKT 5 SKÅP.pdf",
+    "Sektion/Disk": 5,
+    "Kommentar": "VEGETARISKT DJUPFRYST",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "KYL01",
+    "Kategori": "DRYCKER",
+    "Planogram-fil": "GWIL-1106-K00-03-LÄSK_DRINKMIX_VIN DRICKAKYL 6 SEK.pdf",
+    "Sektion/Disk": 1,
+    "Kommentar": "DRICKESKYL",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "KYL02",
+    "Kategori": "DRYCKER",
+    "Planogram-fil": "GWIL-1106-K00-03-LÄSK_DRINKMIX_VIN DRICKAKYL 6 SEK.pdf",
+    "Sektion/Disk": 2,
+    "Kommentar": "DRICKESKYL",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "KYL03",
+    "Kategori": "DRYCKER",
+    "Planogram-fil": "GWIL-1106-K00-03-LÄSK_DRINKMIX_VIN DRICKAKYL 6 SEK.pdf",
+    "Sektion/Disk": 3,
+    "Kommentar": "DRICKESKYL",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "KYL04",
+    "Kategori": "DRYCKER",
+    "Planogram-fil": "GWIL-1106-K00-03-LÄSK_DRINKMIX_VIN DRICKAKYL 6 SEK.pdf",
+    "Sektion/Disk": 4,
+    "Kommentar": "DRICKESKYL",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "KYL05",
+    "Kategori": "DRYCKER",
+    "Planogram-fil": "GWIL-1106-K00-03-LÄSK_DRINKMIX_VIN DRICKAKYL 6 SEK.pdf",
+    "Sektion/Disk": 5,
+    "Kommentar": "DRICKESKYL",
+    "": "",
+    "__1": ""
+  },
+  {
+    "Hyll-ID": "KYL06",
+    "Kategori": "DRYCKER",
+    "Planogram-fil": "GWIL-1106-K00-03-LÄSK_DRINKMIX_VIN DRICKAKYL 6 SEK.pdf",
+    "Sektion/Disk": 6,
+    "Kommentar": "DRICKESKYL",
+    "": "",
+    "__1": ""
+  }
+]
