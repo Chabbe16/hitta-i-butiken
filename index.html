@@ -228,6 +228,25 @@
       background: #000;
     }
 
+    /* html5-qrcode renders its own video/canvas elements. Keep them full-bleed like our <video>. */
+    #barcodeReader {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    #barcodeReader.hidden {
+      display: none;
+    }
+
+    #barcodeReader video,
+    #barcodeReader canvas {
+      width: 100% !important;
+      height: 100% !important;
+      object-fit: cover !important;
+    }
+
     .scanner-overlay {
       position: absolute;
       inset: 0;
@@ -1115,6 +1134,7 @@
       </div>
       <div class="scanner-viewport">
         <video id="barcodeVideo" playsinline muted></video>
+        <div id="barcodeReader" class="hidden" aria-hidden="true"></div>
         <div class="scanner-overlay" aria-hidden="true">
           <div class="scanner-box"></div>
         </div>
@@ -1126,8 +1146,8 @@
     </div>
   </div>
 
-  <!-- ZXing (barcode scanning). Pinned to a stable version for reliability. -->
-  <script src="https://unpkg.com/@zxing/library@0.21.3"></script>
+  <!-- Barcode scanning fallback (used when BarcodeDetector API is unavailable). -->
+  <script src="https://unpkg.com/html5-qrcode@2.3.8/html5-qrcode.min.js"></script>
 
   <script>
     const panel = document.getElementById("productPanel");
@@ -1168,6 +1188,7 @@
     const barcodeScannerModal = document.getElementById("barcodeScannerModal");
     const closeBarcodeScanner = document.getElementById("closeBarcodeScanner");
     const barcodeVideo = document.getElementById("barcodeVideo");
+    const barcodeReader = document.getElementById("barcodeReader");
     const barcodeScannerStatus = document.getElementById("barcodeScannerStatus");
     // Put your exported floorplan SVG in the project root and keep this path in sync.
     const STORE_SVG_PATH = "./%C3%84lmhult%20-%20250902.svg";
@@ -1269,196 +1290,220 @@
     class Ean13BarcodeScanner {
       constructor(options) {
         this.videoEl = options.videoEl;
+        this.readerEl = options.readerEl;
         this.onDetected = options.onDetected;
         this.status = options.status;
-        this.reader = null;
-        this.controls = null;
+
+        this.running = false;
         this.hasResult = false;
         this.lastValue = "";
-        this.noResultTimer = null;
-        this.resolutionUpgradeAttempted = false;
+        this.stream = null;
+        this.detector = null;
+        this.html5 = null;
+        this.mode = ""; // "barcode-detector" | "html5-qrcode"
+        this.attempt = 0;
+        this.loopTimer = null;
       }
 
       async open() {
+        setBarcodeScannerOpen(true);
+        this.hasResult = false;
+        this.lastValue = "";
+        this.attempt = 0;
+        this.status("Scanning...");
+
+        try {
+          console.info("[scanner] open()", { at: new Date().toISOString() });
+        } catch (logError) {
+        }
+
         if (!isBarcodeScanningSupported()) {
-          setBarcodeScannerOpen(true);
           this.status("Unsupported browser (camera API missing).");
           return;
         }
 
-        if (!window.ZXing || typeof window.ZXing.BrowserMultiFormatReader !== "function") {
-          setBarcodeScannerOpen(true);
-          this.status("Scanner library failed to load. Check network/CDN availability.");
+        // Prefer native BarcodeDetector when available; fallback to html5-qrcode for iOS Safari and others.
+        if (window.BarcodeDetector) {
+          try {
+            this.detector = new window.BarcodeDetector({ formats: ["ean_13"] });
+            this.mode = "barcode-detector";
+            await this.startBarcodeDetector();
+            return;
+          } catch (detectorError) {
+            this.detector = null;
+            this.mode = "";
+          }
+        }
+
+        if (window.Html5Qrcode) {
+          this.mode = "html5-qrcode";
+          await this.startHtml5Qrcode();
           return;
         }
 
-        setBarcodeScannerOpen(true);
-        this.hasResult = false;
-        this.lastValue = "";
-        this.resolutionUpgradeAttempted = false;
-        this.status("Scanning...");
+        this.status("Scanner not supported on this browser.");
+      }
+
+      async startBarcodeDetector() {
+        this.showMode("barcode-detector");
+
+        const constraintAttempts = [
+          {
+            audio: false,
+            video: {
+              facingMode: { exact: "environment" },
+              width: { exact: 1920 },
+              height: { exact: 1080 },
+              frameRate: { ideal: 30, max: 60 }
+            }
+          },
+          {
+            audio: false,
+            video: {
+              facingMode: { exact: "environment" },
+              width: { ideal: 1920 },
+              height: { ideal: 1080 },
+              frameRate: { ideal: 30, max: 60 }
+            }
+          },
+          {
+            audio: false,
+            video: {
+              facingMode: { ideal: "environment" },
+              width: { ideal: 1920 },
+              height: { ideal: 1080 },
+              frameRate: { ideal: 30, max: 60 }
+            }
+          }
+        ];
+
+        let stream = null;
+        let lastError = null;
+        for (let i = 0; i < constraintAttempts.length; i++) {
+          try {
+            const constraints = constraintAttempts[i];
+            try {
+              console.info("[scanner] getUserMedia attempt " + (i + 1), { at: new Date().toISOString(), video: constraints.video });
+            } catch (logError) {
+            }
+            stream = await navigator.mediaDevices.getUserMedia(constraints);
+            lastError = null;
+            break;
+          } catch (error) {
+            lastError = error;
+          }
+        }
+        if (!stream) throw lastError || new Error("Failed to start camera");
+
+        this.stream = stream;
+        this.running = true;
+
+        this.videoEl.srcObject = stream;
+        this.videoEl.setAttribute("playsinline", "");
+        this.videoEl.muted = true;
+
         try {
-          console.info("[scanner] open() start", new Date().toISOString());
+          await this.videoEl.play();
+        } catch (playError) {
+          // Some browsers need a short delay after assigning srcObject.
+          await new Promise((r) => setTimeout(r, 50));
+          await this.videoEl.play();
+        }
+
+        this.logVideoSettings("[scanner] camera started");
+
+        // Continuous scan loop (sequential, throttled ~220ms; no overlapping attempts).
+        const loop = async () => {
+          while (this.running && !this.hasResult) {
+            this.attempt += 1;
+            try {
+              console.debug("[scanner] attempt", { n: this.attempt, at: new Date().toISOString(), mode: this.mode });
+            } catch (logError) {
+            }
+
+            let barcodes = [];
+            try {
+              if (this.detector && this.videoEl && this.videoEl.readyState >= 2) {
+                barcodes = await this.detector.detect(this.videoEl);
+              }
+            } catch (detectError) {
+              // Keep looping; never silently stop scanning.
+            }
+
+            if (!this.running || this.hasResult) break;
+
+            if (barcodes && barcodes.length) {
+              const rawValue = barcodes[0] && barcodes[0].rawValue ? String(barcodes[0].rawValue) : "";
+              await this.handleDetected(rawValue);
+            }
+
+            await new Promise((r) => setTimeout(r, 220));
+          }
+        };
+
+        void loop();
+      }
+
+      async startHtml5Qrcode() {
+        this.showMode("html5-qrcode");
+
+        if (!this.readerEl || !this.readerEl.id) {
+          this.status("Scanner UI error: missing reader element.");
+          return;
+        }
+
+        this.running = true;
+
+        const supportedFormats = (window.Html5QrcodeSupportedFormats && window.Html5QrcodeSupportedFormats.EAN_13)
+          ? [window.Html5QrcodeSupportedFormats.EAN_13]
+          : undefined;
+
+        this.html5 = new window.Html5Qrcode(this.readerEl.id);
+
+        const config = {
+          fps: 12,
+          formatsToSupport: supportedFormats,
+          // Crop area improves speed and reduces false negatives in cluttered backgrounds.
+          qrbox: { width: 320, height: 240 },
+          videoConstraints: {
+            facingMode: "environment",
+            width: { ideal: 1920 },
+            height: { ideal: 1080 }
+          }
+        };
+
+        try {
+          console.info("[scanner] html5-qrcode start", { at: new Date().toISOString(), config });
         } catch (logError) {
         }
 
-        // Hint the decoder to look only for EAN-13 for speed and fewer false positives.
-        const hints = new Map();
         try {
-          hints.set(window.ZXing.DecodeHintType.POSSIBLE_FORMATS, [window.ZXing.BarcodeFormat.EAN_13]);
-        } catch (hintError) {
-          // Hints are optional; keep going if this ZXing build differs.
-        }
-
-        // Lower interval = faster first reads (at the cost of more CPU).
-        this.reader = new window.ZXing.BrowserMultiFormatReader(hints, 150);
-
-        clearTimeout(this.noResultTimer);
-        this.noResultTimer = setTimeout(() => {
-          if (!this.hasResult) this.status("No barcode found. Try moving closer and keeping the code steady.");
-        }, 9000);
-
-        try {
-          // Prefer the rear camera and request high resolution to avoid blurry preview.
-          // Try strict constraints first, then fall back to "ideal" if the device/browser can't satisfy them.
-          const constraintAttempts = [
-            {
-              audio: false,
-              video: {
-                facingMode: { exact: "environment" },
-                width: { exact: 1920 },
-                height: { exact: 1080 },
-                frameRate: { ideal: 30, max: 60 }
-              }
+          await this.html5.start(
+            { facingMode: "environment" },
+            config,
+            (decodedText /*, decodedResult */) => {
+              // Success callback can fire multiple times; guard to prevent duplicates.
+              void this.handleDetected(decodedText);
             },
-            {
-              audio: false,
-              video: {
-                facingMode: { exact: "environment" },
-                width: { ideal: 1920 },
-                height: { ideal: 1080 },
-                frameRate: { ideal: 30, max: 60 }
-              }
-            },
-            {
-              audio: false,
-              video: {
-                facingMode: { ideal: "environment" },
-                width: { ideal: 1920 },
-                height: { ideal: 1080 },
-                frameRate: { ideal: 30, max: 60 }
-              }
-            }
-          ];
-
-          const onDecode = (result, error) => {
-            if (this.hasResult) return;
-
-            if (result && typeof result.getText === "function") {
-              const raw = result.getText();
-              const ean = normalizeEan13(raw);
-              if (!ean) return;
-              if (ean === this.lastValue) return; // Prevent duplicate firings.
-
-              this.lastValue = ean;
-              this.hasResult = true;
-              clearTimeout(this.noResultTimer);
-              this.status("Code detected");
+            (errorMessage) => {
+              // html5-qrcode reports per-frame scan failures here; treat as "attempts".
+              if (!this.running || this.hasResult) return;
+              this.attempt += 1;
               try {
-                console.info("[scanner] success", { ean, at: new Date().toISOString() });
+                console.debug("[scanner] attempt", { n: this.attempt, at: new Date().toISOString(), mode: this.mode, err: String(errorMessage || "") });
               } catch (logError) {
               }
-
-              // Required behavior: instantly stop camera + scanning and hide the UI.
-              // Do this before triggering search so the transition feels immediate.
-              try {
-                this.close();
-              } catch (closeError) {
-              }
-
-              try {
-                this.onDetected(ean);
-              } catch (callbackError) {
-              }
-              return;
             }
+          );
 
-            // ZXing throws NotFoundException frequently while scanning; ignore those.
-            if (error && error.name && String(error.name).toLowerCase().includes("notfound")) return;
-          };
-
-          // decodeFromConstraints returns controls that can stop the camera/decoder.
-          let lastError = null;
-          for (let i = 0; i < constraintAttempts.length; i++) {
-            const constraints = constraintAttempts[i];
-            try {
-              try {
-                console.info("[scanner] starting stream (attempt " + (i + 1) + ")", constraints.video);
-              } catch (logError) {
-              }
-              this.controls = await this.reader.decodeFromConstraints(constraints, this.videoEl, onDecode);
-              lastError = null;
-              break;
-            } catch (attemptError) {
-              lastError = attemptError;
-              // Reset between attempts to avoid keeping a low-quality stream alive.
-              try {
-                this.stop();
-              } catch (stopError) {
-              }
-            }
-          }
-          if (lastError) throw lastError;
-
-          // Debug: log actual video resolution/settings in use.
-          if (this.videoEl) {
-            const logResolution = () => {
-              try {
-                const stream = this.videoEl.srcObject;
-                const track = stream && stream.getVideoTracks ? stream.getVideoTracks()[0] : null;
-                const settings = track && typeof track.getSettings === "function" ? track.getSettings() : null;
-                console.info("[scanner] stream started", {
-                  at: new Date().toISOString(),
-                  videoWidth: this.videoEl.videoWidth,
-                  videoHeight: this.videoEl.videoHeight,
-                  settings
-                });
-
-                // If the browser gave us a low-res preview, try to upgrade to 1080p once.
-                if (!this.resolutionUpgradeAttempted && track && typeof track.applyConstraints === "function") {
-                  this.resolutionUpgradeAttempted = true;
-                  const w = settings && settings.width ? Number(settings.width) : 0;
-                  const h = settings && settings.height ? Number(settings.height) : 0;
-                  if ((w && w < 1600) || (h && h < 900)) {
-                    track.applyConstraints({
-                      width: { ideal: 1920 },
-                      height: { ideal: 1080 },
-                      frameRate: { ideal: 30, max: 60 }
-                    }).then(() => {
-                      try {
-                        const upgraded = typeof track.getSettings === "function" ? track.getSettings() : null;
-                        console.info("[scanner] upgraded constraints", { at: new Date().toISOString(), settings: upgraded });
-                      } catch (logError) {
-                      }
-                    }).catch(() => {
-                      // Ignore; not all browsers/tracks allow dynamic upgrades.
-                    });
-                  }
-                }
-              } catch (logError) {
-              }
-            };
-
-            if (this.videoEl.readyState >= 1) {
-              logResolution();
-            } else {
-              this.videoEl.addEventListener("loadedmetadata", logResolution, { once: true });
-            }
+          // We can't reliably read the internal video element's resolution here without querying the DOM.
+          // Log a baseline "camera started" event so production has an anchor.
+          try {
+            console.info("[scanner] camera started", { at: new Date().toISOString(), mode: this.mode });
+          } catch (logError) {
           }
         } catch (error) {
-          clearTimeout(this.noResultTimer);
           const name = error && error.name ? String(error.name) : "";
-
           if (name === "NotAllowedError" || name === "SecurityError") {
             this.status("Camera permission denied.");
           } else if (name === "NotFoundError" || name === "OverconstrainedError") {
@@ -1466,37 +1511,116 @@
           } else {
             this.status("Camera error. " + (error && error.message ? error.message : ""));
           }
-
-          // Keep the modal open so the user can read the error and close it manually.
-          try {
-            this.stop();
-          } catch (stopError) {
-          }
+          this.running = false;
         }
       }
 
-      stop() {
-        if (this.controls && typeof this.controls.stop === "function") {
-          this.controls.stop();
-        }
-        this.controls = null;
+      extractEanCandidate(input) {
+        const raw = String(input || "").trim().replace(/\s+/g, "");
+        const digits = raw.replace(/[^\d]/g, "");
+        if (!digits) return "";
 
-        if (this.reader && typeof this.reader.reset === "function") {
-          this.reader.reset();
+        // Some decoders include add-on digits; find the first valid EAN-13 substring.
+        for (let i = 0; i + 13 <= digits.length; i++) {
+          const candidate = digits.slice(i, i + 13);
+          if (normalizeEan13(candidate)) return candidate;
+        }
+        return "";
+      }
+
+      async handleDetected(rawValue) {
+        if (!this.running || this.hasResult) return;
+        const raw = String(rawValue || "");
+        const ean = this.extractEanCandidate(raw);
+
+        if (!ean) {
+          // Never "do nothing": log and keep scanning.
+          try {
+            console.info("[scanner] detected non-ean13", { at: new Date().toISOString(), raw });
+          } catch (logError) {
+          }
+          this.status("Scanning...");
+          return;
         }
 
-        // Extra safety: ensure the underlying MediaStream is stopped and detached.
+        if (ean === this.lastValue) return;
+        this.lastValue = ean;
+        this.hasResult = true;
+
+        try {
+          console.info("[scanner] detected", { at: new Date().toISOString(), ean });
+        } catch (logError) {
+        }
+
+        // Required behavior: stop scanner + close UI, then trigger app search flow.
+        await this.close();
+
+        try {
+          console.info("[scanner] searchProduct()", { at: new Date().toISOString(), ean });
+        } catch (logError) {
+        }
+
+        try {
+          this.onDetected(ean);
+        } catch (callbackError) {
+        }
+      }
+
+      showMode(mode) {
+        const useVideo = mode === "barcode-detector";
+        if (this.videoEl) this.videoEl.hidden = !useVideo;
+        if (this.readerEl) {
+          this.readerEl.classList.toggle("hidden", useVideo);
+          this.readerEl.setAttribute("aria-hidden", String(useVideo));
+        }
+      }
+
+      logVideoSettings(prefix) {
         try {
           const stream = this.videoEl && this.videoEl.srcObject;
-          if (stream && typeof stream.getTracks === "function") {
-            stream.getTracks().forEach((track) => {
+          const track = stream && stream.getVideoTracks ? stream.getVideoTracks()[0] : null;
+          const settings = track && typeof track.getSettings === "function" ? track.getSettings() : null;
+          console.info(prefix, {
+            at: new Date().toISOString(),
+            videoWidth: this.videoEl ? this.videoEl.videoWidth : 0,
+            videoHeight: this.videoEl ? this.videoEl.videoHeight : 0,
+            settings
+          });
+        } catch (logError) {
+        }
+      }
+
+      async stop() {
+        this.running = false;
+
+        if (this.loopTimer) {
+          clearTimeout(this.loopTimer);
+          this.loopTimer = null;
+        }
+
+        if (this.html5) {
+          try {
+            await this.html5.stop();
+          } catch (stopError) {
+          }
+          try {
+            await this.html5.clear();
+          } catch (clearError) {
+          }
+          this.html5 = null;
+        }
+
+        if (this.stream) {
+          try {
+            this.stream.getTracks().forEach((track) => {
               try {
                 track.stop();
               } catch (trackError) {
               }
             });
+          } catch (streamError) {
           }
-        } catch (streamError) {
+          this.stream = null;
         }
 
         if (this.videoEl) {
@@ -1508,20 +1632,15 @@
         }
       }
 
-      close() {
-        clearTimeout(this.noResultTimer);
-        this.noResultTimer = null;
-        try {
-          this.stop();
-        } catch (stopError) {
-        }
-        this.reader = null;
+      async close() {
+        await this.stop();
         setBarcodeScannerOpen(false);
       }
     }
 
     const eanScanner = new Ean13BarcodeScanner({
       videoEl: barcodeVideo,
+      readerEl: barcodeReader,
       status: setBarcodeScannerStatus,
       onDetected: (ean) => {
         window.searchProduct({ ean });
@@ -3283,10 +3402,11 @@
       scanBarcodeBtn.hidden = !shouldShow;
       if (!shouldShow) return;
 
-      const hasLibrary = Boolean(window.ZXing && typeof window.ZXing.BrowserMultiFormatReader === "function");
-      const ok = isBarcodeScanningSupported() && hasLibrary;
+      const hasNative = Boolean(window.BarcodeDetector);
+      const hasFallback = Boolean(window.Html5Qrcode);
+      const ok = isBarcodeScanningSupported() && (hasNative || hasFallback);
       scanBarcodeBtn.disabled = !ok;
-      if (!ok) scanBarcodeBtn.title = "Camera scanning not available in this browser or the scanner library did not load.";
+      if (!ok) scanBarcodeBtn.title = "Camera scanning not available in this browser.";
     }
 
     if (scanBarcodeBtn) {
@@ -3298,7 +3418,7 @@
 
     if (closeBarcodeScanner) {
       closeBarcodeScanner.addEventListener("click", () => {
-        eanScanner.close();
+        void eanScanner.close();
       });
     }
 
@@ -3306,13 +3426,13 @@
       barcodeScannerModal.addEventListener("click", (event) => {
         // Close if the user taps outside the scanner sheet.
         const sheet = event.target.closest(".scanner-sheet");
-        if (!sheet) eanScanner.close();
+        if (!sheet) void eanScanner.close();
       });
     }
 
     document.addEventListener("visibilitychange", () => {
       // Stop camera when the page is backgrounded.
-      if (document.hidden) eanScanner.close();
+      if (document.hidden) void eanScanner.close();
     });
 
     // Enable/disable the button (and re-check once everything loads).
