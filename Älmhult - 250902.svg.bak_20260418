@@ -7,7 +7,7 @@
    width="4493.3335"
    height="3178.6667"
    viewBox="0 0 4493.3335 3178.6667"
-   sodipodi:docname="2254 Willys Älmhults Handelsplats Planritning.svg"
+   sodipodi:docname="Älmhult - 250902.svg"
    inkscape:version="1.4.3 (0d15f75, 2025-12-25)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
@@ -53,15 +53,15 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#505050"
      showguides="false"
-     inkscape:zoom="0.70710678"
-     inkscape:cx="2153.1402"
-     inkscape:cy="2155.9686"
+     inkscape:zoom="4"
+     inkscape:cx="2702"
+     inkscape:cy="1146.375"
      inkscape:window-width="1920"
      inkscape:window-height="1009"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
-     inkscape:current-layer="layer-oc173">
+     inkscape:current-layer="svg1">
     <inkscape:page
        x="0"
        y="0"
@@ -6217,33 +6217,27 @@
     <text
        id="text116569"
        xml:space="preserve"
-       x="2533.8484"
-       y="2271.8401"
-       style="font-size:0.48px;stroke-width:0.04;fill:#ffffff"><tspan
+       transform="matrix(0.04,0,0,0.04,2519.9733,2271.84)"><tspan
          id="tspan116569"
-         style="font-variant:normal;font-weight:normal;font-size:8.448px;font-family:Arial;writing-mode:lr-tb;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.04"
-         x="2533.8484"
-         y="2271.8401">FRUKT01</tspan></text>
+         style="font-variant:normal;font-weight:normal;font-size:211.2px;font-family:Arial;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         x="0"
+         y="0">FRUKT &amp; GRÖNT</tspan></text>
     <text
        id="text116604"
        xml:space="preserve"
-       x="2533.8479"
-       y="2094.2"
-       style="font-size:0.48px;stroke-width:0.04;fill:#ffffff"><tspan
+       transform="matrix(0.04,0,0,0.04,2519.9733,2094.2)"><tspan
          id="tspan116604"
-         style="font-variant:normal;font-weight:normal;font-size:8.448px;font-family:Arial;writing-mode:lr-tb;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.04"
-         x="2533.8479"
-         y="2094.2">FRUKT02</tspan></text>
+         style="font-variant:normal;font-weight:normal;font-size:211.2px;font-family:Arial;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         x="0"
+         y="0">FRUKT &amp; GRÖNT</tspan></text>
     <text
        id="text116605"
        xml:space="preserve"
-       style="font-size:0.48px;fill:#ffffff;stroke-width:0.04"
-       x="2533.8479"
-       y="1916.5601"><tspan
+       transform="matrix(0.04,0,0,0.04,2519.9733,1916.56)"><tspan
          id="tspan116605"
-         style="font-variant:normal;font-weight:normal;font-size:8.448px;font-family:Arial;writing-mode:lr-tb;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.04"
-         x="2533.8479"
-         y="1916.5601">FRUKT03</tspan></text>
+         style="font-variant:normal;font-weight:normal;font-size:211.2px;font-family:Arial;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         x="0"
+         y="0">FRUKT &amp; GRÖNT</tspan></text>
     <text
        id="text119367"
        xml:space="preserve"
@@ -7196,13 +7190,35 @@
        xml:space="preserve"
        style="font-size:37.3333px;line-height:0;writing-mode:lr-tb;direction:ltr;fill:#000000"
        x="1325.4366"
+       y="1555.2236"
+       id="text407"><tspan
+         sodipodi:role="line"
+         id="tspan407"
+         x="1325.4366"
+         y="1555.2236"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:Arial">7</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:37.3333px;line-height:0;writing-mode:lr-tb;direction:ltr;fill:#000000"
+       x="1325.4366"
+       y="1681.3226"
+       id="text408"><tspan
+         sodipodi:role="line"
+         id="tspan408"
+         x="1325.4366"
+         y="1681.3226"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:Arial">8</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:37.3333px;line-height:0;writing-mode:lr-tb;direction:ltr;fill:#000000"
+       x="1325.4366"
        y="1796.4233"
        id="text409"><tspan
          sodipodi:role="line"
          id="tspan409"
          x="1325.4366"
          y="1796.4233"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:Arial">7</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:Arial">9</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:37.3333px;line-height:0;writing-mode:lr-tb;direction:ltr;fill:#000000"
@@ -7213,7 +7229,7 @@
          id="tspan410"
          x="1325.4366"
          y="1912.8223"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:Arial">8</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:Arial">10</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:37.3333px;line-height:0;writing-mode:lr-tb;direction:ltr;fill:#000000"
@@ -7224,7 +7240,7 @@
          id="tspan411"
          x="1325.4366"
          y="2030.5214"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:Arial">9</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:Arial">11</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:37.3333px;line-height:0;writing-mode:lr-tb;direction:ltr;fill:#000000"
@@ -7235,7 +7251,7 @@
          id="tspan412"
          x="1325.4366"
          y="2165.3223"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:Arial">10</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:Arial">12</tspan></text>
     <text
        id="text413"
        xml:space="preserve"
@@ -11339,94 +11355,6 @@
          style="font-variant:normal;font-weight:normal;font-size:8.448px;font-family:Arial;writing-mode:lr-tb;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.04"
          x="985.38605"
          y="1894.3013">KATT06</tspan></text>
-    <text
-       id="text42"
-       xml:space="preserve"
-       x="2449.6643"
-       y="2427.0068"
-       style="font-size:0.48px;fill:#000000;stroke-width:0.04"><tspan
-         id="tspan42"
-         style="font-variant:normal;font-weight:normal;font-size:8.448px;font-family:Arial;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.04"
-         x="2449.6643"
-         y="2427.0068">LÖK</tspan></text>
-    <text
-       id="text48"
-       xml:space="preserve"
-       x="2489.8672"
-       y="2427.0068"
-       style="font-size:0.48px;fill:#000000;stroke-width:0.04"><tspan
-         id="tspan48"
-         style="font-variant:normal;font-weight:normal;font-size:8.448px;font-family:Arial;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.04"
-         x="2489.8672"
-         y="2427.0068">LÖK</tspan></text>
-    <text
-       id="text61"
-       xml:space="preserve"
-       x="2583.2693"
-       y="2427.0068"
-       style="font-size:0.48px;fill:#000000;stroke-width:0.04"><tspan
-         sodipodi:role="line"
-         id="tspan63"
-         x="2583.2693"
-         y="2427.0068"><tspan
-           id="tspan61"
-           style="font-variant:normal;font-weight:normal;font-size:8.448px;font-family:Arial;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.04"
-           x="2583.2693"
-           y="2427.0068">LÖK</tspan></tspan><tspan
-         sodipodi:role="line"
-         id="tspan64"
-         x="2583.2693"
-         y="2430.3953" /></text>
-    <text
-       id="text62"
-       xml:space="preserve"
-       x="2619.6067"
-       y="2425.9463"
-       style="font-size:6.66667px;fill:#000000;stroke-width:0.04"><tspan
-         id="tspan62"
-         style="font-variant:normal;font-weight:normal;font-size:6.66667px;font-family:Arial;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.04"
-         x="2619.6067"
-         y="2425.9463">POTATIS</tspan></text>
-    <text
-       id="text65"
-       xml:space="preserve"
-       x="2660.0088"
-       y="2425.9463"
-       style="font-size:6.66667px;fill:#000000;stroke-width:0.04"><tspan
-         id="tspan65"
-         style="font-variant:normal;font-weight:normal;font-size:6.66667px;font-family:Arial;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.04"
-         x="2660.0088"
-         y="2425.9463">POTATIS</tspan></text>
-    <text
-       id="text66"
-       xml:space="preserve"
-       x="2701.2107"
-       y="2425.9463"
-       style="font-size:6.66667px;fill:#000000;stroke-width:0.04"><tspan
-         id="tspan66"
-         style="font-variant:normal;font-weight:normal;font-size:6.66667px;font-family:Arial;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.04"
-         x="2701.2107"
-         y="2425.9463">POTATIS</tspan></text>
-    <text
-       id="text67"
-       xml:space="preserve"
-       x="2758.1328"
-       y="2370.792"
-       style="font-size:6.66667px;fill:#000000;stroke-width:0.04"><tspan
-         id="tspan67"
-         style="font-variant:normal;font-weight:normal;font-size:6.66667px;font-family:Arial;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.04"
-         x="2758.1328"
-         y="2370.792">POTATIS</tspan></text>
-    <text
-       id="text68"
-       xml:space="preserve"
-       x="2758.1328"
-       y="2329.4897"
-       style="font-size:6.66667px;fill:#000000;stroke-width:0.04"><tspan
-         id="tspan68"
-         style="font-variant:normal;font-weight:normal;font-size:6.66667px;font-family:Arial;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.04"
-         x="2758.1328"
-         y="2329.4897">POTATIS</tspan></text>
   </g>
   <g
      id="layer-oc96"
@@ -74425,6 +74353,10 @@
        d="m 1119.693,1476.28 v 20.32"
        style="fill:none;stroke:#ff0000;stroke-width:0.96;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1" />
     <path
+       id="path224"
+       d="m 983.5333,7.38 h 20.32"
+       style="fill:none;stroke:#ff0000;stroke-width:0.96;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1" />
+    <path
        id="path225"
        d="m 984.2533,810.5 h 18.88"
        style="fill:none;stroke:#ff0000;stroke-width:0.96;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1" />
@@ -118201,7 +118133,13 @@
   <g
      id="layer-oc202"
      inkscape:groupmode="layer"
-     inkscape:label="IW_Vikmarkeringar" />
+     inkscape:label="IW_Vikmarkeringar">
+    <path
+       id="path130799"
+       d="m 78373,17060 h -473"
+       style="fill:none;stroke:#ff0000;stroke-width:24;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+       transform="matrix(0,-0.04,-0.04,0,4429.3333,3160)" />
+  </g>
   <g
      id="layer-oc203"
      inkscape:groupmode="layer"
