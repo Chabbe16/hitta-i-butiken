@@ -1276,6 +1276,7 @@
         this.hasResult = false;
         this.lastValue = "";
         this.noResultTimer = null;
+        this.resolutionUpgradeAttempted = false;
       }
 
       async open() {
@@ -1294,18 +1295,23 @@
         setBarcodeScannerOpen(true);
         this.hasResult = false;
         this.lastValue = "";
+        this.resolutionUpgradeAttempted = false;
         this.status("Scanning...");
+        try {
+          console.info("[scanner] open() start", new Date().toISOString());
+        } catch (logError) {
+        }
 
         // Hint the decoder to look only for EAN-13 for speed and fewer false positives.
         const hints = new Map();
         try {
           hints.set(window.ZXing.DecodeHintType.POSSIBLE_FORMATS, [window.ZXing.BarcodeFormat.EAN_13]);
-          hints.set(window.ZXing.DecodeHintType.TRY_HARDER, true);
         } catch (hintError) {
           // Hints are optional; keep going if this ZXing build differs.
         }
 
-        this.reader = new window.ZXing.BrowserMultiFormatReader(hints, 300);
+        // Lower interval = faster first reads (at the cost of more CPU).
+        this.reader = new window.ZXing.BrowserMultiFormatReader(hints, 150);
 
         clearTimeout(this.noResultTimer);
         this.noResultTimer = setTimeout(() => {
@@ -1313,17 +1319,39 @@
         }, 9000);
 
         try {
-          const constraints = {
-            audio: false,
-            video: {
-              facingMode: { ideal: "environment" },
-              width: { ideal: 1280 },
-              height: { ideal: 720 }
+          // Prefer the rear camera and request high resolution to avoid blurry preview.
+          // Try strict constraints first, then fall back to "ideal" if the device/browser can't satisfy them.
+          const constraintAttempts = [
+            {
+              audio: false,
+              video: {
+                facingMode: { exact: "environment" },
+                width: { exact: 1920 },
+                height: { exact: 1080 },
+                frameRate: { ideal: 30, max: 60 }
+              }
+            },
+            {
+              audio: false,
+              video: {
+                facingMode: { exact: "environment" },
+                width: { ideal: 1920 },
+                height: { ideal: 1080 },
+                frameRate: { ideal: 30, max: 60 }
+              }
+            },
+            {
+              audio: false,
+              video: {
+                facingMode: { ideal: "environment" },
+                width: { ideal: 1920 },
+                height: { ideal: 1080 },
+                frameRate: { ideal: 30, max: 60 }
+              }
             }
-          };
+          ];
 
-          // decodeFromConstraints returns controls that can stop the camera/decoder.
-          this.controls = await this.reader.decodeFromConstraints(constraints, this.videoEl, (result, error) => {
+          const onDecode = (result, error) => {
             if (this.hasResult) return;
 
             if (result && typeof result.getText === "function") {
@@ -1336,6 +1364,10 @@
               this.hasResult = true;
               clearTimeout(this.noResultTimer);
               this.status("Code detected");
+              try {
+                console.info("[scanner] success", { ean, at: new Date().toISOString() });
+              } catch (logError) {
+              }
 
               // Required behavior: instantly stop camera + scanning and hide the UI.
               // Do this before triggering search so the transition feels immediate.
@@ -1353,7 +1385,76 @@
 
             // ZXing throws NotFoundException frequently while scanning; ignore those.
             if (error && error.name && String(error.name).toLowerCase().includes("notfound")) return;
-          });
+          };
+
+          // decodeFromConstraints returns controls that can stop the camera/decoder.
+          let lastError = null;
+          for (let i = 0; i < constraintAttempts.length; i++) {
+            const constraints = constraintAttempts[i];
+            try {
+              try {
+                console.info("[scanner] starting stream (attempt " + (i + 1) + ")", constraints.video);
+              } catch (logError) {
+              }
+              this.controls = await this.reader.decodeFromConstraints(constraints, this.videoEl, onDecode);
+              lastError = null;
+              break;
+            } catch (attemptError) {
+              lastError = attemptError;
+              // Reset between attempts to avoid keeping a low-quality stream alive.
+              try {
+                this.stop();
+              } catch (stopError) {
+              }
+            }
+          }
+          if (lastError) throw lastError;
+
+          // Debug: log actual video resolution/settings in use.
+          if (this.videoEl) {
+            const logResolution = () => {
+              try {
+                const stream = this.videoEl.srcObject;
+                const track = stream && stream.getVideoTracks ? stream.getVideoTracks()[0] : null;
+                const settings = track && typeof track.getSettings === "function" ? track.getSettings() : null;
+                console.info("[scanner] stream started", {
+                  at: new Date().toISOString(),
+                  videoWidth: this.videoEl.videoWidth,
+                  videoHeight: this.videoEl.videoHeight,
+                  settings
+                });
+
+                // If the browser gave us a low-res preview, try to upgrade to 1080p once.
+                if (!this.resolutionUpgradeAttempted && track && typeof track.applyConstraints === "function") {
+                  this.resolutionUpgradeAttempted = true;
+                  const w = settings && settings.width ? Number(settings.width) : 0;
+                  const h = settings && settings.height ? Number(settings.height) : 0;
+                  if ((w && w < 1600) || (h && h < 900)) {
+                    track.applyConstraints({
+                      width: { ideal: 1920 },
+                      height: { ideal: 1080 },
+                      frameRate: { ideal: 30, max: 60 }
+                    }).then(() => {
+                      try {
+                        const upgraded = typeof track.getSettings === "function" ? track.getSettings() : null;
+                        console.info("[scanner] upgraded constraints", { at: new Date().toISOString(), settings: upgraded });
+                      } catch (logError) {
+                      }
+                    }).catch(() => {
+                      // Ignore; not all browsers/tracks allow dynamic upgrades.
+                    });
+                  }
+                }
+              } catch (logError) {
+              }
+            };
+
+            if (this.videoEl.readyState >= 1) {
+              logResolution();
+            } else {
+              this.videoEl.addEventListener("loadedmetadata", logResolution, { once: true });
+            }
+          }
         } catch (error) {
           clearTimeout(this.noResultTimer);
           const name = error && error.name ? String(error.name) : "";
