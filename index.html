@@ -1244,10 +1244,26 @@
     // The scanner callback is required to call: searchProduct({ ean: scannedCode })
     // This project historically only had text-based searching; provide a tiny wrapper for re-use.
     window.searchProduct = window.searchProduct || function searchProduct(payload) {
-      const ean = payload && payload.ean ? String(payload.ean).trim() : "";
-      if (!ean) return;
-      searchInput.value = ean;
-      runSearch(ean);
+      const raw = payload && payload.ean ? String(payload.ean).trim() : "";
+      if (!raw) return;
+
+      const digits = raw.replace(/[^\d]/g, "");
+      const query = (digits.length === 13 ? digits : raw);
+      searchInput.value = query;
+
+      // If we have an exact EAN match, behave like the user clicked the first search result:
+      // open the product panel and highlight the map immediately (no extra tap).
+      const exact = (digits.length === 13)
+        ? products.filter((p) => String(p && p.ean ? p.ean : "").replace(/[^\d]/g, "") === digits)
+        : [];
+
+      if (exact.length === 1) {
+        setSearchPanelOpen(false);
+        openProductPanel(exact[0]);
+        return;
+      }
+
+      runSearch(query);
     };
 
     class Ean13BarcodeScanner {
@@ -1321,19 +1337,17 @@
               clearTimeout(this.noResultTimer);
               this.status("Code detected");
 
-              // Bonus: stop scanning after a successful read.
+              // Required behavior: instantly stop camera + scanning and hide the UI.
+              // Do this before triggering search so the transition feels immediate.
               try {
-                this.stop();
-              } catch (stopError) {
+                this.close();
+              } catch (closeError) {
               }
 
               try {
                 this.onDetected(ean);
               } catch (callbackError) {
               }
-
-              // Close the scanner shortly after a successful read (mobile-friendly flow).
-              setTimeout(() => this.close(), 400);
               return;
             }
 
@@ -1368,6 +1382,28 @@
 
         if (this.reader && typeof this.reader.reset === "function") {
           this.reader.reset();
+        }
+
+        // Extra safety: ensure the underlying MediaStream is stopped and detached.
+        try {
+          const stream = this.videoEl && this.videoEl.srcObject;
+          if (stream && typeof stream.getTracks === "function") {
+            stream.getTracks().forEach((track) => {
+              try {
+                track.stop();
+              } catch (trackError) {
+              }
+            });
+          }
+        } catch (streamError) {
+        }
+
+        if (this.videoEl) {
+          try {
+            this.videoEl.pause();
+          } catch (pauseError) {
+          }
+          this.videoEl.srcObject = null;
         }
       }
 
