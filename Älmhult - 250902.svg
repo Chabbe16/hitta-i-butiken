@@ -53,9 +53,9 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#505050"
      showguides="false"
-     inkscape:zoom="0.70710678"
-     inkscape:cx="2153.1402"
-     inkscape:cy="2155.9686"
+     inkscape:zoom="0.5"
+     inkscape:cx="1599"
+     inkscape:cy="1623"
      inkscape:window-width="1920"
      inkscape:window-height="1009"
      inkscape:window-x="-8"
@@ -7237,6 +7237,17 @@
          y="2165.3223"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:Arial">10</tspan></text>
     <text
+       xml:space="preserve"
+       style="font-size:37.3333px;line-height:0;writing-mode:lr-tb;direction:ltr;fill:#000000"
+       x="1455.6127"
+       y="1331.62"
+       id="text412-8"><tspan
+         sodipodi:role="line"
+         id="tspan412-2"
+         x="1455.6127"
+         y="1331.62"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:Arial">11</tspan></text>
+    <text
        id="text413"
        xml:space="preserve"
        x="1940.2894"
@@ -11427,6 +11438,28 @@
          style="font-variant:normal;font-weight:normal;font-size:6.66667px;font-family:Arial;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.04"
          x="2758.1328"
          y="2329.4897">POTATIS</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:37.3333px;line-height:0;writing-mode:lr-tb;direction:ltr;fill:#000000"
+       x="1455.6127"
+       y="1439.7191"
+       id="text69"><tspan
+         sodipodi:role="line"
+         id="tspan69"
+         x="1455.6127"
+         y="1439.7191"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:Arial">12</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:37.3333px;line-height:0;writing-mode:lr-tb;direction:ltr;fill:#000000"
+       x="1455.6127"
+       y="1813.217"
+       id="text70"><tspan
+         sodipodi:role="line"
+         id="tspan70"
+         x="1455.6127"
+         y="1813.217"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:Arial">13</tspan></text>
   </g>
   <g
      id="layer-oc96"
